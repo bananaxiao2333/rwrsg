@@ -153,8 +153,9 @@ const App = () => {
     },
   ];
   const [data, setData] = React.useState([
-    { key: "banner_aid", name: "牌子 (banner_aid)", price: 1000, num: 1 },
-    { key: "banner_rwr", name: "牌子 (banner_rwr)", price: 500, num: 2 },
+    { key: "cooler_box_2", name: "夏日冷藏箱2", price: 1000, num: 2 },
+    { key: "camo_vest", name: "迷彩背心", price: 500, num: 5 },
+    { key: "aa-12", name: "AA-12全自动霰弹枪", price: 2000, num: 10 },
   ]);
   const [sortedInfo, setSortedInfo] = React.useState({});
   const handleFormChange = (pagination, filters, sorter) => {
@@ -395,7 +396,7 @@ const App = () => {
                           {
                             key: item,
                             name: translData[item]?.Cn_name
-                              ? `${translData[item].Cn_name} (${item})`
+                              ? `${translData[item].Cn_name}`
                               : item,
                           },
                         ]);
