@@ -51,6 +51,7 @@ import Marquee from "react-fast-marquee";
 import fs from "file-saver";
 import html2canvas from "html2canvas";
 import moment from "moment";
+import translData from "./data.json";
 
 const { Header, Content, Footer, Sider } = Layout;
 const items = [
@@ -103,7 +104,7 @@ const App = () => {
     opti = opti.concat([
       {
         value: n,
-        label: n,
+        label: translData[n]?.Cn_name ? `${translData[n].Cn_name} (${n})` : n,
       },
     ]);
   });
@@ -152,9 +153,8 @@ const App = () => {
     },
   ];
   const [data, setData] = React.useState([
-    { key: "flare_aav7", name: "flare_aav7", num: 100, price: 10 },
-    { key: "flare_m528", name: "flare_m528", num: 25, price: 100 },
-    { key: "flare_guntruck", name: "flare_guntruck", num: 30, price: 2000 },
+    { key: "banner_aid", name: "牌子 (banner_aid)", price: 1000, num: 1 },
+    { key: "banner_rwr", name: "牌子 (banner_rwr)", price: 500, num: 2 },
   ]);
   const [sortedInfo, setSortedInfo] = React.useState({});
   const handleFormChange = (pagination, filters, sorter) => {
@@ -219,7 +219,7 @@ const App = () => {
       key: "key",
       fixed: "right",
       render: (text, record) => (
-        <div style={{ overflow: "hidden" }}>
+        <div>
           <Image
             width={50}
             src={imageUrls["./assets/items/" + text + ".png"]}
@@ -354,6 +354,7 @@ const App = () => {
             <Col xs={{ flex: "100%" }} sm={{ flex: "70%" }}>
               <div ref={ref4}>
                 <Table
+                  virtual
                   size="small"
                   rowSelection={rowSelection}
                   columns={columns}
@@ -373,6 +374,7 @@ const App = () => {
                     showSearch
                     placeholder="请输入名称"
                     mode="multiple"
+                    size="small"
                     prefix={<AppstoreAddOutlined />}
                     optionFilterProp="label"
                     style={{ width: "100%" }}
@@ -389,7 +391,14 @@ const App = () => {
                       if (addChoise.join().length <= 0) return true;
                       var newData = [];
                       addChoise.forEach(function (item) {
-                        newData = newData.concat([{ key: item, name: item }]);
+                        newData = newData.concat([
+                          {
+                            key: item,
+                            name: translData[item]?.Cn_name
+                              ? `${translData[item].Cn_name} (${item})`
+                              : item,
+                          },
+                        ]);
                       });
                       setData(removeDuplicates(data.concat(newData)));
                       message.open({
@@ -412,6 +421,7 @@ const App = () => {
       content: (
         <>
           <Table
+            virtual
             size="small"
             columns={columns2}
             dataSource={data}
