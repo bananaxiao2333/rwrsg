@@ -67,33 +67,25 @@ function removeDuplicates(arr) {
   });
 }
 
+const imageModules = import.meta.glob("./assets/items/*.png", { eager: true });
+
+const preloadedUrls = Object.fromEntries(
+  Object.entries(imageModules).map(([path, module]) => [path, module.default])
+);
+
 const App = () => {
   const [imageUrls, setImageUrls] = React.useState({});
   const [spinning, setSpinning] = React.useState(false);
   React.useEffect(() => {
-    const loadImages = async () => {
-      setSpinning(true);
-      const imageModules = import.meta.glob("./assets/items/*.png");
-      message.open({
-        type: "info",
-        content:
-          "目前包含" +
-          Object.keys(imageModules).length +
-          "个物品，可能需要较长等待时间",
-        duration: 3,
-      });
-      const urls = {};
+    setSpinning(true);
+    message.open({
+      type: "info",
+      content: `目前包含${Object.keys(preloadedUrls).length}个物品`,
+      duration: 3,
+    });
 
-      for (const path in imageModules) {
-        const module = await imageModules[path]();
-        urls[path] = module.default; // 获取实际URL
-      }
-
-      setImageUrls(urls);
-      setSpinning(false);
-    };
-
-    loadImages();
+    setImageUrls(preloadedUrls);
+    setSpinning(false);
   }, []);
   const [currentTime, setCurrentTime] = React.useState(new moment().format());
   React.useEffect(() => {
