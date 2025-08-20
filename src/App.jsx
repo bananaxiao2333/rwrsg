@@ -5,16 +5,18 @@ import {
   DeleteOutlined,
   DollarCircleOutlined,
   DownloadOutlined,
+  EyeOutlined,
+  FileTextOutlined,
   HomeOutlined,
   LeftCircleOutlined,
   LoadingOutlined,
-  MoneyCollectOutlined,
   MoonOutlined,
   PlusOutlined,
   QuestionCircleOutlined,
   RightCircleFilled,
   SunOutlined,
   UploadOutlined,
+  UserOutlined,
 } from "@ant-design/icons";
 import {
   Alert,
@@ -45,13 +47,16 @@ import { Button, Steps } from "antd";
 import logo from "./assets/icon.png";
 import thumbUp from "./assets/emoticon_thumbup_gray.png";
 import smile from "./assets/emoticon_smiley_gray.png";
-import rwrIcon from "./assets/rwr-icon.webp";
 import Title from "antd/es/typography/Title";
 import Marquee from "react-fast-marquee";
 import fs from "file-saver";
 import html2canvas from "html2canvas";
 import moment from "moment";
 import translData from "./data.json";
+import { useVercount } from "vercount-react";
+import CountUp from "react-countup";
+
+const formatter = (value) => <CountUp end={value} separator="," />;
 
 const { Header, Content, Footer, Sider } = Layout;
 const items = [
@@ -74,7 +79,70 @@ const preloadedUrls = Object.fromEntries(
   Object.entries(imageModules).map(([path, module]) => [path, module.default])
 );
 
+// 整整50行没啥用的东西
+const lines = [
+  "时光荏苒，记忆如沙",
+  "梦想在远方，脚步在当下",
+  "城市灯火，永不熄灭的星辰",
+  "爱是无声的诗，来自心底",
+  "雨滴轻敲窗，思绪随风飘",
+  "书籍是沉默的导师，指引迷途",
+  "音乐响起，灵魂开始舞蹈",
+  "自然之声，治愈疲惫的心灵",
+  "友情如茶，苦涩中带甜",
+  "科技之光，照亮未知的黑暗",
+  "旅行是写给自己的情书",
+  "美食的香气，唤醒沉睡的味蕾",
+  "星空之下，我们都是宇宙的孩子",
+  "坚持是通往成功的桥梁",
+  "时间如流水，一去不复返",
+  "微笑是打开心门的钥匙",
+  "家是永远的避风港",
+  "工作与休闲，生活的双翼",
+  "学习是永不停歇的旅程",
+  "健康是生命的基石",
+  "环保行动，守护地球家园",
+  "创新是未来的引擎",
+  "历史的长河，映照今日",
+  "艺术是情感的出口",
+  "运动释放能量，焕发活力",
+  "冥想中，找到内心的宁静",
+  "幽默是生活的调味剂",
+  "诚实赢得信任，虚伪带来孤独",
+  "失败是成长的阶梯",
+  "感恩每一刻，珍惜小幸福",
+  "好奇心驱动世界的进步",
+  "耐心等待，花开有时",
+  "分享快乐，温暖倍增",
+  "孤独是自我对话的时光",
+  "希望是黑暗中的灯塔",
+  "勇气征服恐惧，成就非凡",
+  "简单生活，回归本真",
+  "科技便利，也需警惕依赖",
+  "文化交融，世界更精彩",
+  "教育点燃希望的火种",
+  "和平是人类的共同梦想",
+  "爱情需要用心浇灌",
+  "自然奇观，令人叹为观止",
+  "城市节奏，永不停歇的心跳",
+  "信息洪流，筛选真知",
+  "AI时代，人机共生",
+  "虚拟世界，真实情感",
+  "可持续发展，留给未来的礼物",
+  "心理健康，不可忽视",
+  "别光顾着看，你也是这列表的一部分",
+];
+
 const App = () => {
+  const getRandomItem = () => {
+    const randomIndex = Math.floor(Math.random() * lines.length);
+    return lines[randomIndex];
+  };
+  const [randomItem, setRandomItem] = React.useState("");
+  React.useEffect(() => {
+    setRandomItem(getRandomItem());
+  }, []);
+
   const [imageUrls, setImageUrls] = React.useState({});
   const [spinning, setSpinning] = React.useState(false);
   React.useEffect(() => {
@@ -355,7 +423,6 @@ const App = () => {
             <Col xs={{ flex: "100%" }} sm={{ flex: "70%" }}>
               <div ref={ref4}>
                 <Table
-                  virtual
                   size="small"
                   rowSelection={rowSelection}
                   columns={columns}
@@ -560,6 +627,7 @@ const App = () => {
     },
   };
   var [isBright, setIsBright] = React.useState(true);
+  const { sitePv, pagePv, siteUv } = useVercount();
   return (
     <ConfigProvider theme={isBright ? {} : { algorithm: theme.darkAlgorithm }}>
       <Layout style={{ height: "100vh" }}>
@@ -720,7 +788,30 @@ const App = () => {
               </Spin>
             </div>
           </Content>
-          <Divider>用爱制造，来自《带着步枪奔跑》</Divider>
+          <Divider>{randomItem}</Divider>
+          <Row justify="space-evenly">
+            <Statistic
+              value={siteUv}
+              title="曾经有人来过"
+              suffix="位"
+              formatter={formatter}
+              prefix={<UserOutlined />}
+            />
+            <Statistic
+              value={sitePv}
+              title="过去有人看过"
+              suffix="次"
+              formatter={formatter}
+              prefix={<EyeOutlined />}
+            />
+            <Statistic
+              value={pagePv}
+              title="本页有次见过"
+              suffix="个"
+              formatter={formatter}
+              prefix={<FileTextOutlined />}
+            />
+          </Row>
         </div>
       </Layout>
     </ConfigProvider>
