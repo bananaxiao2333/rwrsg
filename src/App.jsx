@@ -835,6 +835,17 @@ const App = () => {
               prefix={<FileTextOutlined />}
             />
           </Row>
+          <a href="https://github.com/bananaxiao2333/rwrsg">
+            <Row
+              justify="space-evenly"
+              style={{ margin: "20px 0", padding: "10px" }}
+            >
+              <img src="https://img.shields.io/github/contributors/bananaxiao2333/rwrsg?label=%E8%B4%A1%E7%8C%AE%E8%80%85%E6%95%B0" />
+              <img src="https://img.shields.io/github/commit-activity/t/bananaxiao2333/rwrsg?label=%E8%B4%A1%E7%8C%AE%E6%AC%A1%E6%95%B0" />
+              <img src="https://img.shields.io/github/actions/workflow/status/bananaxiao2333/rwrsg/.github%2Fworkflows%2Fghpage.yml?label=%E6%9E%84%E5%BB%BA%E7%8A%B6%E6%80%81" />
+              <img src="https://img.shields.io/github/last-commit/bananaxiao2333/rwrsg?label=%E6%9B%B4%E6%96%B0%E6%97%B6%E9%97%B4" />
+            </Row>
+          </a>
         </div>
       </Layout>
     </ConfigProvider>
