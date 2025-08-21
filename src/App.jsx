@@ -22,6 +22,7 @@ import {
   Alert,
   Card,
   Col,
+  Collapse,
   ConfigProvider,
   Divider,
   Flex,
@@ -55,6 +56,8 @@ import moment from "moment";
 import translData from "./data.json";
 import { useVercount } from "vercount-react";
 import CountUp from "react-countup";
+import priceData from "./price.json";
+import priceTxt from "./og_price.json";
 
 const formatter = (value) => <CountUp end={value} separator="," />;
 
@@ -176,7 +179,6 @@ const App = () => {
       },
     ]);
   });
-  console.log(opti);
 
   const ref1 = React.useRef(null);
   const ref2 = React.useRef(null);
@@ -413,7 +415,7 @@ const App = () => {
   };
   const [editModal, setEditModal] = React.useState();
   const canvasRef = React.useRef(null);
-  const [editableStr, setEditableStr] = React.useState("RWR小店");
+  const [editableStr, setEditableStr] = React.useState("RWR摆摊生成器");
   const [picWidth, setPicWidth] = React.useState();
   const steps = [
     {
@@ -466,6 +468,7 @@ const App = () => {
                             name: translData[item]?.cn_name
                               ? `${translData[item].cn_name}`
                               : item,
+                            price: priceData[item] ?? 0,
                           },
                         ]);
                       });
@@ -477,6 +480,25 @@ const App = () => {
                       });
                       setAddChoice([]);
                     }}
+                  />
+                  <Alert
+                    type="info"
+                    closable
+                    message="添加完成后在属性中：如果物品有翻译会自动显示中文翻译，
+                    如果物品在群中有标价会自动添加价格（暂无收藏品/破损物/武器其他模式价格）"
+                    showIcon
+                    style={{ margin: "10px 0" }}
+                  />
+                  <Collapse
+                    accordion
+                    items={[
+                      {
+                        key: "1",
+                        label: "群价数据源",
+                        children: <p>{priceTxt["txt"]}</p>,
+                      },
+                    ]}
+                    style={{ whiteSpace: "pre-wrap" }}
                   />
                 </div>
               </Card>
