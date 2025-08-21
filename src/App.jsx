@@ -58,6 +58,7 @@ import { useVercount } from "vercount-react";
 import CountUp from "react-countup";
 import priceData from "./price.json";
 import priceTxt from "./og_price.json";
+import useLocalStorageState from "use-local-storage-state";
 
 const formatter = (value) => <CountUp end={value} separator="," />;
 
@@ -223,15 +224,13 @@ const App = () => {
       cover: <img src={thumbUp} style={{ maxWidth: "100px" }} />,
     },
   ];
-  const [data, setData] = React.useState([
-    { key: "lottery", name: "彩票", price: 1700, num: 1 },
-    { key: "vest3", name: "Ⅲ型防弹背心", price: 200, num: 2 },
-    { key: "aug", name: "斯太尔AUG突击步枪", price: 250, num: 5 },
-  ]);
-  const [sortedInfo, setSortedInfo] = React.useState({});
-  const handleFormChange = (pagination, filters, sorter) => {
-    setSortedInfo(sorter);
-  };
+  const [data, setData] = useLocalStorageState("data", {
+    defaultValue: [
+      { key: "lottery", name: "彩票", price: 1700, num: 1 },
+      { key: "vest3", name: "Ⅲ型防弹背心", price: 200, num: 2 },
+      { key: "aug", name: "斯太尔AUG突击步枪", price: 250, num: 5 },
+    ],
+  });
   const columns = [
     {
       title: "图片",
@@ -415,7 +414,9 @@ const App = () => {
   };
   const [editModal, setEditModal] = React.useState();
   const canvasRef = React.useRef(null);
-  const [editableStr, setEditableStr] = React.useState("RWR摆摊生成器");
+  const [editableStr, setEditableStr] = useLocalStorageState("title", {
+    defaultValue: "RWR摆摊生成器",
+  });
   const [picWidth, setPicWidth] = React.useState();
   const steps = [
     {
@@ -430,7 +431,6 @@ const App = () => {
                   rowSelection={rowSelection}
                   columns={columns}
                   dataSource={data}
-                  onChange={handleFormChange}
                 />
               </div>
             </Col>
@@ -511,13 +511,7 @@ const App = () => {
       title: "属性",
       content: (
         <>
-          <Table
-            virtual
-            size="small"
-            columns={columns2}
-            dataSource={data}
-            onChange={handleFormChange}
-          />
+          <Table virtual size="small" columns={columns2} dataSource={data} />
           <Modal
             title={
               "设置" + editKey.key + "(" + editKey.name + ")" + "的" + editMode
