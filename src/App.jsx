@@ -172,10 +172,11 @@ const App = () => {
     opti = opti.concat([
       {
         value: n,
-        label: translData[n]?.Cn_name ? `${translData[n].Cn_name} (${n})` : n,
+        label: translData[n]?.cn_name ? `${translData[n].cn_name} (${n})` : n,
       },
     ]);
   });
+  console.log(opti);
 
   const ref1 = React.useRef(null);
   const ref2 = React.useRef(null);
@@ -462,8 +463,8 @@ const App = () => {
                         newData = newData.concat([
                           {
                             key: item,
-                            name: translData[item]?.Cn_name
-                              ? `${translData[item].Cn_name}`
+                            name: translData[item]?.cn_name
+                              ? `${translData[item].cn_name}`
                               : item,
                           },
                         ]);
