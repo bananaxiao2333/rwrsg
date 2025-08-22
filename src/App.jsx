@@ -23,6 +23,7 @@ import {
   Card,
   Col,
   Collapse,
+  ColorPicker,
   ConfigProvider,
   Divider,
   Flex,
@@ -34,6 +35,7 @@ import {
   Modal,
   Row,
   Select,
+  Slider,
   Spin,
   Statistic,
   Switch,
@@ -176,7 +178,9 @@ const App = () => {
     opti = opti.concat([
       {
         value: n,
-        label: translData[n]?.cn_name ? `${translData[n].cn_name} (${n})` : n,
+        label: translData[n]?.cn_name
+          ? `${translData[n].cn_name + "-" + translData[n].en_name} (${n})`
+          : n,
       },
     ]);
   });
@@ -418,6 +422,24 @@ const App = () => {
     defaultValue: "RWR摆摊生成器",
   });
   const [picWidth, setPicWidth] = React.useState();
+  const [showName, setShowName] = useLocalStorageState("showName", {
+    defaultValue: false,
+  });
+  const [showPrice, setShowPrice] = useLocalStorageState("showPrice", {
+    defaultValue: true,
+  });
+  const [showID, setShowID] = useLocalStorageState("showID", {
+    defaultValue: false,
+  });
+  const [showNum, setShowNum] = useLocalStorageState("showNum", {
+    defaultValue: false,
+  });
+  const [color, setColor] = useLocalStorageState("color", {
+    defaultValue: "#ffffff",
+  });
+  const [txtColor, setTxtColor] = useLocalStorageState("txtColor", {
+    defaultValue: "#000000",
+  });
   const steps = [
     {
       title: "售卖物",
@@ -554,55 +576,191 @@ const App = () => {
         <>
           <Alert message="如果尺寸不合适可以在下方调整宽度" closable showIcon />
           <div
-            ref={canvasRef}
-            style={picWidth ? { width: picWidth + "px" } : {}}
+            style={{
+              display: "flex",
+              justifyContent: "center",
+              width: "100%",
+            }}
           >
-            <Watermark
-              //height={88 / 4}
-              //width={700 / 4}
-              content={[editableStr, currentTime]}
-              style={{ margin: "20px" }}
-              //image={rwrIcon}
+            <div
+              style={{
+                border: "2px solid #0000FF",
+                borderStyle: "dashed",
+                backgroundColor: color,
+              }}
             >
-              <Typography.Title
-                editable={{
-                  tooltip: "click to edit text",
-                  onChange: setEditableStr,
-                }}
-                style={{ width: "100%", textAlign: "center" }}
+              <div
+                ref={canvasRef}
+                style={Object.assign(
+                  { backgroundColor: color },
+                  picWidth ? { width: picWidth + "px" } : {}
+                )}
               >
-                {editableStr}
-              </Typography.Title>
-              <Flex wrap gap="small" justify="space-evenly">
-                {data.map((item) => (
-                  <div key={item.key} className="grid-item">
-                    <Image
-                      src={imageUrls["./assets/items/" + item.key + ".png"]}
-                      fallback="data:image/png;base64,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"
-                      style={{ maxHeight: 200, maxWidth: 100 }}
-                    />
-                    <Typography.Title level={4}>{item.name}</Typography.Title>
-                    <Typography>
-                      {"("}
-                      {item.key}
-                      {")"}
-                    </Typography>
-                    <Statistic
-                      title="单个价格"
-                      prefix={<DollarCircleOutlined />}
-                      value={item.price ? item.price + "rp" : "暂无价格"}
-                    />
-
-                    <Statistic
-                      title="库存量"
-                      prefix={<AppstoreOutlined />}
-                      value={item.num ? item.num + "个" : "暂无数据"}
-                    />
-                  </div>
-                ))}
-              </Flex>
-            </Watermark>
+                <Watermark
+                  //height={88 / 4}
+                  //width={700 / 4}
+                  content={[editableStr, currentTime]}
+                  //image={rwrIcon}
+                >
+                  <ConfigProvider
+                    theme={{
+                      token: {
+                        colorText: txtColor,
+                        colorTextDescription: txtColor,
+                        fontFamily: "komikax",
+                      },
+                    }}
+                  >
+                    <Typography.Title
+                      editable={{
+                        tooltip: "点击来修改",
+                        onChange: setEditableStr,
+                      }}
+                      style={{ textAlign: "center", margin: "0" }}
+                    >
+                      {editableStr}
+                    </Typography.Title>
+                    <Flex wrap gap="small" justify="center">
+                      {data.map((item) => (
+                        <div
+                          key={item.key}
+                          className="grid-item"
+                          style={{
+                            lineHeight: "0",
+                            textAlign: "center",
+                            minHeight: "100%",
+                          }}
+                        >
+                          <div //图片限制大小居中
+                            style={{
+                              maxHeight: "200px",
+                              width: "100%",
+                              alignContent: "center",
+                            }}
+                          >
+                            <img
+                              src={
+                                imageUrls["./assets/items/" + item.key + ".png"]
+                              }
+                              style={{
+                                maxHeight: "200px",
+                                maxWidth: "100px",
+                                margin: "0 0",
+                              }}
+                            />
+                          </div>
+                          {showName ? (
+                            <Typography.Title style={{ margin: "0" }} level={5}>
+                              {item.name}
+                            </Typography.Title>
+                          ) : (
+                            ""
+                          )}
+                          {showID ? (
+                            <Typography>
+                              {"("}
+                              {item.key}
+                              {")"}
+                            </Typography>
+                          ) : (
+                            ""
+                          )}
+                          {showPrice ? (
+                            <Statistic
+                              title="单个价格"
+                              prefix={<DollarCircleOutlined />}
+                              value={
+                                item.price ? item.price + "rp" : "暂无价格"
+                              }
+                            />
+                          ) : (
+                            ""
+                          )}
+                          {showNum ? (
+                            <Statistic
+                              title="库存量"
+                              prefix={<AppstoreOutlined />}
+                              value={item.num ? item.num + "个" : "暂无数据"}
+                            />
+                          ) : (
+                            ""
+                          )}
+                        </div>
+                      ))}
+                    </Flex>
+                  </ConfigProvider>
+                </Watermark>
+              </div>
+            </div>
           </div>
+          <Card title="导出设置面板">
+            <div
+              style={{
+                gap: "20px",
+                width: "100%",
+                display: "flex",
+                justifyContent: "space-around",
+                flexWrap: "wrap",
+              }}
+            >
+              <div style={{ display: "flex", flexWrap: "wrap" }}>
+                <Slider
+                  placeholder="宽度"
+                  value={picWidth}
+                  onChange={(value) => setPicWidth(value)}
+                  suffix="px"
+                  changeOnWheel
+                  min={1}
+                  max={2000}
+                  style={{ width: "200px" }}
+                />
+                <InputNumber
+                  placeholder="宽度"
+                  value={picWidth}
+                  onChange={(value) => setPicWidth(value)}
+                  suffix="px"
+                  changeOnWheel
+                  min={1}
+                />
+              </div>
+              <Switch
+                checkedChildren="显示中文名称"
+                unCheckedChildren="隐藏中文名称"
+                value={showName}
+                onChange={() => setShowName(!showName)}
+              />
+              <Switch
+                checkedChildren="显示物品ID"
+                unCheckedChildren="隐藏物品ID"
+                value={showID}
+                onChange={() => setShowID(!showID)}
+              />
+              <Switch
+                checkedChildren="显示价格"
+                unCheckedChildren="隐藏价格"
+                value={showPrice}
+                onChange={() => setShowPrice(!showPrice)}
+              />
+              <Switch
+                checkedChildren="显示库存量"
+                unCheckedChildren="隐藏库存量"
+                value={showNum}
+                onChange={() => setShowNum(!showNum)}
+              />
+              <ColorPicker
+                showText
+                format="hex"
+                value={color}
+                onChange={(value) => setColor(value.toHexString())}
+              />
+              <ColorPicker
+                showText
+                format="hex"
+                value={txtColor}
+                onChange={(value) => setTxtColor(value.toHexString())}
+              />
+            </div>
+          </Card>
         </>
       ),
     },
@@ -762,15 +920,6 @@ const App = () => {
                       >
                         保存图片
                       </Button>
-                      <InputNumber
-                        placeholder="宽度"
-                        style={{ marginRight: "8px" }}
-                        value={picWidth}
-                        onChange={(value) => setPicWidth(value)}
-                        suffix="px"
-                        changeOnWheel
-                        min={1}
-                      />
                     </>
                   )}
                   {current > 0 && (

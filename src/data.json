@@ -250,7 +250,10 @@
   "impact_grenade": { "en_name": "impact grenade", "cn_name": "触发式手榴弹" },
   "jackhammer": { "en_name": "Jackhammer", "cn_name": "“汽锤”全自动霰弹枪" },
   "javelin": { "en_name": "Javelin", "cn_name": "“标枪”反坦克导弹" },
-  "javelin_ap": { "en_name": "rocket", "cn_name": "火箭弹" },
+  "javelin_ap": {
+    "en_name": "Javelin, anti-personnel",
+    "cn_name": "“标枪”反步兵导弹"
+  },
   "flare_xmas": {
     "en_name": "Xmas Jeep Drop",
     "cn_name": "圣诞快乐车空投信标"
