@@ -139,6 +139,37 @@ const lines = [
   "别光顾着看，你也是这列表的一部分",
 ];
 
+const unitTrans = (num) => {
+  const absNum = Math.abs(num);
+  let value, unit;
+
+  if (absNum >= 1e12) {
+    value = num / 1e12;
+    unit = "t";
+  } else if (absNum >= 1e9) {
+    value = num / 1e9;
+    unit = "b";
+  } else if (absNum >= 1e6) {
+    value = num / 1e6;
+    unit = "m";
+  } else if (absNum >= 1e3) {
+    value = num / 1e3;
+    unit = "k";
+  } else {
+    return num.toString();
+  }
+
+  // 将数字转换为字符串保留所有小数
+  const strVal = value.toString();
+
+  // 处理科学计数法 (大于1e21的数字会自动转科学计数法)
+  if (strVal.includes("e")) {
+    return value.toLocaleString("fullwide", { useGrouping: false }) + unit;
+  }
+
+  return strVal + unit;
+};
+
 const App = () => {
   const getRandomItem = () => {
     const randomIndex = Math.floor(Math.random() * lines.length);
@@ -434,6 +465,9 @@ const App = () => {
   const [showNum, setShowNum] = useLocalStorageState("showNum", {
     defaultValue: false,
   });
+  const [transUnit, setTransUnit] = useLocalStorageState("transUnit", {
+    defaultValue: true,
+  });
   const [color, setColor] = useLocalStorageState("color", {
     defaultValue: "#ffffff",
   });
@@ -670,7 +704,11 @@ const App = () => {
                               title="单个价格"
                               prefix={<DollarCircleOutlined />}
                               value={
-                                item.price ? item.price + "rp" : "暂无价格"
+                                item.price
+                                  ? (transUnit
+                                      ? unitTrans(item.price)
+                                      : item.price) + " rp"
+                                  : "N/A"
                               }
                             />
                           ) : (
@@ -680,7 +718,7 @@ const App = () => {
                             <Statistic
                               title="库存量"
                               prefix={<AppstoreOutlined />}
-                              value={item.num ? item.num + "个" : "暂无数据"}
+                              value={item.num ? item.num + "个" : "N/A"}
                             />
                           ) : (
                             ""
@@ -740,6 +778,13 @@ const App = () => {
                 unCheckedChildren="隐藏价格"
                 value={showPrice}
                 onChange={() => setShowPrice(!showPrice)}
+              />
+
+              <Switch
+                checkedChildren="转换价格单位"
+                unCheckedChildren="不转换价格单位"
+                value={transUnit}
+                onChange={() => setTransUnit(!transUnit)}
               />
               <Switch
                 checkedChildren="显示库存量"
