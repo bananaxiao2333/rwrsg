@@ -7,6 +7,7 @@ import {
   DownloadOutlined,
   EyeOutlined,
   FileTextOutlined,
+  GithubOutlined,
   HomeOutlined,
   LeftCircleOutlined,
   LoadingOutlined,
@@ -41,6 +42,7 @@ import {
   Switch,
   Table,
   theme,
+  Timeline,
   Tour,
   Typography,
   Upload,
@@ -170,7 +172,32 @@ const unitTrans = (num) => {
   return strVal + unit;
 };
 
+const extractCommitInfo = (commits) => {
+  return commits.map((commit) => {
+    // 从commit.commit.author获取提交者信息
+    const authorInfo = commit.commit.author;
+
+    // 返回提取的信息
+    return {
+      label: authorInfo.date,
+      children: <a href={commit.html_url}>{commit.commit.message}</a>,
+    };
+  });
+};
+
 const App = () => {
+  const [commitHistory, setCommitHistory] = React.useState([]);
+  React.useEffect(() => {
+    const fetchCommits = async () => {
+      const response = await fetch(
+        "https://api.github.com/repos/bananaxiao2333/rwrsg/commits"
+      );
+      const jsonData = await response.json();
+      setCommitHistory(extractCommitInfo(jsonData));
+    };
+    fetchCommits();
+  }, []);
+
   const getRandomItem = () => {
     const randomIndex = Math.floor(Math.random() * lines.length);
     return lines[randomIndex];
@@ -452,7 +479,7 @@ const App = () => {
   const [editableStr, setEditableStr] = useLocalStorageState("title", {
     defaultValue: "RWR摆摊生成器",
   });
-  const [picWidth, setPicWidth] = React.useState();
+  const [picWidth, setPicWidth] = useLocalStorageState("picWidth");
   const [showName, setShowName] = useLocalStorageState("showName", {
     defaultValue: false,
   });
@@ -474,6 +501,7 @@ const App = () => {
   const [txtColor, setTxtColor] = useLocalStorageState("txtColor", {
     defaultValue: "#000000",
   });
+  const { Paragraph, Text } = Typography;
   const steps = [
     {
       title: "售卖物",
@@ -1034,6 +1062,17 @@ const App = () => {
               <img src="https://img.shields.io/github/last-commit/bananaxiao2333/rwrsg?label=%E6%9B%B4%E6%96%B0%E6%97%B6%E9%97%B4" />
             </Row>
           </a>
+          <div style={{ width: "100%", alignContent: "center" }}>
+            {commitHistory ? (
+              <Timeline
+                mode="alternate"
+                items={commitHistory}
+                style={{ width: "95vw" }}
+              />
+            ) : (
+              <Spin indicator={<GithubOutlined spin />} />
+            )}
+          </div>
         </div>
       </Layout>
     </ConfigProvider>

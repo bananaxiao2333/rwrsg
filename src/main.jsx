@@ -1,9 +1,8 @@
-import { StrictMode } from "react";
+import { StrictMode, Suspense } from "react";
 import { createRoot } from "react-dom/client";
 import "@ant-design/v5-patch-for-react-19";
 import { ConfigProvider, Watermark } from "antd";
 import zhCN from "antd/locale/zh_CN";
-import App from "./App";
 
 createRoot(document.getElementById("root")).render(
   <StrictMode>
@@ -16,7 +15,22 @@ createRoot(document.getElementById("root")).render(
       locale={zhCN}
     >
       <Watermark content={["RWR Store Generator"]}>
-        <App />
+        <Suspense
+          fallback={
+            <div
+              style={{
+                height: "100vh",
+                width: "100vh",
+                alignContent: "center",
+                textAlign: "center",
+              }}
+            >
+              <h1>RWRSG</h1>
+            </div>
+          }
+        >
+          <App />
+        </Suspense>
       </Watermark>
     </ConfigProvider>
   </StrictMode>
