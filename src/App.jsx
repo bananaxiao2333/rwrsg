@@ -820,6 +820,11 @@ const App = () => {
                 value={showNum}
                 onChange={() => setShowNum(!showNum)}
               />
+              <Input
+                placeholder="标题"
+                value={editableStr}
+                onChange={(value) => setEditableStr(value)}
+              />
               <ColorPicker
                 showText
                 format="hex"
