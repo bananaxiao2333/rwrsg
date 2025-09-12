@@ -858,6 +858,12 @@ const App = () => {
                 value={original}
                 onChange={() => setOriginal(!original)}
               />
+              <Switch
+                checkedChildren="显示数据标题"
+                unCheckedChildren="隐藏数据标题"
+                value={showTitle}
+                onChange={() => setShowTitle(!showTitle)}
+              />
               <ColorPicker
                 showText
                 format="hex"
