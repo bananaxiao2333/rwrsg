@@ -2,6 +2,7 @@ import React from "react";
 import {
   AppstoreAddOutlined,
   AppstoreOutlined,
+  CopyOutlined,
   DeleteOutlined,
   DollarCircleOutlined,
   DownloadOutlined,
@@ -489,10 +490,16 @@ const App = () => {
   const [showID, setShowID] = useLocalStorageState("showID", {
     defaultValue: false,
   });
+  const [showTitle, setShowTitle] = useLocalStorageState("showTitle", {
+    defaultValue: false,
+  });
   const [showNum, setShowNum] = useLocalStorageState("showNum", {
     defaultValue: false,
   });
   const [transUnit, setTransUnit] = useLocalStorageState("transUnit", {
+    defaultValue: true,
+  });
+  const [original, setOriginal] = useLocalStorageState("original", {
     defaultValue: true,
   });
   const [color, setColor] = useLocalStorageState("color", {
@@ -691,13 +698,15 @@ const App = () => {
                             lineHeight: "0",
                             textAlign: "center",
                             minHeight: "100%",
+                            position: "relative", // 添加相对定位
                           }}
                         >
-                          <div //图片限制大小居中
+                          <div // 图片容器
                             style={{
                               maxHeight: "200px",
                               width: "100%",
                               alignContent: "center",
+                              position: "relative", // 添加相对定位
                             }}
                           >
                             <img
@@ -710,7 +719,23 @@ const App = () => {
                                 margin: "0 0",
                               }}
                             />
+
+                            {/* 新增：当original为true时显示库存标签 */}
+                            {original && showNum && item.num !== undefined && (
+                              <Typography
+                                style={{
+                                  position: "absolute",
+                                  bottom: "4px",
+                                  right: "4px",
+                                  fontSize: "28px",
+                                  lineHeight: "1.5",
+                                }}
+                              >
+                                {item.num}
+                              </Typography>
+                            )}
                           </div>
+
                           {showName ? (
                             <Typography.Title style={{ margin: "0" }} level={5}>
                               {item.name}
@@ -718,6 +743,7 @@ const App = () => {
                           ) : (
                             ""
                           )}
+
                           {showID ? (
                             <Typography>
                               {"("}
@@ -727,9 +753,10 @@ const App = () => {
                           ) : (
                             ""
                           )}
+
                           {showPrice ? (
                             <Statistic
-                              title="单个价格"
+                              title={showTitle ? "单个价格" : ""}
                               prefix={<DollarCircleOutlined />}
                               value={
                                 item.price
@@ -742,9 +769,11 @@ const App = () => {
                           ) : (
                             ""
                           )}
-                          {showNum ? (
+
+                          {/* 修改：当original为false时才显示库存统计 */}
+                          {showNum && !original ? (
                             <Statistic
-                              title="库存量"
+                              title={showTitle ? "库存量" : ""}
                               prefix={<AppstoreOutlined />}
                               value={item.num ? item.num + "个" : "N/A"}
                             />
@@ -788,6 +817,9 @@ const App = () => {
                   changeOnWheel
                   min={1}
                 />
+                <Button type="dashed" onClick={() => setPicWidth(470)}>
+                  手机合适宽度
+                </Button>
               </div>
               <Switch
                 checkedChildren="显示中文名称"
@@ -819,6 +851,12 @@ const App = () => {
                 unCheckedChildren="隐藏库存量"
                 value={showNum}
                 onChange={() => setShowNum(!showNum)}
+              />
+              <Switch
+                checkedChildren="游戏库存样式"
+                unCheckedChildren="多行库存样式"
+                value={original}
+                onChange={() => setOriginal(!original)}
               />
               <ColorPicker
                 showText
@@ -992,6 +1030,30 @@ const App = () => {
                         }}
                       >
                         保存图片
+                      </Button>
+                      <Button
+                        type="primary"
+                        style={{ marginRight: "8px" }}
+                        icon={<CopyOutlined />}
+                        onClick={() => {
+                          html2canvas(canvasRef.current).then((canvas) => {
+                            canvas.toBlob((blob) => {
+                              if (blob) {
+                                try {
+                                  const item = new ClipboardItem({
+                                    "image/png": blob,
+                                  });
+                                  navigator.clipboard.write([item]);
+                                  message.info("已将图片复制至剪贴板");
+                                } catch (error) {
+                                  message.error("复制至剪贴板失败：" + error);
+                                }
+                              }
+                            });
+                          });
+                        }}
+                      >
+                        复制图片
                       </Button>
                     </>
                   )}
