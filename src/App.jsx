@@ -64,6 +64,8 @@ import CountUp from "react-countup";
 import priceData from "./price.json";
 import priceTxt from "./og_price.json";
 import useLocalStorageState from "use-local-storage-state";
+import { Route, Routes } from "react-router-dom";
+import RwrTable from "./Table";
 
 const formatter = (value) => <CountUp end={value} separator="," />;
 
@@ -920,6 +922,7 @@ const App = () => {
   };
   var [isBright, setIsBright] = React.useState(true);
   const { sitePv, pagePv, siteUv } = useVercount();
+
   return (
     <ConfigProvider theme={isBright ? {} : { algorithm: theme.darkAlgorithm }}>
       <Layout style={{ height: "100vh" }}>
@@ -975,124 +978,163 @@ const App = () => {
                 borderRadius: borderRadiusLG,
               }}
             >
-              <Spin
-                spinning={spinning}
-                indicator={<LoadingOutlined spin />}
-                size="large"
-              >
-                <Steps
-                  current={current}
-                  items={items}
-                  onChange={(value) => {
-                    setCurrent(value);
-                  }}
-                />
-                <div style={contentStyle}>{steps[current].content}</div>
-                <div style={{ marginTop: 24 }}>
-                  {current < steps.length - 1 && (
-                    <Button
-                      type="primary"
-                      onClick={() => next()}
-                      icon={<RightCircleFilled />}
-                      ref={ref2}
-                      style={{ marginRight: "8px" }}
-                    >
-                      下一步
-                    </Button>
-                  )}
-                  {current === steps.length - 1 && (
+              <Routes>
+                <Route
+                  path="/"
+                  element={
                     <>
-                      <Button
-                        type="primary"
-                        icon={<DownloadOutlined />}
-                        style={{ marginBottom: "8px" }}
-                        onClick={() =>
-                          fs.saveAs(
-                            new Blob([JSON.stringify(data)], {
-                              type: "text/plain;charset=utf-8",
-                            }),
-                            "RWRSG-" + new Date().getTime() + ".json"
-                          )
-                        }
+                      <Spin
+                        spinning={spinning}
+                        indicator={<LoadingOutlined spin />}
+                        size="large"
                       >
-                        保存数据
-                      </Button>
-                      <Button
-                        type="primary"
-                        style={{ marginLeft: "8px", marginRight: "8px" }}
-                        icon={<DownloadOutlined />}
-                        onClick={() => {
-                          html2canvas(canvasRef.current).then((canvas) => {
-                            canvas.toBlob((blob) => {
-                              if (blob) {
-                                // 使用FileSaver保存文件
-                                saveAs(
-                                  blob,
-                                  "RWRSG-" + new Date().getTime() + ".png"
-                                );
-                              }
-                            });
-                          });
-                        }}
-                      >
-                        保存图片
-                      </Button>
-                      <Button
-                        type="primary"
-                        style={{ marginRight: "8px" }}
-                        icon={<CopyOutlined />}
-                        onClick={() => {
-                          html2canvas(canvasRef.current).then((canvas) => {
-                            canvas.toBlob((blob) => {
-                              if (blob) {
-                                try {
-                                  const item = new ClipboardItem({
-                                    "image/png": blob,
-                                  });
-                                  navigator.clipboard.write([item]);
-                                  message.info("已将图片复制至剪贴板");
-                                } catch (error) {
-                                  message.error("复制至剪贴板失败：" + error);
+                        <Steps
+                          current={current}
+                          items={items}
+                          onChange={(value) => {
+                            setCurrent(value);
+                          }}
+                        />
+                        <div style={contentStyle}>{steps[current].content}</div>
+                        <div style={{ marginTop: 24 }}>
+                          {current < steps.length - 1 && (
+                            <Button
+                              type="primary"
+                              onClick={() => next()}
+                              icon={<RightCircleFilled />}
+                              ref={ref2}
+                              style={{ marginRight: "8px" }}
+                            >
+                              下一步
+                            </Button>
+                          )}
+                          {current === steps.length - 1 && (
+                            <>
+                              <Button
+                                type="primary"
+                                icon={<DownloadOutlined />}
+                                style={{ marginBottom: "8px" }}
+                                onClick={() =>
+                                  fs.saveAs(
+                                    new Blob([JSON.stringify(data)], {
+                                      type: "text/plain;charset=utf-8",
+                                    }),
+                                    "RWRSG-" + new Date().getTime() + ".json"
+                                  )
                                 }
-                              }
-                            });
-                          });
-                        }}
-                      >
-                        复制图片
-                      </Button>
+                              >
+                                保存数据
+                              </Button>
+                              <Button
+                                type="primary"
+                                style={{
+                                  marginLeft: "8px",
+                                  marginRight: "8px",
+                                }}
+                                icon={<DownloadOutlined />}
+                                onClick={() => {
+                                  html2canvas(canvasRef.current).then(
+                                    (canvas) => {
+                                      canvas.toBlob((blob) => {
+                                        if (blob) {
+                                          // 使用FileSaver保存文件
+                                          saveAs(
+                                            blob,
+                                            "RWRSG-" +
+                                              new Date().getTime() +
+                                              ".png"
+                                          );
+                                        }
+                                      });
+                                    }
+                                  );
+                                }}
+                              >
+                                保存图片
+                              </Button>
+                              <Button
+                                type="primary"
+                                style={{ marginRight: "8px" }}
+                                icon={<CopyOutlined />}
+                                onClick={() => {
+                                  html2canvas(canvasRef.current).then(
+                                    (canvas) => {
+                                      canvas.toBlob((blob) => {
+                                        if (blob) {
+                                          try {
+                                            const item = new ClipboardItem({
+                                              "image/png": blob,
+                                            });
+                                            navigator.clipboard.write([item]);
+                                            message.info(
+                                              "已将图片复制至剪贴板"
+                                            );
+                                          } catch (error) {
+                                            message.error(
+                                              "复制至剪贴板失败：" + error
+                                            );
+                                          }
+                                        }
+                                      });
+                                    }
+                                  );
+                                }}
+                              >
+                                复制图片
+                              </Button>
+                            </>
+                          )}
+                          {current > 0 && (
+                            <Button
+                              onClick={() => prev()}
+                              icon={<LeftCircleOutlined />}
+                            >
+                              上一步
+                            </Button>
+                          )}
+                          {current == 0 && (
+                            <>
+                              <Upload {...props}>
+                                <Button
+                                  ref={ref1}
+                                  style={{ marginRight: "8px" }}
+                                  icon={<UploadOutlined />}
+                                >
+                                  导入数据
+                                </Button>
+                              </Upload>
+                              <Button
+                                icon={<QuestionCircleOutlined />}
+                                onClick={() => setOpen(true)}
+                                style={{ margin: "8px 0" }}
+                              >
+                                导览帮助
+                              </Button>
+                            </>
+                          )}
+                        </div>
+                      </Spin>
                     </>
-                  )}
-                  {current > 0 && (
-                    <Button
-                      onClick={() => prev()}
-                      icon={<LeftCircleOutlined />}
-                    >
-                      上一步
-                    </Button>
-                  )}
-                  {current == 0 && (
+                  }
+                />
+                <Route
+                  path="/table"
+                  element={
                     <>
-                      <Upload {...props}>
-                        <Button
-                          ref={ref1}
-                          style={{ marginRight: "8px" }}
-                          icon={<UploadOutlined />}
-                        >
-                          导入数据
-                        </Button>
-                      </Upload>
-                      <Button
-                        icon={<QuestionCircleOutlined />}
-                        onClick={() => setOpen(true)}
-                        style={{ margin: "8px 0" }}
-                      >
-                        导览帮助
-                      </Button>
+                      <RwrTable />
                     </>
-                  )}
-                </div>
-              </Spin>
+                  }
+                />
+                <Route
+                  path="/*"
+                  element={
+                    <>
+                      <Typography>什么都没有，3秒后返回首页</Typography>
+                      <meta http-equiv="refresh" content="3;url=/" />
+                    </>
+                  }
+                />
+              </Routes>
             </div>
           </Content>
           <Divider>{randomItem}</Divider>
