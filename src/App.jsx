@@ -177,18 +177,17 @@ const App = () => {
     },
     {
       key: "2",
+      label: "（实验性！）",
       icon: <TranslationOutlined />,
       children: [
         {
           key: "zh",
           label: "中文",
-          extra: "zh",
           icon: <SwitcherOutlined />,
         },
         {
           key: "en",
           label: "English",
-          extra: "en",
           icon: <SwitcherOutlined />,
         },
       ],
@@ -341,7 +340,7 @@ const App = () => {
             if (record.key.length > 0)
               message.open({
                 type: "success",
-                content: "删除" + record.name,
+                content: t("删除") + record.name,
                 duration: 3,
               });
           }}
@@ -979,7 +978,7 @@ const App = () => {
           >
             <Menu
               mode="inline"
-              defaultOpenKeys={["1", "2"]}
+              defaultOpenKeys={["1"]}
               style={{ height: "100%", borderInlineEnd: 0 }}
               items={navItem}
               onClick={(key) =>
