@@ -420,7 +420,7 @@ const RwrTable = () => {
       {/* 武器对比模态框 */}
       <Modal
         title={`武器对比 (${selectedWeapons.length}件)`}
-        visible={compareModalVisible}
+        open={compareModalVisible}
         width="90%"
         onCancel={() => setCompareModalVisible(false)}
         footer={[

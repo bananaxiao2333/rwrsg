@@ -1,0 +1,24 @@
+{
+  "topWarn": "All Running With Rifles assets © 2015 - {{year}} Osumia Games. This site not affiliated with Osumia Games. This is a fan-made website. ",
+  "butNext": "Next",
+  "butPrevious": "Previous",
+  "butImport": "Import Data",
+  "butCopyImg": "Copy Image",
+  "pic": "Image",
+  "key": "Identifier",
+  "action": "Action",
+  "pages": "Page Navigation",
+  "home": "Home",
+  "table": "Data Workbench",
+  "countup": "We have been through",
+  "countdown": "RWRSG can still accompany you for",
+  "userCount": "Some have been here before",
+  "siteCount": "Have been viewed in the past",
+  "pageCount": "This page has been seen times",
+  "app": {
+    "items": "Items for Sale",
+    "property": "Property",
+    "save": "Save",
+    "currentTip": "Currently contains {{num}} items"
+  }
+}

@@ -5,6 +5,7 @@ import "@ant-design/v5-patch-for-react-19";
 import { ConfigProvider, Watermark } from "antd";
 import zhCN from "antd/locale/zh_CN";
 import App from "./App";
+import "./i18n";
 
 createRoot(document.getElementById("root")).render(
   <StrictMode>

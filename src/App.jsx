@@ -7,16 +7,22 @@ import {
   DollarCircleOutlined,
   DownloadOutlined,
   EyeOutlined,
+  FileOutlined,
   FileTextOutlined,
   GithubOutlined,
   HomeOutlined,
+  LaptopOutlined,
   LeftCircleOutlined,
   LoadingOutlined,
   MoonOutlined,
+  NotificationOutlined,
   PlusOutlined,
   QuestionCircleOutlined,
   RightCircleFilled,
   SunOutlined,
+  SwitcherOutlined,
+  TableOutlined,
+  TranslationOutlined,
   UploadOutlined,
   UserOutlined,
 } from "@ant-design/icons";
@@ -28,11 +34,13 @@ import {
   ColorPicker,
   ConfigProvider,
   Divider,
+  Dropdown,
   Flex,
   Image,
   Input,
   InputNumber,
   Layout,
+  Menu,
   message,
   Modal,
   Row,
@@ -44,15 +52,15 @@ import {
   Table,
   theme,
   Timeline,
-  Tour,
+  // Tour,
   Typography,
   Upload,
   Watermark,
 } from "antd";
 import { Button, Steps } from "antd";
 import logo from "./assets/icon.png";
-import thumbUp from "./assets/emoticon_thumbup_gray.png";
-import smile from "./assets/emoticon_smiley_gray.png";
+// import thumbUp from "./assets/emoticon_thumbup_gray.png";
+// import smile from "./assets/emoticon_smiley_gray.png";
 import Title from "antd/es/typography/Title";
 import Marquee from "react-fast-marquee";
 import fs from "file-saver";
@@ -64,8 +72,9 @@ import CountUp from "react-countup";
 import priceData from "./price.json";
 import priceTxt from "./og_price.json";
 import useLocalStorageState from "use-local-storage-state";
-import { Route, Routes } from "react-router-dom";
+import { Route, Routes, useNavigate } from "react-router-dom";
 import RwrTable from "./Table";
+import { useTranslation } from "react-i18next";
 
 const formatter = (value) => <CountUp end={value} separator="," />;
 
@@ -92,56 +101,12 @@ const preloadedUrls = Object.fromEntries(
 
 // 整整50行没啥用的东西
 const lines = [
-  "时光荏苒，记忆如沙",
-  "梦想在远方，脚步在当下",
-  "城市灯火，永不熄灭的星辰",
-  "爱是无声的诗，来自心底",
-  "雨滴轻敲窗，思绪随风飘",
-  "书籍是沉默的导师，指引迷途",
-  "音乐响起，灵魂开始舞蹈",
-  "自然之声，治愈疲惫的心灵",
-  "友情如茶，苦涩中带甜",
-  "科技之光，照亮未知的黑暗",
-  "旅行是写给自己的情书",
-  "美食的香气，唤醒沉睡的味蕾",
-  "星空之下，我们都是宇宙的孩子",
-  "坚持是通往成功的桥梁",
-  "时间如流水，一去不复返",
-  "微笑是打开心门的钥匙",
-  "家是永远的避风港",
-  "工作与休闲，生活的双翼",
-  "学习是永不停歇的旅程",
-  "健康是生命的基石",
-  "环保行动，守护地球家园",
-  "创新是未来的引擎",
-  "历史的长河，映照今日",
-  "艺术是情感的出口",
-  "运动释放能量，焕发活力",
-  "冥想中，找到内心的宁静",
-  "幽默是生活的调味剂",
-  "诚实赢得信任，虚伪带来孤独",
-  "失败是成长的阶梯",
-  "感恩每一刻，珍惜小幸福",
-  "好奇心驱动世界的进步",
-  "耐心等待，花开有时",
-  "分享快乐，温暖倍增",
-  "孤独是自我对话的时光",
-  "希望是黑暗中的灯塔",
-  "勇气征服恐惧，成就非凡",
-  "简单生活，回归本真",
-  "科技便利，也需警惕依赖",
-  "文化交融，世界更精彩",
-  "教育点燃希望的火种",
-  "和平是人类的共同梦想",
-  "爱情需要用心浇灌",
-  "自然奇观，令人叹为观止",
-  "城市节奏，永不停歇的心跳",
-  "信息洪流，筛选真知",
-  "AI时代，人机共生",
-  "虚拟世界，真实情感",
-  "可持续发展，留给未来的礼物",
-  "心理健康，不可忽视",
-  "别光顾着看，你也是这列表的一部分",
+  "梦想只是梦想，不能当饭吃。那我就不吃。我只是害怕如果我今天死掉，或许就这样一事无成，过完一生。——《心灵奇旅》",
+  "由衷感谢所有对本项目提供帮助的游戏玩家以及社区成员。30年后有人问起RWR是什么，哦，那是一个漫长而愉快的梦。",
+  "圣诞快乐，劳伦斯先生。",
+  "强者救赎自己，圣人普度他人。——《肖申克的救赎》",
+  "希望是美好的，也许是人间至善，而美好的事物永不消逝。——《肖申克的救赎》",
+  "有的鸟终究是关不住的，因为他们的羽翼太过光辉——《肖申克的救赎》",
 ];
 
 const unitTrans = (num) => {
@@ -189,6 +154,47 @@ const extractCommitInfo = (commits) => {
 };
 
 const App = () => {
+  const { t, i18n } = useTranslation();
+  const navigate = useNavigate();
+
+  const navItem = [
+    {
+      key: "1",
+      label: t("pages"),
+      icon: <FileOutlined />,
+      children: [
+        {
+          key: "1.1",
+          label: <a href="/#/">{t("home")}</a>,
+          icon: <HomeOutlined />,
+        },
+        {
+          key: "1.2",
+          label: <a href="/#/table">{t("table")}</a>,
+          icon: <TableOutlined />,
+        },
+      ],
+    },
+    {
+      key: "2",
+      icon: <TranslationOutlined />,
+      children: [
+        {
+          key: "zh",
+          label: "中文",
+          extra: "zh",
+          icon: <SwitcherOutlined />,
+        },
+        {
+          key: "en",
+          label: "English",
+          extra: "en",
+          icon: <SwitcherOutlined />,
+        },
+      ],
+    },
+  ];
+
   const [commitHistory, setCommitHistory] = React.useState([]);
   React.useEffect(() => {
     const fetchCommits = async () => {
@@ -216,7 +222,7 @@ const App = () => {
     setSpinning(true);
     message.open({
       type: "info",
-      content: `目前包含${Object.keys(preloadedUrls).length}个物品`,
+      content: t("app.currentTip", { num: Object.keys(preloadedUrls).length }),
       duration: 3,
     });
 
@@ -252,43 +258,43 @@ const App = () => {
   const ref4 = React.useRef(null);
   const ref5 = React.useRef(null);
   const [open, setOpen] = React.useState(false);
-  const tSteps = [
-    {
-      title: "欢迎",
-      description: "欢迎使用RWRSG，我们来进行一个简单的漫游式引导以熟悉界面",
-      cover: <img src={smile} style={{ maxWidth: "100px" }} />,
-    },
-    {
-      title: "导入数据",
-      description: "导入被导出数据。注意：重复部分会自动合并，或者去重",
-      target: () => ref1.current,
-    },
-    {
-      title: "下一步",
-      description: "前往下一个步骤",
-      target: () => ref2.current,
-    },
-    {
-      title: "添加售卖物",
-      description: "你可以多选售卖物一次性添加",
-      target: () => ref3.current,
-    },
-    {
-      title: "物品表单",
-      description: "在这里预览你选择的售卖物",
-      target: () => ref4.current,
-    },
-    {
-      title: "进度条",
-      description: "指示正在进行和即将进行的步骤",
-      target: () => ref5.current,
-    },
-    {
-      title: "导览结束",
-      description: "那么我们就到这里，接下来自己发挥。干杯！继续奔跑下去！",
-      cover: <img src={thumbUp} style={{ maxWidth: "100px" }} />,
-    },
-  ];
+  // const tSteps = [
+  //   {
+  //     title: "欢迎",
+  //     description: "欢迎使用RWRSG，我们来进行一个简单的漫游式引导以熟悉界面",
+  //     cover: <img src={smile} style={{ maxWidth: "100px" }} />,
+  //   },
+  //   {
+  //     title: "导入数据",
+  //     description: "导入被导出数据。注意：重复部分会自动合并，或者去重",
+  //     target: () => ref1.current,
+  //   },
+  //   {
+  //     title: "下一步",
+  //     description: "前往下一个步骤",
+  //     target: () => ref2.current,
+  //   },
+  //   {
+  //     title: "添加售卖物",
+  //     description: "你可以多选售卖物一次性添加",
+  //     target: () => ref3.current,
+  //   },
+  //   {
+  //     title: "物品表单",
+  //     description: "在这里预览你选择的售卖物",
+  //     target: () => ref4.current,
+  //   },
+  //   {
+  //     title: "进度条",
+  //     description: "指示正在进行和即将进行的步骤",
+  //     target: () => ref5.current,
+  //   },
+  //   {
+  //     title: "导览结束",
+  //     description: "那么我们就到这里，接下来自己发挥。干杯！继续奔跑下去！",
+  //     cover: <img src={thumbUp} style={{ maxWidth: "100px" }} />,
+  //   },
+  // ];
   const [data, setData] = useLocalStorageState("data", {
     defaultValue: [
       { key: "lottery", name: "彩票", price: 1700, num: 1 },
@@ -298,7 +304,7 @@ const App = () => {
   });
   const columns = [
     {
-      title: "图片",
+      title: t("pic"),
       dataIndex: "key",
       key: "key",
       render: (text) => (
@@ -312,12 +318,12 @@ const App = () => {
       ),
     },
     {
-      title: "标识",
+      title: t("key"),
       dataIndex: "key",
       key: "key",
     },
     {
-      title: "操作",
+      title: t("action"),
       key: "delete",
       render: (_, record) => (
         <Button
@@ -931,18 +937,14 @@ const App = () => {
           type="info"
           message={
             <Marquee pauseOnHover gradient={false}>
-              All Running With Rifles assets © 2015 - {new Date().getFullYear()}{" "}
-              Osumia Games. This site not affiliated with Osumia Games. This is
-              a fan-made website. 所有Running With Rifles资产©2015 -{" "}
-              {new Date().getFullYear()} Osumia Games。本网站不隶属于Osumia
-              Games。这是一个玩家制作的网站。
+              {t("topWarn", { year: new Date().getFullYear() })}
             </Marquee>
           }
         />
         <Header
           style={{
             position: "sticky",
-            top: 0,
+            top: "0px",
             zIndex: 1,
             width: "100%",
             display: "flex",
@@ -969,221 +971,258 @@ const App = () => {
             onChange={(value) => setIsBright(value)}
           />
         </Header>
-        <Tour open={open} onClose={() => setOpen(false)} steps={tSteps} />
-        <div style={{ overflow: "auto", flex: "1" }} ref={ref5}>
-          <Content style={{ padding: "16px 16px" }}>
-            <div
-              style={{
-                padding: 24,
-                borderRadius: borderRadiusLG,
-              }}
-            >
-              <Routes>
-                <Route
-                  path="/"
-                  element={
-                    <>
-                      <Spin
-                        spinning={spinning}
-                        indicator={<LoadingOutlined spin />}
-                        size="large"
-                      >
-                        <Steps
-                          current={current}
-                          items={items}
-                          onChange={(value) => {
-                            setCurrent(value);
-                          }}
-                        />
-                        <div style={contentStyle}>{steps[current].content}</div>
-                        <div style={{ marginTop: 24 }}>
-                          {current < steps.length - 1 && (
-                            <Button
-                              type="primary"
-                              onClick={() => next()}
-                              icon={<RightCircleFilled />}
-                              ref={ref2}
-                              style={{ marginRight: "8px" }}
-                            >
-                              下一步
-                            </Button>
-                          )}
-                          {current === steps.length - 1 && (
-                            <>
+        <Layout>
+          <Sider
+            width={210}
+            style={{ background: colorBgContainer }}
+            breakpoint="lg"
+          >
+            <Menu
+              mode="inline"
+              defaultOpenKeys={["1", "2"]}
+              style={{ height: "100%", borderInlineEnd: 0 }}
+              items={navItem}
+              onClick={(key) =>
+                ["zh", "en"].indexOf(key["key"]) !== -1
+                  ? i18n.changeLanguage(key["key"])
+                  : ""
+              }
+            />
+          </Sider>
+          <div style={{ overflow: "auto", flex: "1" }} ref={ref5}>
+            <Content style={{ padding: "16px 16px" }}>
+              <div
+                style={{
+                  padding: 24,
+                  borderRadius: borderRadiusLG,
+                }}
+              >
+                <Routes>
+                  <Route
+                    path="/"
+                    element={
+                      <>
+                        <Spin
+                          spinning={spinning}
+                          indicator={<LoadingOutlined spin />}
+                          size="large"
+                        >
+                          <Steps
+                            current={current}
+                            items={items}
+                            onChange={(value) => {
+                              setCurrent(value);
+                            }}
+                          />
+                          <div style={contentStyle}>
+                            {steps[current].content}
+                          </div>
+                          <div style={{ marginTop: 24 }}>
+                            {current < steps.length - 1 && (
                               <Button
                                 type="primary"
-                                icon={<DownloadOutlined />}
-                                style={{ marginBottom: "8px" }}
-                                onClick={() =>
-                                  fs.saveAs(
-                                    new Blob([JSON.stringify(data)], {
-                                      type: "text/plain;charset=utf-8",
-                                    }),
-                                    "RWRSG-" + new Date().getTime() + ".json"
-                                  )
-                                }
-                              >
-                                保存数据
-                              </Button>
-                              <Button
-                                type="primary"
-                                style={{
-                                  marginLeft: "8px",
-                                  marginRight: "8px",
-                                }}
-                                icon={<DownloadOutlined />}
-                                onClick={() => {
-                                  html2canvas(canvasRef.current).then(
-                                    (canvas) => {
-                                      canvas.toBlob((blob) => {
-                                        if (blob) {
-                                          // 使用FileSaver保存文件
-                                          saveAs(
-                                            blob,
-                                            "RWRSG-" +
-                                              new Date().getTime() +
-                                              ".png"
-                                          );
-                                        }
-                                      });
-                                    }
-                                  );
-                                }}
-                              >
-                                保存图片
-                              </Button>
-                              <Button
-                                type="primary"
+                                onClick={() => next()}
+                                icon={<RightCircleFilled />}
+                                ref={ref2}
                                 style={{ marginRight: "8px" }}
-                                icon={<CopyOutlined />}
-                                onClick={() => {
-                                  html2canvas(canvasRef.current).then(
-                                    (canvas) => {
-                                      canvas.toBlob((blob) => {
-                                        if (blob) {
-                                          try {
-                                            const item = new ClipboardItem({
-                                              "image/png": blob,
-                                            });
-                                            navigator.clipboard.write([item]);
-                                            message.info(
-                                              "已将图片复制至剪贴板"
-                                            );
-                                          } catch (error) {
-                                            message.error(
-                                              "复制至剪贴板失败：" + error
+                              >
+                                {t("butNext")}
+                              </Button>
+                            )}
+                            {current === steps.length - 1 && (
+                              <>
+                                <Button
+                                  type="primary"
+                                  icon={<DownloadOutlined />}
+                                  style={{ marginBottom: "8px" }}
+                                  onClick={() =>
+                                    fs.saveAs(
+                                      new Blob([JSON.stringify(data)], {
+                                        type: "text/plain;charset=utf-8",
+                                      }),
+                                      "RWRSG-" + new Date().getTime() + ".json"
+                                    )
+                                  }
+                                >
+                                  保存数据
+                                </Button>
+                                <Button
+                                  type="primary"
+                                  style={{
+                                    marginLeft: "8px",
+                                    marginRight: "8px",
+                                  }}
+                                  icon={<DownloadOutlined />}
+                                  onClick={() => {
+                                    html2canvas(canvasRef.current).then(
+                                      (canvas) => {
+                                        canvas.toBlob((blob) => {
+                                          if (blob) {
+                                            // 使用FileSaver保存文件
+                                            saveAs(
+                                              blob,
+                                              "RWRSG-" +
+                                                new Date().getTime() +
+                                                ".png"
                                             );
                                           }
-                                        }
-                                      });
-                                    }
-                                  );
-                                }}
-                              >
-                                复制图片
-                              </Button>
-                            </>
-                          )}
-                          {current > 0 && (
-                            <Button
-                              onClick={() => prev()}
-                              icon={<LeftCircleOutlined />}
-                            >
-                              上一步
-                            </Button>
-                          )}
-                          {current == 0 && (
-                            <>
-                              <Upload {...props}>
-                                <Button
-                                  ref={ref1}
-                                  style={{ marginRight: "8px" }}
-                                  icon={<UploadOutlined />}
+                                        });
+                                      }
+                                    );
+                                  }}
                                 >
-                                  导入数据
+                                  保存图片
                                 </Button>
-                              </Upload>
+                                <Button
+                                  type="primary"
+                                  style={{ marginRight: "8px" }}
+                                  icon={<CopyOutlined />}
+                                  onClick={() => {
+                                    html2canvas(canvasRef.current).then(
+                                      (canvas) => {
+                                        canvas.toBlob((blob) => {
+                                          if (blob) {
+                                            try {
+                                              const item = new ClipboardItem({
+                                                "image/png": blob,
+                                              });
+                                              navigator.clipboard.write([item]);
+                                              message.info(
+                                                "已将图片复制至剪贴板"
+                                              );
+                                            } catch (error) {
+                                              message.error(
+                                                "复制至剪贴板失败：" + error
+                                              );
+                                            }
+                                          }
+                                        });
+                                      }
+                                    );
+                                  }}
+                                >
+                                  {t("butCopyImg")}
+                                </Button>
+                              </>
+                            )}
+                            {current > 0 && (
                               <Button
-                                icon={<QuestionCircleOutlined />}
-                                onClick={() => setOpen(true)}
-                                style={{ margin: "8px 0" }}
+                                onClick={() => prev()}
+                                icon={<LeftCircleOutlined />}
                               >
-                                导览帮助
+                                {t("butPrevious")}
                               </Button>
-                            </>
-                          )}
-                        </div>
-                      </Spin>
-                    </>
-                  }
-                />
-                <Route
-                  path="/table"
-                  element={
-                    <>
-                      <RwrTable />
-                    </>
-                  }
-                />
-                <Route
-                  path="/*"
-                  element={
-                    <>
-                      <Typography>什么都没有，3秒后返回首页</Typography>
-                      <meta http-equiv="refresh" content="3;url=/" />
-                    </>
-                  }
-                />
-              </Routes>
-            </div>
-          </Content>
-          <Divider>{randomItem}</Divider>
-          <Row justify="space-evenly">
-            <Statistic
-              value={siteUv}
-              title="曾经有人来过"
-              suffix="位"
-              formatter={formatter}
-              prefix={<UserOutlined />}
-            />
-            <Statistic
-              value={sitePv}
-              title="过去有人看过"
-              suffix="次"
-              formatter={formatter}
-              prefix={<EyeOutlined />}
-            />
-            <Statistic
-              value={pagePv}
-              title="本页有次见过"
-              suffix="个"
-              formatter={formatter}
-              prefix={<FileTextOutlined />}
-            />
-          </Row>
-          <a href="https://github.com/bananaxiao2333/rwrsg">
-            <Row
-              justify="space-evenly"
-              style={{ margin: "20px 0", padding: "10px" }}
-            >
-              <img src="https://img.shields.io/github/contributors/bananaxiao2333/rwrsg?label=%E8%B4%A1%E7%8C%AE%E8%80%85%E6%95%B0" />
-              <img src="https://img.shields.io/github/commit-activity/t/bananaxiao2333/rwrsg?label=%E8%B4%A1%E7%8C%AE%E6%AC%A1%E6%95%B0" />
-              <img src="https://img.shields.io/github/actions/workflow/status/bananaxiao2333/rwrsg/.github%2Fworkflows%2Fghpage.yml?label=%E6%9E%84%E5%BB%BA%E7%8A%B6%E6%80%81" />
-              <img src="https://img.shields.io/github/last-commit/bananaxiao2333/rwrsg?label=%E6%9B%B4%E6%96%B0%E6%97%B6%E9%97%B4" />
-            </Row>
-          </a>
-          <div style={{ width: "100%", alignContent: "center" }}>
-            {commitHistory ? (
-              <Timeline
-                mode="alternate"
-                items={commitHistory}
-                style={{ width: "95vw" }}
+                            )}
+                            {current == 0 && (
+                              <>
+                                <Upload {...props}>
+                                  <Button
+                                    ref={ref1}
+                                    style={{ marginRight: "8px" }}
+                                    icon={<UploadOutlined />}
+                                  >
+                                    {t("butImport")}
+                                  </Button>
+                                </Upload>
+                                {/* <Button
+                                  icon={<QuestionCircleOutlined />}
+                                  onClick={() => setOpen(true)}
+                                  style={{ margin: "8px 0" }}
+                                >
+                                  导览帮助
+                                </Button> */}
+                              </>
+                            )}
+                          </div>
+                        </Spin>
+                      </>
+                    }
+                  />
+                  <Route
+                    path="/table"
+                    element={
+                      <>
+                        <RwrTable />
+                      </>
+                    }
+                  />
+                  <Route
+                    path="/*"
+                    element={
+                      <>
+                        <Typography>什么都没有，3秒后返回首页</Typography>
+                        <meta http-equiv="refresh" content="3;url=/" />
+                      </>
+                    }
+                  />
+                </Routes>
+              </div>
+            </Content>
+            <Divider />
+            <Typography style={{ width: "95%", padding: "20px" }}>
+              {randomItem}
+            </Typography>
+
+            <Row justify="space-evenly">
+              <Statistic.Timer
+                type="countdown"
+                title={t("countdown")}
+                value={2064268800000}
+                format="D day and H:m:s"
               />
-            ) : (
-              <Spin indicator={<GithubOutlined spin />} />
-            )}
+              <Statistic.Timer
+                type="countup"
+                title={t("countup")}
+                value={1755682690000}
+                format="D day and H:m:s"
+              />
+            </Row>
+            <Row justify="space-evenly">
+              <Statistic
+                value={siteUv}
+                title={t("userCount")}
+                formatter={formatter}
+                prefix={<UserOutlined />}
+              />
+              <Statistic
+                value={sitePv}
+                title={t("siteCount")}
+                formatter={formatter}
+                prefix={<EyeOutlined />}
+              />
+              <Statistic
+                value={pagePv}
+                title={t("pageCount")}
+                formatter={formatter}
+                prefix={<FileTextOutlined />}
+              />
+            </Row>
+            <a href="https://github.com/bananaxiao2333/rwrsg">
+              <Row
+                justify="space-evenly"
+                style={{ margin: "20px 0", padding: "10px" }}
+              >
+                <img src="https://img.shields.io/github/contributors/bananaxiao2333/rwrsg" />
+                <img src="https://img.shields.io/github/commit-activity/t/bananaxiao2333/rwrsg" />
+                <img src="https://img.shields.io/github/actions/workflow/status/bananaxiao2333/rwrsg/.github%2Fworkflows%2Fghpage.yml" />
+                <img src="https://img.shields.io/github/last-commit/bananaxiao2333/rwrsg" />
+              </Row>
+            </a>
+            <div style={{ width: "100%", alignItems: "center" }}>
+              {commitHistory ? (
+                <Timeline
+                  mode="alternate"
+                  items={commitHistory}
+                  style={{ width: "95%" }}
+                />
+              ) : (
+                <div style={{ width: "100%", alignItems: "center" }}>
+                  <Spin indicator={<GithubOutlined spin />} />
+                </div>
+              )}
+            </div>
           </div>
-        </div>
+        </Layout>
       </Layout>
     </ConfigProvider>
   );

@@ -1,0 +1,24 @@
+{
+  "topWarn": "所有Running With Rifles资产©2015 - {{year}} Osumia Games。本网站不隶属于Osumia Games。这是一个玩家制作的网站。",
+  "butNext": "下一步",
+  "butPrevious": "上一步",
+  "butImport": "导入数据",
+  "butCopyImg": "复制图片",
+  "pic": "图片",
+  "key": "标识",
+  "action": "操作",
+  "pages": "页面导航",
+  "home": "主页",
+  "table": "数据工作台",
+  "countup": "我们已经走过了",
+  "countdown": "RWRSG还能陪伴你",
+  "userCount": "曾经有人来过",
+  "siteCount": "过去有人看过",
+  "pageCount": "本页有次见过",
+  "app": {
+    "items": "售卖物",
+    "property": "属性",
+    "save": "保存",
+    "currentTip": "目前包含{{num}}个物品"
+  }
+}
