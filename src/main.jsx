@@ -4,8 +4,10 @@ import { HashRouter } from "react-router-dom";
 import "@ant-design/v5-patch-for-react-19";
 import { ConfigProvider, Watermark } from "antd";
 import zhCN from "antd/locale/zh_CN";
+import enUS from "antd/locale/en_US";
 import App from "./App";
 import "./i18n";
+import i18n from "./i18n";
 
 createRoot(document.getElementById("root")).render(
   <StrictMode>
@@ -16,7 +18,7 @@ createRoot(document.getElementById("root")).render(
             colorPrimary: "#9cc321",
           },
         }}
-        locale={zhCN}
+        locale={{ zh: zhCN, en: enUS }[i18n.language]}
       >
         <Watermark content={["RWR Store Generator"]}>
           <Suspense

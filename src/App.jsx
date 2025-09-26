@@ -11,13 +11,10 @@ import {
   FileTextOutlined,
   GithubOutlined,
   HomeOutlined,
-  LaptopOutlined,
   LeftCircleOutlined,
   LoadingOutlined,
   MoonOutlined,
-  NotificationOutlined,
   PlusOutlined,
-  QuestionCircleOutlined,
   RightCircleFilled,
   SunOutlined,
   SwitcherOutlined,
@@ -34,7 +31,6 @@ import {
   ColorPicker,
   ConfigProvider,
   Divider,
-  Dropdown,
   Flex,
   Image,
   Input,
@@ -79,9 +75,6 @@ import { useTranslation } from "react-i18next";
 const formatter = (value) => <CountUp end={value} separator="," />;
 
 const { Header, Content, Footer, Sider } = Layout;
-const items = [
-  { key: 1, icon: React.createElement(HomeOutlined), label: "首页" },
-];
 function removeDuplicates(arr) {
   const seen = new Map();
   return arr.filter((item) => {
@@ -99,7 +92,6 @@ const preloadedUrls = Object.fromEntries(
   Object.entries(imageModules).map(([path, module]) => [path, module.default])
 );
 
-// 整整50行没啥用的东西
 const lines = [
   "梦想只是梦想，不能当饭吃。那我就不吃。我只是害怕如果我今天死掉，或许就这样一事无成，过完一生。——《心灵奇旅》",
   "由衷感谢所有对本项目提供帮助的游戏玩家以及社区成员。30年后有人问起RWR是什么，哦，那是一个漫长而愉快的梦。",
@@ -177,7 +169,7 @@ const App = () => {
     },
     {
       key: "2",
-      label: "（实验性！）",
+      label: t("experi"),
       icon: <TranslationOutlined />,
       children: [
         {
@@ -244,9 +236,14 @@ const App = () => {
     opti = opti.concat([
       {
         value: n,
-        label: translData[n]?.cn_name
-          ? `${translData[n].cn_name + "-" + translData[n].en_name} (${n})`
-          : n,
+        label:
+          i18n.language == "zh"
+            ? translData[n]?.cn_name
+              ? `${translData[n].cn_name + "-" + translData[n].en_name} (${n})`
+              : n
+            : translData[n]?.en_name
+            ? `${translData[n].en_name} (${n})`
+            : n,
       },
     ]);
   });
@@ -340,7 +337,7 @@ const App = () => {
             if (record.key.length > 0)
               message.open({
                 type: "success",
-                content: t("删除") + record.name,
+                content: t("delete") + " " + record.name,
                 duration: 3,
               });
           }}
@@ -355,7 +352,7 @@ const App = () => {
 
   const columns2 = [
     {
-      title: "图片/名称",
+      title: t("pic") + "/" + t("key"),
       dataIndex: "key",
       key: "key",
       fixed: "right",
@@ -377,20 +374,20 @@ const App = () => {
                 setIsModalOpen(true);
             }}
           >
-            {record.name ? <>{record.name}</> : <>未设定</>}
+            {record.name ? <>{record.name}</> : <>{t("unset")}</>}
           </Button>
         </div>
       ),
     },
     {
-      title: "标识",
+      title: t("key"),
       dataIndex: "key",
       key: "key",
 
       responsive: ["sm"],
     },
     {
-      title: "价格(rp)",
+      title: t("price") + "(rp)",
       dataIndex: "price",
       key: "price",
       onFilter: (value, record) => record.name.indexOf(value) === 0,
@@ -408,13 +405,13 @@ const App = () => {
                 setIsModalOpen(true);
             }}
           >
-            {text ? <>{text}rp</> : <>未设定</>}
+            {text ? <>{text}rp</> : <>{t("unset")}</>}
           </Button>
         </>
       ),
     },
     {
-      title: "数量(个)",
+      title: t("num"),
       dataIndex: "num",
       key: "num",
       onFilter: (value, record) => record.name.indexOf(value) === 0,
@@ -432,7 +429,7 @@ const App = () => {
                 setIsModalOpen(true);
             }}
           >
-            {text ? <>{text}</> : <>未设定</>}
+            {text ? <>{text}</> : <>{t("unset")}</>}
           </Button>
         </>
       ),
@@ -456,7 +453,6 @@ const App = () => {
       Table.SELECTION_NONE,
       {
         key: "delete",
-        text: "删除所选项",
         onSelect: (changeableRowKeys) => {
           //console.log("orgin data:", data);
           //console.log("rows to del:", selectedRowKeys);
@@ -474,7 +470,7 @@ const App = () => {
           if (selectedRowKeys.join().length > 0)
             message.open({
               type: "success",
-              content: "删除" + selectedRowKeys.join(),
+              content: t("delete") + " " + selectedRowKeys.join(),
               duration: 3,
             });
           setSelectedRowKeys([]);
@@ -485,7 +481,7 @@ const App = () => {
   const [editModal, setEditModal] = React.useState();
   const canvasRef = React.useRef(null);
   const [editableStr, setEditableStr] = useLocalStorageState("title", {
-    defaultValue: "RWR摆摊生成器",
+    defaultValue: t("rwrsg"),
   });
   const [picWidth, setPicWidth] = useLocalStorageState("picWidth");
   const [showName, setShowName] = useLocalStorageState("showName", {
@@ -518,7 +514,7 @@ const App = () => {
   const { Paragraph, Text } = Typography;
   const steps = [
     {
-      title: "售卖物",
+      title: t("app.items"),
       content: (
         <>
           <Row style={{ justifyContent: "space-evenly" }}>
@@ -534,14 +530,14 @@ const App = () => {
             </Col>
             <Col xs={{ flex: "100%" }} sm={{ flex: "25%" }}>
               <Card
-                title="添加售卖物"
+                title={t("app.add_items")}
                 variant="borderless"
                 style={{ height: "100%" }}
               >
                 <div ref={ref3} style={{ height: "100%" }}>
                   <Select
                     showSearch
-                    placeholder="请输入名称"
+                    placeholder={t("app.input_name")}
                     mode="multiple"
                     size="small"
                     prefix={<AppstoreAddOutlined />}
@@ -563,9 +559,14 @@ const App = () => {
                         newData = newData.concat([
                           {
                             key: item,
-                            name: translData[item]?.cn_name
-                              ? `${translData[item].cn_name}`
-                              : item,
+                            name:
+                              i18n.language == "zh"
+                                ? translData[item]?.cn_name
+                                  ? `${translData[item].cn_name}`
+                                  : item
+                                : translData[item]?.en_name
+                                ? `${translData[item].en_name}`
+                                : item,
                             price: priceData[item] ?? 0,
                           },
                         ]);
@@ -573,7 +574,7 @@ const App = () => {
                       setData(removeDuplicates(data.concat(newData)));
                       message.open({
                         type: "success",
-                        content: "增加" + addChoise.join(),
+                        content: t("add") + addChoise.join(),
                         duration: 3,
                       });
                       setAddChoice([]);
@@ -582,8 +583,7 @@ const App = () => {
                   <Alert
                     type="info"
                     closable
-                    message="添加完成后在属性中：如果物品有翻译会自动显示中文翻译，
-                    如果物品在群中有标价会自动添加价格（暂无收藏品/破损物/武器其他模式价格）"
+                    message={t("app.tip1")}
                     showIcon
                     style={{ margin: "10px 0" }}
                   />
@@ -592,7 +592,7 @@ const App = () => {
                     items={[
                       {
                         key: "1",
-                        label: "群价数据源",
+                        label: t("app.tip2"),
                         children: <p>{priceTxt["txt"]}</p>,
                       },
                     ]}
@@ -606,13 +606,21 @@ const App = () => {
       ),
     },
     {
-      title: "属性",
+      title: t("property"),
       content: (
         <>
           <Table virtual size="small" columns={columns2} dataSource={data} />
           <Modal
             title={
-              "设置" + editKey.key + "(" + editKey.name + ")" + "的" + editMode
+              t("set") +
+              " " +
+              editKey.key +
+              "(" +
+              editKey.name +
+              ")" +
+              t("'s") +
+              " " +
+              editMode
             }
             open={isModalOpen}
             onOk={() => {
@@ -647,7 +655,7 @@ const App = () => {
       ),
     },
     {
-      title: "保存",
+      title: t("app.save"),
       content: (
         <>
           <Alert message="如果尺寸不合适可以在下方调整宽度" closable showIcon />

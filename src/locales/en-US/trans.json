@@ -16,9 +16,22 @@
   "siteCount": "Have Been Viewed in the Past",
   "pageCount": "This Page Has Been Seen Times",
   "delete": "Delete",
+  "add": "Add",
+  "unset": "Unset",
+  "price": "Price",
+  "num": "Quantity",
+  "rwrsg": "RWR Stall Generator",
+  "property": "Property",
+  "set": "Set",
+  "'s": "'s",
+  "experi": "(Experimental!)",
   "app": {
     "items": "Items for Sale",
-    "property": "Property",
+    "tip1": "After adding items in Properties: If an item has a translation, its Chinese translation will be displayed automatically; if the item has a set price in the group, the price will be automatically added (prices for collectibles/damaged items/weapons in other modes are currently unavailable).",
+    "tip2": "Group Price Data Source (ZH)",
+    "add_items": "Add Items for Sale",
+    "input_name": "Please enter the name",
+    "property": "Properties",
     "save": "Save",
     "currentTip": "Currently contains {{num}} items"
   }

@@ -352,7 +352,7 @@
     "cn_name": "MAG-7霰弹枪（龙息弹）"
   },
   "unknown": { "en_name": "trauma kit", "cn_name": "创伤医护包" },
-  "mg42": { "en_name": "MG-3", "cn_name": "车载MG3" },
+  "mg42": { "en_name": "MG-42", "cn_name": "MG-42通用机枪" },
   "mgl": { "en_name": "MGL Flasher", "cn_name": "MGL闪光弹发射器" },
   "mgv176": { "en_name": "MGV-176", "cn_name": "MGV-176冲锋枪" },
   "microgun": { "en_name": "WB-II Microgun", "cn_name": "WB-Ⅱ轻型加特林机枪" },
