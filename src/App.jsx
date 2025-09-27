@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useContext, useMemo } from "react";
 import {
   AppstoreAddOutlined,
   AppstoreOutlined,
@@ -10,6 +10,7 @@ import {
   FileOutlined,
   FileTextOutlined,
   GithubOutlined,
+  HolderOutlined,
   HomeOutlined,
   LeftCircleOutlined,
   LoadingOutlined,
@@ -71,6 +72,15 @@ import useLocalStorageState from "use-local-storage-state";
 import { Route, Routes, useNavigate } from "react-router-dom";
 import RwrTable from "./Table";
 import { useTranslation } from "react-i18next";
+import { DndContext } from "@dnd-kit/core";
+import { restrictToVerticalAxis } from "@dnd-kit/modifiers";
+import {
+  arrayMove,
+  SortableContext,
+  useSortable,
+  verticalListSortingStrategy,
+} from "@dnd-kit/sortable";
+import { CSS } from "@dnd-kit/utilities";
 
 const formatter = (value) => <CountUp end={value} separator="," />;
 
@@ -145,9 +155,64 @@ const extractCommitInfo = (commits) => {
   });
 };
 
+const RowContext = React.createContext({});
+const DragHandle = () => {
+  const { setActivatorNodeRef, listeners } = useContext(RowContext);
+  return (
+    <Button
+      type="text"
+      size="small"
+      icon={<HolderOutlined />}
+      style={{ cursor: "move" }}
+      ref={setActivatorNodeRef}
+      {...listeners}
+    />
+  );
+};
+
+const DRow = (props) => {
+  const {
+    attributes,
+    listeners,
+    setNodeRef,
+    setActivatorNodeRef,
+    transform,
+    transition,
+    isDragging,
+  } = useSortable({ id: props["data-row-key"] });
+  const style = {
+    ...props.style,
+    transform: CSS.Translate.toString(transform),
+    transition,
+    ...(isDragging ? { position: "relative", zIndex: 9999 } : {}),
+  };
+  const contextValue = useMemo(
+    () => ({ setActivatorNodeRef, listeners }),
+    [setActivatorNodeRef, listeners]
+  );
+  return (
+    <RowContext.Provider value={contextValue}>
+      <tr {...props} ref={setNodeRef} style={style} {...attributes} />
+    </RowContext.Provider>
+  );
+};
+
 const App = () => {
   const { t, i18n } = useTranslation();
   const navigate = useNavigate();
+  const onDragEnd = ({ active, over }) => {
+    if (active.id !== over?.id) {
+      setData((prevState) => {
+        const activeIndex = prevState.findIndex(
+          (record) => record.key === active?.id
+        );
+        const overIndex = prevState.findIndex(
+          (record) => record.key === over?.id
+        );
+        return arrayMove(prevState, activeIndex, overIndex);
+      });
+    }
+  };
 
   const navItem = [
     {
@@ -299,6 +364,7 @@ const App = () => {
     ],
   });
   const columns = [
+    { key: "sort", align: "center", width: 80, render: () => <DragHandle /> },
     {
       title: t("pic"),
       dataIndex: "key",
@@ -511,6 +577,9 @@ const App = () => {
   const [txtColor, setTxtColor] = useLocalStorageState("txtColor", {
     defaultValue: "#000000",
   });
+  const [useFont, setUseFont] = useLocalStorageState("useFont", {
+    defaultValue: true,
+  });
   const { Paragraph, Text } = Typography;
   const steps = [
     {
@@ -520,12 +589,24 @@ const App = () => {
           <Row style={{ justifyContent: "space-evenly" }}>
             <Col xs={{ flex: "100%" }} sm={{ flex: "70%" }}>
               <div ref={ref4}>
-                <Table
-                  size="small"
-                  rowSelection={rowSelection}
-                  columns={columns}
-                  dataSource={data}
-                />
+                <DndContext
+                  modifiers={[restrictToVerticalAxis]}
+                  onDragEnd={onDragEnd}
+                >
+                  <SortableContext
+                    items={data.map((i) => i.key)}
+                    strategy={verticalListSortingStrategy}
+                  >
+                    <Table
+                      rowKey="key"
+                      components={{ body: { row: DRow } }}
+                      size="small"
+                      rowSelection={rowSelection}
+                      columns={columns}
+                      dataSource={data}
+                    />
+                  </SortableContext>
+                </DndContext>
               </div>
             </Col>
             <Col xs={{ flex: "100%" }} sm={{ flex: "25%" }}>
@@ -691,7 +772,7 @@ const App = () => {
                       token: {
                         colorText: txtColor,
                         colorTextDescription: txtColor,
-                        fontFamily: "komikax",
+                        fontFamily: useFont ? "komikax" : "",
                       },
                     }}
                   >
@@ -752,7 +833,10 @@ const App = () => {
                           </div>
 
                           {showName ? (
-                            <Typography.Title style={{ margin: "0" }} level={5}>
+                            <Typography.Title
+                              style={{ margin: "0", width: "120px" }}
+                              level={5}
+                            >
                               {item.name}
                             </Typography.Title>
                           ) : (
@@ -878,6 +962,12 @@ const App = () => {
                 unCheckedChildren="隐藏数据标题"
                 value={showTitle}
                 onChange={() => setShowTitle(!showTitle)}
+              />
+              <Switch
+                checkedChildren="使用特殊字体"
+                unCheckedChildren="不用特殊字体"
+                value={useFont}
+                onChange={() => setUseFont(!useFont)}
               />
               <ColorPicker
                 showText
