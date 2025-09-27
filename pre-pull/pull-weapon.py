@@ -41,13 +41,23 @@ for weaponTree in rwrWeaponTreeList:
             continue
         if specAttr['name'] in recordedList:
             continue
-        ret.append({**specAttr,'key':specAttr['name'],'cnName':rwrTransKeyPairList[specAttr['name']]})
+        hitsAttr = tree.find('.//result').attrib
+        accAttrL = tree.findall('.//stance')
+        accAttr = {}
+        for i in accAttrL:
+            tempAttr = i.attrib
+            accAttr[tempAttr['state_key']+'_stance'] = tempAttr['accuracy']
+        item = {**specAttr,**hitsAttr,**accAttr,'key':specAttr['name'],'cnName':rwrTransKeyPairList[specAttr['name']]}
+        ret.append(item)
         recordedList.append(specAttr['name'])
-        for key in specAttr:
+        for key in item:
             if key not in keyList:
                 keyList.append(key)
     except Exception as e:
-        logger.warning('{}'.format(e))
-logger.debug(ret)
-with open("weaponAttrList.json", "w") as json_file:
+        pass
+        #logger.warning('{}'.format(e))
+#logger.debug(ret)
+with open("weaponAttrList.json", "w",encoding="utf-8") as json_file:
     json.dump(ret, json_file)
+with open("keyList.json", "w",encoding="utf-8") as json_file:
+    json.dump(keyList, json_file)

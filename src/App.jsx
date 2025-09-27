@@ -581,6 +581,11 @@ const App = () => {
     defaultValue: true,
   });
   const { Paragraph, Text } = Typography;
+  const [pageS, setPageS] = React.useState({
+    pageSize: 30,
+    showSizeChanger: true,
+    showTotal: (total) => `${total}`,
+  });
   const steps = [
     {
       title: t("app.items"),
@@ -604,6 +609,10 @@ const App = () => {
                       rowSelection={rowSelection}
                       columns={columns}
                       dataSource={data}
+                      pagination={pageS}
+                      onChange={(pagination) => {
+                        setPageS(pagination);
+                      }}
                     />
                   </SortableContext>
                 </DndContext>
