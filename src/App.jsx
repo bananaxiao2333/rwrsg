@@ -549,6 +549,9 @@ const App = () => {
   const [editableStr, setEditableStr] = useLocalStorageState("title", {
     defaultValue: t("rwrsg"),
   });
+  const [discount, setDiscount] = useLocalStorageState("discount", {
+    defaultValue: 0,
+  });
   const [picWidth, setPicWidth] = useLocalStorageState("picWidth");
   const [showName, setShowName] = useLocalStorageState("showName", {
     defaultValue: false,
@@ -624,7 +627,7 @@ const App = () => {
                 variant="borderless"
                 style={{ height: "100%" }}
               >
-                <div ref={ref3} style={{ height: "100%" }}>
+                <div ref={ref3} style={{ height: "100%", minWidth: "0" }}>
                   <Select
                     showSearch
                     placeholder={t("app.input_name")}
@@ -632,7 +635,7 @@ const App = () => {
                     size="small"
                     prefix={<AppstoreAddOutlined />}
                     optionFilterProp="label"
-                    style={{ width: "100%" }}
+                    style={{ width: "200px" }}
                     onChange={handleAddChoiseChange}
                     value={addChoise}
                     options={opti}
@@ -869,11 +872,35 @@ const App = () => {
                               value={
                                 item.price
                                   ? (transUnit
-                                      ? unitTrans(item.price)
-                                      : item.price) + " rp"
+                                      ? unitTrans(
+                                          (item.price * (1 - discount)).toFixed(
+                                            0
+                                          )
+                                        )
+                                      : (item.price * (1 - discount)).toFixed(
+                                          0
+                                        )) + " rp"
                                   : "N/A"
                               }
                             />
+                          ) : (
+                            ""
+                          )}
+
+                          {discount ? (
+                            <Typography
+                              style={{
+                                height: "30px",
+                                backgroundColor: "#006400", // 深绿色
+                                color: "white",
+                                display: "flex",
+                                justifyContent: "center",
+                                alignItems: "center",
+                                fontSize: "18px",
+                              }}
+                            >
+                              -{discount * 100}%
+                            </Typography>
                           ) : (
                             ""
                           )}
@@ -989,6 +1016,16 @@ const App = () => {
                 format="hex"
                 value={txtColor}
                 onChange={(value) => setTxtColor(value.toHexString())}
+              />
+
+              <InputNumber
+                placeholder="打折"
+                value={discount}
+                onChange={(value) => setDiscount(value)}
+                suffix="x"
+                changeOnWheel
+                min={0}
+                max={1}
               />
             </div>
           </Card>
