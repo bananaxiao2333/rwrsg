@@ -863,5 +863,66 @@
   "xmastree": { "en_name": "Christmas biscuit", "cn_name": "圣诞小饼干" },
   "xmas_box": { "en_name": "Xmas box", "cn_name": "圣诞箱子" },
   "candycane": { "en_name": "Candy cane", "cn_name": "手杖糖" },
-  "stocking": { "en_name": "Santa's stocking", "cn_name": "圣诞长筒袜" }
+  "stocking": { "en_name": "Santa's stocking", "cn_name": "圣诞长筒袜" },
+  "apr308s": { "en_name": "APR308S", "cn_name": "APR308S微声狙击步枪" },
+  "g18c": {
+    "en_name": "Glock G18c suppressed",
+    "cn_name": "Glock G18c 消音手枪"
+  },
+  "beowulf": {
+    "en_name": ".50 Beowulf",
+    "cn_name": ".50口径贝奥武夫自动步枪"
+  },
+  "fmg9": {
+    "en_name": "FMG9",
+    "cn_name": "FMG9冲锋枪"
+  },
+  "fn57": {
+    "en_name": "Five-seveN",
+    "cn_name": "FN57穿甲手枪"
+  },
+  "fn57_s": {
+    "en_name": "Five-seveN suppressed",
+    "cn_name": "FN57消音穿甲手枪"
+  },
+  "origin_12": {
+    "en_name": "Origin-12",
+    "cn_name": "Origin-12半自动霰弹枪"
+  },
+  "origin_12_s": {
+    "en_name": "Origin-12 suppressed",
+    "cn_name": "Origin-12半自动霰弹枪（消音）"
+  },
+  "axe": {
+    "en_name": "hand axe",
+    "cn_name": "手斧"
+  },
+  "can_cannon": {
+    "en_name": "Can Cannon",
+    "cn_name": "罐子发射器"
+  },
+  "fmg9_box": {
+    "en_name": "FMG9 BOX",
+    "cn_name": "FMG9冲锋枪（折叠）"
+  },
+  "sa81": {
+    "en_name": "SA81-Krasa-HE",
+    "cn_name": "SA81爆弹改型冲锋枪"
+  },
+  "sa81_o": {
+    "en_name": "SA81-Krasa-Overload!",
+    "cn_name": "SA81爆弹改型冲锋枪（过载模式）"
+  },
+  "headtaker": {
+    "en_name": "Headtaker",
+    "cn_name": "斩颅巨斧"
+  },
+  "pumpkin_3": {
+    "en_name": "pumpkin box 3",
+    "cn_name": "南瓜箱子3"
+  },
+  "rsh_12": {
+    "en_name": "Rsh 12",
+    "cn_name": "Rsh 12手枪"
+  }
 }

@@ -56,8 +56,15 @@ for weaponTree in rwrWeaponTreeList:
     except Exception as e:
         pass
         #logger.warning('{}'.format(e))
+    try:
+        # todo: this
+        itemName = tree.find('.//specification').attrib['name']
+        specAttr
+    except Exception as e:
+        pass
+        #logger.warning('{}'.format(e))
 #logger.debug(ret)
 with open("weaponAttrList.json", "w",encoding="utf-8") as json_file:
-    json.dump(ret, json_file)
+    json.dump(ret, json_file,ensure_ascii=False)
 with open("keyList.json", "w",encoding="utf-8") as json_file:
-    json.dump(keyList, json_file)
+    json.dump(keyList, json_file,ensure_ascii=False)

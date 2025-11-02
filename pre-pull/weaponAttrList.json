@@ -25,7 +25,7 @@
     "prone_moving_stance": "0.3",
     "over_wall_stance": "0.85",
     "key": "AA-12",
-    "cnName": "AA-12\u5168\u81ea\u52a8\u9730\u5f39\u67aa"
+    "cnName": "AA-12全自动霰弹枪"
   },
   {
     "slot": "2",
@@ -50,7 +50,7 @@
     "kill_decay_start_time": "0.35",
     "kill_decay_end_time": "0.70",
     "key": "AAV7 MG",
-    "cnName": "\u4e24\u6816\u6218\u8f66\u673a\u67aa"
+    "cnName": "两栖战车机枪"
   },
   {
     "retrigger_time": "0.097",
@@ -71,7 +71,7 @@
     "kill_decay_start_time": "0.42",
     "kill_decay_end_time": "0.6",
     "key": "Ruger AC556",
-    "cnName": "\u9c81\u683c AC556"
+    "cnName": "鲁格 AC556"
   },
   {
     "retrigger_time": "0.097",
@@ -94,7 +94,7 @@
     "kill_decay_start_time": "0.42",
     "kill_decay_end_time": "0.6",
     "key": "Ruger AC556 - bayonet",
-    "cnName": "\u9c81\u683c AC556\uff08\u523a\u5200\uff09"
+    "cnName": "鲁格 AC556（刺刀）"
   },
   {
     "retrigger_time": "0.088",
@@ -123,7 +123,7 @@
     "crouching_stance": "0.9",
     "prone_stance": "0.95",
     "key": "AEK-919k",
-    "cnName": "AEK-919k\u51b2\u950b\u67aa"
+    "cnName": "AEK-919k冲锋枪"
   },
   {
     "retrigger_time": "0.123",
@@ -140,7 +140,7 @@
     "kill_decay_start_time": "0.33",
     "kill_decay_end_time": "0.68",
     "key": "AK47",
-    "cnName": "AK47\u7a81\u51fb\u6b65\u67aa"
+    "cnName": "AK47突击步枪"
   },
   {
     "retrigger_time": "0.123",
@@ -157,7 +157,7 @@
     "kill_decay_start_time": "0.33",
     "kill_decay_end_time": "0.68",
     "key": "AK47 w/ GP25 GL",
-    "cnName": "AK47/GP25\uff08\u4e0b\u6302\u69b4\u5f39\uff09"
+    "cnName": "AK47/GP25（下挂榴弹）"
   },
   {
     "retrigger_time": "0.098",
@@ -174,7 +174,7 @@
     "kill_decay_start_time": "0.38",
     "kill_decay_end_time": "0.52",
     "key": "AKS-74U",
-    "cnName": "AKS-74U\u5361\u5bbe\u67aa"
+    "cnName": "AKS-74U卡宾枪"
   },
   {
     "retrigger_time": "0.098",
@@ -200,7 +200,7 @@
     "prone_moving_stance": "0.1",
     "over_wall_stance": "0.9",
     "key": "AKS / Tishina GL",
-    "cnName": "AKS / Tishina\uff08\u4e0b\u6302\u69b4\u5f39\uff09"
+    "cnName": "AKS / Tishina（下挂榴弹）"
   },
   {
     "retrigger_time": "0.102",
@@ -218,7 +218,7 @@
     "kill_decay_start_time": "0.32",
     "kill_decay_end_time": "0.69",
     "key": "AN-94",
-    "cnName": "AN-94\u7a81\u51fb\u6b65\u67aa"
+    "cnName": "AN-94突击步枪"
   },
   {
     "retrigger_time": "0.035",
@@ -238,7 +238,7 @@
     "kill_decay_start_time": "0.32",
     "kill_decay_end_time": "0.69",
     "key": "AN-94 - burst",
-    "cnName": "AN-94\u7a81\u51fb\u6b65\u67aa\uff08\u53cc\u53d1\uff09"
+    "cnName": "AN-94突击步枪（双发）"
   },
   {
     "retrigger_time": "-1.0",
@@ -268,7 +268,65 @@
     "prone_moving_stance": "0.1",
     "over_wall_stance": "0.95",
     "key": "APR",
-    "cnName": "APR\u5fae\u58f0\u72d9\u51fb\u6b65\u67aa"
+    "cnName": "APR微声狙击步枪"
+  },
+  {
+    "retrigger_time": "-1.0",
+    "accuracy_factor": "1.0",
+    "sustained_fire_grow_step": "3.0",
+    "sustained_fire_diminish_rate": "1.26",
+    "magazine_size": "10",
+    "can_shoot_standing": "1",
+    "suppressed": "1",
+    "name": "APR308S",
+    "class": "hit",
+    "burst_shots": "1",
+    "reload_one_at_a_time": "0",
+    "sight_range_modifier": "1.45",
+    "projectile_speed": "150.0",
+    "barrel_offset": "0.4",
+    "projectiles_per_shot": "1",
+    "kill_probability": "0.95",
+    "kill_decay_start_time": "0.5",
+    "kill_decay_end_time": "0.85",
+    "running_stance": "0.1",
+    "walking_stance": "0.4",
+    "crouch_moving_stance": "0.1",
+    "standing_stance": "0.6",
+    "crouching_stance": "0.8",
+    "prone_stance": "1.0",
+    "prone_moving_stance": "0.1",
+    "over_wall_stance": "0.95",
+    "key": "APR308S",
+    "cnName": "APR308S微声狙击步枪"
+  },
+  {
+    "retrigger_time": "0.06",
+    "accuracy_factor": "0.95",
+    "sustained_fire_grow_step": "0.2",
+    "sustained_fire_diminish_rate": "1.20",
+    "magazine_size": "17",
+    "can_shoot_standing": "1",
+    "carry_in_two_hands": "0",
+    "suppressed": "1",
+    "name": "Glock G18c suppressed",
+    "class": "hit",
+    "sight_range_modifier": "1.0",
+    "projectile_speed": "100.0",
+    "projectiles_per_shot": "1",
+    "slot": "0",
+    "kill_probability": "0.45",
+    "kill_decay_start_time": "0.32",
+    "kill_decay_end_time": "0.38",
+    "running_stance": "0.4",
+    "walking_stance": "0.5",
+    "crouch_moving_stance": "0.6",
+    "prone_moving_stance": "0.6",
+    "standing_stance": "0.9",
+    "crouching_stance": "0.95",
+    "prone_stance": "0.95",
+    "key": "Glock G18c suppressed",
+    "cnName": "Glock G18c 消音手枪"
   },
   {
     "retrigger_time": "0.113",
@@ -287,7 +345,7 @@
     "kill_decay_start_time": "0.34",
     "kill_decay_end_time": "0.67",
     "key": "AR15",
-    "cnName": "AR15\u7a81\u51fb\u6b65\u67aa"
+    "cnName": "AR15突击步枪"
   },
   {
     "retrigger_time": "0.113",
@@ -308,7 +366,7 @@
     "kill_decay_start_time": "0.34",
     "kill_decay_end_time": "0.67",
     "key": "AR15 - thermal",
-    "cnName": "AR15\u7a81\u51fb\u6b65\u67aa\uff08\u70ed\u6210\u50cf\uff09"
+    "cnName": "AR15突击步枪（热成像）"
   },
   {
     "retrigger_time": "0.11",
@@ -326,7 +384,7 @@
     "kill_decay_start_time": "0.4",
     "kill_decay_end_time": "0.6",
     "key": "ASh-12.7",
-    "cnName": "ASh-12.7\u7a81\u51fb\u6b65\u67aa"
+    "cnName": "ASh-12.7突击步枪"
   },
   {
     "retrigger_time": "0.08",
@@ -345,7 +403,7 @@
     "kill_decay_start_time": "0.42",
     "kill_decay_end_time": "0.58",
     "key": "ASM VAL",
-    "cnName": "ASM VAL\u7279\u79cd\u7a81\u51fb\u6b65\u67aa"
+    "cnName": "ASM VAL特种突击步枪"
   },
   {
     "retrigger_time": "1.0",
@@ -375,7 +433,7 @@
     "prone_moving_stance": "0.1",
     "over_wall_stance": "0.95",
     "key": "Barrett M107",
-    "cnName": "\u5df4\u96f7\u7279M107\u534a\u81ea\u52a8\u72d9\u51fb\u6b65\u67aa"
+    "cnName": "巴雷特M107半自动狙击步枪"
   },
   {
     "retrigger_time": "0.25",
@@ -397,7 +455,7 @@
     "kill_decay_start_time": "0.30",
     "kill_decay_end_time": "0.35",
     "key": "Benelli M3 - speed loader",
-    "cnName": "\u4f2f\u8010\u5229M3\u9730\u5f39\u67aa\uff08\u901f\u88c5\u5668\uff09"
+    "cnName": "伯耐利M3霰弹枪（速装器）"
   },
   {
     "retrigger_time": "0.333",
@@ -418,7 +476,7 @@
     "kill_decay_start_time": "0.25",
     "kill_decay_end_time": "0.32",
     "key": "Benelli M4",
-    "cnName": "\u4f2f\u8010\u5229M4\u9730\u5f39\u67aa"
+    "cnName": "伯耐利M4霰弹枪"
   },
   {
     "retrigger_time": "0.333",
@@ -439,7 +497,35 @@
     "kill_decay_start_time": "0.22",
     "kill_decay_end_time": "0.38",
     "key": "Benelli M4 suppressed",
-    "cnName": "\u4f2f\u8010\u5229M4\u9730\u5f39\u67aa\uff08\u6d88\u97f3\uff09"
+    "cnName": "伯耐利M4霰弹枪（消音）"
+  },
+  {
+    "retrigger_time": "0.20",
+    "accuracy_factor": "1.0",
+    "sustained_fire_grow_step": "1.6",
+    "sustained_fire_diminish_rate": "1.35",
+    "spread_range": "0.3",
+    "magazine_size": "30",
+    "can_shoot_standing": "0",
+    "suppressed": "0",
+    "name": ".50 Beowulf",
+    "sight_range_modifier": "1.3",
+    "class": "hit",
+    "projectile_speed": "120.0",
+    "barrel_offset": "0.5",
+    "kill_probability": "0.85",
+    "kill_decay_start_time": "0.30",
+    "kill_decay_end_time": "0.62",
+    "running_stance": "0.1",
+    "walking_stance": "0.5",
+    "crouch_moving_stance": "0.1",
+    "standing_stance": "0.7",
+    "crouching_stance": "0.93",
+    "prone_stance": "1.0",
+    "prone_moving_stance": "0.1",
+    "over_wall_stance": "0.96",
+    "key": ".50 Beowulf",
+    "cnName": ".50口径贝奥武夫自动步枪"
   },
   {
     "retrigger_time": "0.07",
@@ -471,7 +557,7 @@
     "crouching_stance": "0.95",
     "prone_stance": "0.95",
     "key": "Beretta 93R",
-    "cnName": "\u4f2f\u83b1\u585493R\u6d88\u97f3\u51b2\u950b\u624b\u67aa"
+    "cnName": "伯莱塔93R消音冲锋手枪"
   },
   {
     "retrigger_time": "0.25",
@@ -502,7 +588,7 @@
     "crouching_stance": "0.95",
     "prone_stance": "0.95",
     "key": "Beretta M9",
-    "cnName": "\u4f2f\u83b1\u5854M9\u624b\u67aa"
+    "cnName": "伯莱塔M9手枪"
   },
   {
     "retrigger_time": "0.25",
@@ -532,7 +618,7 @@
     "crouching_stance": "0.95",
     "prone_stance": "0.95",
     "key": "Beretta M9 suppressed",
-    "cnName": "\u4f2f\u83b1\u5854M9\u6d88\u97f3\u624b\u67aa"
+    "cnName": "伯莱塔M9消音手枪"
   },
   {
     "retrigger_time": "0.085",
@@ -549,7 +635,7 @@
     "kill_decay_start_time": "0.28",
     "kill_decay_end_time": "0.41",
     "key": "PP-19 Bizon",
-    "cnName": "PP-19\u201c\u91ce\u725b\u201d\u51b2\u950b\u67aa"
+    "cnName": "PP-19“野牛”冲锋枪"
   },
   {
     "retrigger_time": "-1",
@@ -579,7 +665,7 @@
     "prone_moving_stance": "0.8",
     "over_wall_stance": "0.95",
     "key": "Blowgun",
-    "cnName": "\u5439\u7bad"
+    "cnName": "吹箭"
   },
   {
     "slot": "2",
@@ -603,7 +689,7 @@
     "kill_decay_start_time": "0.38",
     "kill_decay_end_time": "0.68",
     "key": "Buggy MG",
-    "cnName": "\u5de1\u903b\u8f66\u8f7d\u673a\u67aa"
+    "cnName": "巡逻车载机枪"
   },
   {
     "slot": "2",
@@ -622,7 +708,7 @@
     "kill_decay_start_time": "0.35",
     "kill_decay_end_time": "0.70",
     "key": "M240",
-    "cnName": "M240\u8f7b\u673a\u67aa"
+    "cnName": "M240轻机枪"
   },
   {
     "retrigger_time": "0.05",
@@ -654,7 +740,7 @@
     "prone_moving_stance": "0.1",
     "over_wall_stance": "0.9",
     "key": "Chain SAW",
-    "cnName": "\u201c\u94fe\u952f\u201d\u6d88\u97f3\u8f7b\u673a\u67aa"
+    "cnName": "“链锯”消音轻机枪"
   },
   {
     "retrigger_time": "-1.0",
@@ -687,7 +773,7 @@
     "crouching_stance": "0.95",
     "prone_stance": "0.95",
     "key": "ChiappaRhino",
-    "cnName": "\u9f50\u4e9a\u5e15\u201c\u7280\u725b\u201d\u8f6c\u8f6e\u624b\u67aa"
+    "cnName": "齐亚帕“犀牛”转轮手枪"
   },
   {
     "retrigger_time": "-1.0",
@@ -715,7 +801,7 @@
     "crouching_stance": "0.9",
     "over_wall_stance": "1.0",
     "key": "Compound Bow",
-    "cnName": "\u519b\u7528\u6750\u8d28\u590d\u5408\u5f13"
+    "cnName": "军用材质复合弓"
   },
   {
     "retrigger_time": "0.115",
@@ -742,7 +828,7 @@
     "kill_decay_start_time": "0.41",
     "kill_decay_end_time": "0.70",
     "key": "MG",
-    "cnName": "\u91cd\u673a\u67aa"
+    "cnName": "重机枪"
   },
   {
     "retrigger_time": "0.04",
@@ -770,7 +856,7 @@
     "kill_decay_start_time": "0.25",
     "kill_decay_end_time": "0.7",
     "key": "Minigun",
-    "cnName": "M134\u52a0\u7279\u6797\u673a\u67aa"
+    "cnName": "M134加特林机枪"
   },
   {
     "retrigger_time": "0.3",
@@ -800,7 +886,7 @@
     "crouching_stance": "0.9",
     "prone_stance": "0.95",
     "key": "Desert Eagle",
-    "cnName": "\u6c99\u6f20\u4e4b\u9e70"
+    "cnName": "沙漠之鹰"
   },
   {
     "retrigger_time": "0.3",
@@ -830,7 +916,7 @@
     "crouching_stance": "0.9",
     "prone_stance": "0.95",
     "key": "Desert Eagle GOLD",
-    "cnName": "\u9ec4\u91d1\u6c99\u6f20\u4e4b\u9e70"
+    "cnName": "黄金沙漠之鹰"
   },
   {
     "retrigger_time": "0.1",
@@ -862,7 +948,7 @@
     "prone_moving_stance": "0.6",
     "over_wall_stance": "0.7",
     "key": "KSxS-6 Hunter",
-    "cnName": "KSxS-6 \u730e\u67aa"
+    "cnName": "KSxS-6 猎枪"
   },
   {
     "retrigger_time": "0.100",
@@ -890,7 +976,7 @@
     "crouching_stance": "0.93",
     "prone_stance": "1.0",
     "key": "DPM",
-    "cnName": "DPM\u8f7b\u673a\u67aa"
+    "cnName": "DPM轻机枪"
   },
   {
     "retrigger_time": "0.100",
@@ -918,7 +1004,7 @@
     "crouching_stance": "0.86",
     "prone_stance": "0.96",
     "key": "DPM - shield",
-    "cnName": "DPM\u8f7b\u673a\u67aa\uff08\u67aa\u76fe\uff09"
+    "cnName": "DPM轻机枪（枪盾）"
   },
   {
     "retrigger_time": "0.75",
@@ -940,7 +1026,7 @@
     "kill_decay_start_time": "0.55",
     "kill_decay_end_time": "0.7",
     "key": "Dragunov SVD",
-    "cnName": "Dragunov SVD\u534a\u81ea\u52a8\u72d9\u51fb\u6b65\u67aa"
+    "cnName": "Dragunov SVD半自动狙击步枪"
   },
   {
     "retrigger_time": "-0.667",
@@ -961,7 +1047,7 @@
     "kill_decay_start_time": "0.39",
     "kill_decay_end_time": "0.62",
     "key": "M711-LA Enforcer",
-    "cnName": "M711-LA \u201c\u6267\u884c\u8005\u201d\u6b65\u67aa"
+    "cnName": "M711-LA “执行者”步枪"
   },
   {
     "retrigger_time": "0.11",
@@ -978,7 +1064,7 @@
     "kill_decay_start_time": "0.45",
     "kill_decay_end_time": "0.75",
     "key": "F2000",
-    "cnName": "F2000\u7a81\u51fb\u6b65\u67aa"
+    "cnName": "F2000突击步枪"
   },
   {
     "retrigger_time": "0.113",
@@ -998,7 +1084,7 @@
     "standing_stance": "0.865",
     "crouching_stance": "0.91",
     "key": "FN FAL",
-    "cnName": "FN FAL\u7a81\u51fb\u6b65\u67aa"
+    "cnName": "FN FAL突击步枪"
   },
   {
     "retrigger_time": "0.113",
@@ -1020,7 +1106,7 @@
     "standing_stance": "0.84",
     "crouching_stance": "0.88",
     "key": "FN FAL - bayonet",
-    "cnName": "FN FAL\u7a81\u51fb\u6b65\u67aa\uff08\u523a\u5200\uff09"
+    "cnName": "FN FAL突击步枪（刺刀）"
   },
   {
     "retrigger_time": "0.08",
@@ -1039,7 +1125,7 @@
     "kill_decay_start_time": "0.37",
     "kill_decay_end_time": "0.65",
     "key": "FAMAS G1",
-    "cnName": "FAMAS-G1\u7a81\u51fb\u6b65\u67aa"
+    "cnName": "FAMAS-G1突击步枪"
   },
   {
     "retrigger_time": "0.3",
@@ -1069,7 +1155,7 @@
     "prone_moving_stance": "0.1",
     "over_wall_stance": "0.93",
     "key": "FD-338",
-    "cnName": "FD-338\u5c04\u624b\u6b65\u67aa"
+    "cnName": "FD-338射手步枪"
   },
   {
     "retrigger_time": "0.4",
@@ -1099,7 +1185,7 @@
     "prone_moving_stance": "0.1",
     "over_wall_stance": "0.93",
     "key": "FD-338SD",
-    "cnName": "FD-338\u5c04\u624b\u6b65\u67aa\uff08\u6d88\u97f3\uff09"
+    "cnName": "FD-338射手步枪（消音）"
   },
   {
     "slot": "2",
@@ -1124,7 +1210,98 @@
     "kill_decay_start_time": "0.35",
     "kill_decay_end_time": "0.70",
     "key": "FT-CROC MG",
-    "cnName": "\u70c8\u7130\u88c5\u7532\u8fd0\u8f93\u8f66-\u673a\u67aa"
+    "cnName": "烈焰装甲运输车-机枪"
+  },
+  {
+    "retrigger_time": "0.083",
+    "accuracy_factor": "0.87",
+    "sustained_fire_grow_step": "0.55",
+    "sustained_fire_diminish_rate": "1.5",
+    "spread_range": "0.16",
+    "magazine_size": "35",
+    "can_shoot_standing": "1",
+    "carry_in_two_hands": "0",
+    "suppressed": "0",
+    "name": "FMG9",
+    "class": "hit",
+    "slot": "1",
+    "projectile_speed": "105.0",
+    "kill_probability": "0.53",
+    "kill_decay_start_time": "0.23",
+    "kill_decay_end_time": "0.47",
+    "running_stance": "0.45",
+    "walking_stance": "0.7",
+    "crouch_moving_stance": "0.6",
+    "prone_stance": "0.95",
+    "prone_moving_stance": "0.4",
+    "standing_stance": "0.85",
+    "crouching_stance": "0.9",
+    "over_wall_stance": "0.85",
+    "key": "FMG9",
+    "cnName": "FMG9冲锋枪"
+  },
+  {
+    "retrigger_time": "0.15",
+    "accuracy_factor": "1.0",
+    "sustained_fire_grow_step": "0.58",
+    "sustained_fire_diminish_rate": "0.65",
+    "magazine_size": "20",
+    "can_shoot_standing": "1",
+    "carry_in_two_hands": "0",
+    "suppressed": "0",
+    "name": "Five-seveN",
+    "class": "hit",
+    "reload_one_at_a_time": "0",
+    "sight_range_modifier": "1.0",
+    "projectile_speed": "110",
+    "projectiles_per_shot": "1",
+    "burst_shots": "1",
+    "slot": "1",
+    "barrel_offset": "-0.3",
+    "kill_probability": "0.6",
+    "kill_probability_offset_on_successful_hit": "1.20",
+    "kill_decay_start_time": "0.32",
+    "kill_decay_end_time": "0.45",
+    "running_stance": "0.64",
+    "walking_stance": "0.7",
+    "crouch_moving_stance": "0.6",
+    "prone_moving_stance": "0.6",
+    "standing_stance": "0.95",
+    "crouching_stance": "0.98",
+    "prone_stance": "1.0",
+    "key": "Five-seveN",
+    "cnName": "FN57穿甲手枪"
+  },
+  {
+    "retrigger_time": "0.15",
+    "accuracy_factor": "1.0",
+    "sustained_fire_grow_step": "0.58",
+    "sustained_fire_diminish_rate": "0.65",
+    "magazine_size": "20",
+    "can_shoot_standing": "1",
+    "carry_in_two_hands": "0",
+    "suppressed": "1",
+    "name": "Five-seveN suppressed",
+    "class": "hit",
+    "reload_one_at_a_time": "0",
+    "sight_range_modifier": "1.0",
+    "projectile_speed": "110",
+    "projectiles_per_shot": "1",
+    "burst_shots": "1",
+    "slot": "1",
+    "kill_probability": "0.55",
+    "kill_probability_offset_on_successful_hit": "1.20",
+    "kill_decay_start_time": "0.30",
+    "kill_decay_end_time": "0.43",
+    "running_stance": "0.64",
+    "walking_stance": "0.7",
+    "crouch_moving_stance": "0.6",
+    "prone_moving_stance": "0.6",
+    "standing_stance": "0.95",
+    "crouching_stance": "0.98",
+    "prone_stance": "1.0",
+    "key": "Five-seveN suppressed",
+    "cnName": "FN57消音穿甲手枪"
   },
   {
     "retrigger_time": "0.13",
@@ -1143,7 +1320,7 @@
     "kill_decay_start_time": "0.40",
     "kill_decay_end_time": "0.64",
     "key": "G11",
-    "cnName": "H&K G11\u7a81\u51fb\u6b65\u67aa"
+    "cnName": "H&K G11突击步枪"
   },
   {
     "retrigger_time": "0.02",
@@ -1164,7 +1341,7 @@
     "kill_decay_start_time": "0.40",
     "kill_decay_end_time": "0.64",
     "key": "G11 - burst",
-    "cnName": "H&K G11\u7a81\u51fb\u6b65\u67aa\uff08\u4e09\u8fde\u53d1\uff09"
+    "cnName": "H&K G11突击步枪（三连发）"
   },
   {
     "retrigger_time": "0.110",
@@ -1182,7 +1359,7 @@
     "kill_decay_start_time": "0.35",
     "kill_decay_end_time": "0.70",
     "key": "G36",
-    "cnName": "G36\u7a81\u51fb\u6b65\u67aa"
+    "cnName": "G36突击步枪"
   },
   {
     "retrigger_time": "0.110",
@@ -1200,7 +1377,7 @@
     "kill_decay_start_time": "0.35",
     "kill_decay_end_time": "0.70",
     "key": "G36 w/ AG36 GL",
-    "cnName": "G36/AG36\uff08\u4e0b\u6302\u69b4\u5f39\uff09"
+    "cnName": "G36/AG36（下挂榴弹）"
   },
   {
     "retrigger_time": "0.12",
@@ -1218,7 +1395,7 @@
     "kill_decay_start_time": "0.35",
     "kill_decay_end_time": "0.78",
     "key": "G3A3",
-    "cnName": "G3A3\u7a81\u51fb\u6b65\u67aa\uff08\u7ea2\u70b9\u7784\u5177\uff09"
+    "cnName": "G3A3突击步枪（红点瞄具）"
   },
   {
     "retrigger_time": "0.2",
@@ -1238,7 +1415,7 @@
     "kill_decay_start_time": "0.35",
     "kill_decay_end_time": "0.78",
     "key": "G3A3 - scoped",
-    "cnName": "G3A3\u7a81\u51fb\u6b65\u67aa\uff083\u500d\u7784\u5177\uff09"
+    "cnName": "G3A3突击步枪（3倍瞄具）"
   },
   {
     "retrigger_time": "0.092",
@@ -1257,7 +1434,7 @@
     "kill_decay_start_time": "0.30",
     "kill_decay_end_time": "0.7",
     "key": "Galil ARM",
-    "cnName": "\u52a0\u5229\u5c14\u7a81\u51fb\u6b65\u67aa"
+    "cnName": "加利尔突击步枪"
   },
   {
     "retrigger_time": "0.092",
@@ -1285,7 +1462,7 @@
     "prone_moving_stance": "0.8",
     "over_wall_stance": "1.1",
     "key": "Galil ARM - bipod",
-    "cnName": "\u52a0\u5229\u5c14\u7a81\u51fb\u6b65\u67aa\uff08\u4e24\u811a\u67b6\uff09"
+    "cnName": "加利尔突击步枪（两脚架）"
   },
   {
     "retrigger_time": "1.0",
@@ -1314,7 +1491,7 @@
     "prone_moving_stance": "0.1",
     "over_wall_stance": "0.9",
     "key": "M6 Lynx",
-    "cnName": "GM6\u201c\u5c71\u732b\u201d\u72d9\u51fb\u6b65\u67aa"
+    "cnName": "GM6“山猫”狙击步枪"
   },
   {
     "retrigger_time": "0.15",
@@ -1334,7 +1511,7 @@
     "kill_decay_start_time": "0.38",
     "kill_decay_end_time": "0.52",
     "key": "Gilboa DBR",
-    "cnName": "\u57fa\u5229\u6ce2\u53cc\u7ba1\u7a81\u51fb\u6b65\u67aa"
+    "cnName": "基利波双管突击步枪"
   },
   {
     "retrigger_time": "0.2",
@@ -1365,7 +1542,7 @@
     "crouching_stance": "0.95",
     "prone_stance": "0.95",
     "key": "Glock 17",
-    "cnName": "Glock 17\u624b\u67aa"
+    "cnName": "Glock 17手枪"
   },
   {
     "retrigger_time": "0.2",
@@ -1384,7 +1561,7 @@
     "projectiles_per_shot": "1",
     "burst_shots": "1",
     "slot": "1",
-    "kill_probability": ".45",
+    "kill_probability": "0.45",
     "kill_decay_start_time": "0.32",
     "kill_decay_end_time": "0.38",
     "running_stance": "0.4",
@@ -1395,7 +1572,7 @@
     "crouching_stance": "0.95",
     "prone_stance": "0.95",
     "key": "Glock 17 suppressed",
-    "cnName": "Glock 17 \u6d88\u97f3\u624b\u67aa"
+    "cnName": "Glock 17 消音手枪"
   },
   {
     "retrigger_time": "0.123",
@@ -1413,7 +1590,7 @@
     "kill_decay_start_time": "0.33",
     "kill_decay_end_time": "0.68",
     "key": "Golden AK47",
-    "cnName": "\u9ec4\u91d1AK-47\u7a81\u51fb\u6b65\u67aa"
+    "cnName": "黄金AK-47突击步枪"
   },
   {
     "retrigger_time": "0.75",
@@ -1435,7 +1612,7 @@
     "kill_decay_start_time": "0.55",
     "kill_decay_end_time": "0.7",
     "key": "Golden Dragunov SVD",
-    "cnName": "\u9ec4\u91d1Dragunov SVD\u534a\u81ea\u52a8\u72d9\u51fb\u6b65\u67aa"
+    "cnName": "黄金Dragunov SVD半自动狙击步枪"
   },
   {
     "retrigger_time": "0.092",
@@ -1452,7 +1629,7 @@
     "kill_decay_start_time": "0.23",
     "kill_decay_end_time": "0.38",
     "key": "Golden MP5SD",
-    "cnName": "\u9ec4\u91d1MP5\u5fae\u58f0\u51b2\u950b\u67aa"
+    "cnName": "黄金MP5微声冲锋枪"
   },
   {
     "retrigger_time": "0.12",
@@ -1480,7 +1657,7 @@
     "prone_stance": "0.75",
     "over_wall_stance": "0.65",
     "key": "Lewis Gun",
-    "cnName": "\u5218\u6613\u65af\u8f7b\u673a\u67aa"
+    "cnName": "刘易斯轻机枪"
   },
   {
     "retrigger_time": "0.0825",
@@ -1503,7 +1680,7 @@
     "over_wall_stance": "0.885",
     "prone_stance": "0.825",
     "key": "Tommy Gun",
-    "cnName": "\u829d\u52a0\u54e5\u6253\u5b57\u673a"
+    "cnName": "芝加哥打字机"
   },
   {
     "retrigger_time": "0.175",
@@ -1531,7 +1708,7 @@
     "prone_moving_stance": "0.13",
     "over_wall_stance": "0.97",
     "key": "HCAR",
-    "cnName": "HCAR\u91cd\u578b\u53cd\u7a81\u51fb\u6b65\u67aa"
+    "cnName": "HCAR重型反突击步枪"
   },
   {
     "retrigger_time": "0.075",
@@ -1551,7 +1728,7 @@
     "kill_decay_start_time": "0.34",
     "kill_decay_end_time": "0.52",
     "key": "AAC Honey Badger",
-    "cnName": "\u201c\u871c\u737e\u201d\u6d88\u97f3\u7a81\u51fb\u6b65\u67aa"
+    "cnName": "“蜜獾”消音突击步枪"
   },
   {
     "slot": "2",
@@ -1576,7 +1753,7 @@
     "kill_decay_start_time": "0.25",
     "kill_decay_end_time": "0.70",
     "key": "ACAV minigun",
-    "cnName": "ACAV\u52a0\u7279\u6797\u673a\u67aa"
+    "cnName": "ACAV加特林机枪"
   },
   {
     "slot": "2",
@@ -1600,7 +1777,7 @@
     "kill_decay_start_time": "0.35",
     "kill_decay_end_time": "0.70",
     "key": "Humvee MG",
-    "cnName": "\u608d\u9a6c\u673a\u67aa"
+    "cnName": "悍马机枪"
   },
   {
     "retrigger_time": "0.05",
@@ -1630,7 +1807,7 @@
     "crouching_stance": "1.0",
     "over_wall_stance": "1.0",
     "key": "Crossbow - Anesthetic arrow",
-    "cnName": "\u72e9\u730e\u5f29\uff08\u9ebb\u9189\u7bad\uff09"
+    "cnName": "狩猎弩（麻醉箭）"
   },
   {
     "retrigger_time": "0.05",
@@ -1660,7 +1837,7 @@
     "crouching_stance": "1.0",
     "over_wall_stance": "1.0",
     "key": "Crossbow - Hunting Arrow",
-    "cnName": "\u72e9\u730e\u5f29\uff08\u5f29\u7bad\uff09"
+    "cnName": "狩猎弩（弩箭）"
   },
   {
     "retrigger_time": "0.077",
@@ -1678,7 +1855,7 @@
     "kill_decay_start_time": "0.37",
     "kill_decay_end_time": "0.71",
     "key": "IMI Negev",
-    "cnName": "IMI Negev\u8f7b\u673a\u67aa"
+    "cnName": "IMI Negev轻机枪"
   },
   {
     "retrigger_time": "0.25",
@@ -1705,7 +1882,7 @@
     "prone_moving_stance": "0.3",
     "over_wall_stance": "0.85",
     "key": "Jackhammer",
-    "cnName": "\u201c\u6c7d\u9524\u201d\u5168\u81ea\u52a8\u9730\u5f39\u67aa"
+    "cnName": "“汽锤”全自动霰弹枪"
   },
   {
     "retrigger_time": "0.071",
@@ -1722,7 +1899,7 @@
     "kill_decay_start_time": "0.26",
     "kill_decay_end_time": "0.4",
     "key": "KRISS Vector",
-    "cnName": "KRISS \u7ef4\u514b\u6258\u5fae\u58f0\u51b2\u950b\u67aa"
+    "cnName": "KRISS 维克托微声冲锋枪"
   },
   {
     "retrigger_time": "0.8",
@@ -1744,7 +1921,7 @@
     "kill_decay_start_time": "0.25",
     "kill_decay_end_time": "0.53",
     "key": "KS-23",
-    "cnName": "KS-23\u5927\u53e3\u5f84\u9730\u5f39\u67aa"
+    "cnName": "KS-23大口径霰弹枪"
   },
   {
     "retrigger_time": "-1.0",
@@ -1764,7 +1941,7 @@
     "kill_decay_start_time": "0.28",
     "kill_decay_end_time": "0.4",
     "key": "KSG - buckshot",
-    "cnName": "KSG\u9730\u5f39\u67aa\uff08\u9e7f\u5f39\uff09"
+    "cnName": "KSG霰弹枪（鹿弹）"
   },
   {
     "retrigger_time": "-1.0",
@@ -1794,7 +1971,7 @@
     "prone_moving_stance": "1.0",
     "over_wall_stance": "1.0",
     "key": "KSG - slug",
-    "cnName": "KSG\u9730\u5f39\u67aa\uff08\u72ec\u5934\u5f39\uff09"
+    "cnName": "KSG霰弹枪（独头弹）"
   },
   {
     "retrigger_time": "0.2",
@@ -1827,7 +2004,7 @@
     "crouching_stance": "1.0",
     "prone_stance": "1.0",
     "key": "L30P-DUALIST",
-    "cnName": "\u53cc\u6301L30P\u683c\u6597\u624b\u67aa"
+    "cnName": "双持L30P格斗手枪"
   },
   {
     "retrigger_time": "0.095",
@@ -1846,7 +2023,7 @@
     "kill_decay_start_time": "0.36",
     "kill_decay_end_time": "0.66",
     "key": "L85A2",
-    "cnName": "L85A2\u7a81\u51fb\u6b65\u67aa"
+    "cnName": "L85A2突击步枪"
   },
   {
     "slot": "2",
@@ -1870,7 +2047,7 @@
     "kill_decay_start_time": "0.35",
     "kill_decay_end_time": "0.7",
     "key": "Legion MG",
-    "cnName": "Legion\u6b65\u5175\u5766\u514b-\u673a\u67aa"
+    "cnName": "Legion步兵坦克-机枪"
   },
   {
     "retrigger_time": "0.115",
@@ -1896,7 +2073,7 @@
     "kill_decay_start_time": "0.42",
     "kill_decay_end_time": "0.55",
     "key": ".50 cal",
-    "cnName": ".50\u91cd\u673a\u67aa"
+    "cnName": ".50重机枪"
   },
   {
     "retrigger_time": "0.2",
@@ -1926,7 +2103,7 @@
     "prone_moving_stance": "0.1",
     "over_wall_stance": "0.9",
     "key": "M14ebr - assault",
-    "cnName": "M14ebr\u6218\u6597\u6b65\u67aa\uff08\u7a81\u51fb\u6a21\u5f0f\uff09"
+    "cnName": "M14ebr战斗步枪（突击模式）"
   },
   {
     "retrigger_time": "0.11",
@@ -1958,7 +2135,7 @@
     "prone_moving_stance": "0.1",
     "over_wall_stance": "0.85",
     "key": "M14ebr - support",
-    "cnName": "M14ebr\u6218\u6597\u6b65\u67aa\uff08\u652f\u63f4\u6a21\u5f0f\uff09"
+    "cnName": "M14ebr战斗步枪（支援模式）"
   },
   {
     "retrigger_time": "0.25",
@@ -1989,7 +2166,7 @@
     "prone_moving_stance": "0.1",
     "over_wall_stance": "1.0",
     "key": "M14ebr - marksman",
-    "cnName": "M14ebr\u6218\u6597\u6b65\u67aa\uff08\u5c04\u624b\u6a21\u5f0f\uff09"
+    "cnName": "M14ebr战斗步枪（射手模式）"
   },
   {
     "retrigger_time": "0.107",
@@ -2019,7 +2196,7 @@
     "prone_moving_stance": "0.1",
     "over_wall_stance": "0.95",
     "key": "m14k",
-    "cnName": "M14k\u534a\u81ea\u52a8\u6b65\u67aa"
+    "cnName": "M14k半自动步枪"
   },
   {
     "retrigger_time": "0.113",
@@ -2044,7 +2221,7 @@
     "crouching_stance": "0.9",
     "prone_stance": "0.93",
     "key": "M16A4",
-    "cnName": "M16A4\u7a81\u51fb\u6b65\u67aa"
+    "cnName": "M16A4突击步枪"
   },
   {
     "retrigger_time": "0.113",
@@ -2071,7 +2248,7 @@
     "crouching_stance": "0.85",
     "prone_stance": "0.94",
     "key": "M16A4 - shield and scope",
-    "cnName": "M16A4\u7a81\u51fb\u6b65\u67aa\uff08\u67aa\u76fe|\u7784\u955c\uff09"
+    "cnName": "M16A4突击步枪（枪盾|瞄镜）"
   },
   {
     "retrigger_time": "0.113",
@@ -2096,7 +2273,7 @@
     "crouching_stance": "0.9",
     "prone_stance": "0.93",
     "key": "M16A4 w/ M203 GL",
-    "cnName": "M16A4/M203\uff08\u4e0b\u6302\u69b4\u5f39\uff09"
+    "cnName": "M16A4/M203（下挂榴弹）"
   },
   {
     "retrigger_time": "0.28",
@@ -2118,7 +2295,7 @@
     "kill_decay_start_time": "0.5",
     "kill_decay_end_time": "0.64",
     "key": "M1 Garand Modern",
-    "cnName": "\u73b0\u4ee3\u5316M1\u52a0\u5170\u5fb7"
+    "cnName": "现代化M1加兰德"
   },
   {
     "retrigger_time": "2.2",
@@ -2140,7 +2317,7 @@
     "kill_decay_start_time": "0.6",
     "kill_decay_end_time": "1.6",
     "key": "CheyTac M200",
-    "cnName": "M200\u9ad8\u7cbe\u72d9\u51fb\u6b65\u67aa"
+    "cnName": "M200高精狙击步枪"
   },
   {
     "retrigger_time": "0.077",
@@ -2159,7 +2336,7 @@
     "kill_decay_start_time": "0.35",
     "kill_decay_end_time": "0.70",
     "key": "M249",
-    "cnName": "M249\u8f7b\u673a\u67aa"
+    "cnName": "M249轻机枪"
   },
   {
     "retrigger_time": "0.077",
@@ -2178,7 +2355,7 @@
     "kill_decay_start_time": "0.30",
     "kill_decay_end_time": "0.70",
     "key": "M249 suppressed",
-    "cnName": "M249\u8f7b\u673a\u67aa\uff08\u6d88\u97f3\uff09"
+    "cnName": "M249轻机枪（消音）"
   },
   {
     "retrigger_time": "-1.0",
@@ -2199,7 +2376,7 @@
     "kill_decay_start_time": "0.55",
     "kill_decay_end_time": "0.8",
     "key": "M24-A2",
-    "cnName": "M24-A2\u72d9\u51fb\u6b65\u67aa"
+    "cnName": "M24-A2狙击步枪"
   },
   {
     "retrigger_time": "0.100",
@@ -2228,7 +2405,7 @@
     "prone_stance": "0.98",
     "over_wall_stance": "0.96",
     "key": "M4 / M26 Frag",
-    "cnName": "M4 / M26\uff08\u4e0b\u6302\u7834\u7247\u5f39\uff09"
+    "cnName": "M4 / M26（下挂破片弹）"
   },
   {
     "retrigger_time": "0.13",
@@ -2255,7 +2432,7 @@
     "kill_decay_start_time": "0.35",
     "kill_decay_end_time": "0.70",
     "key": "Tank MG",
-    "cnName": "\u5766\u514b\u673a\u67aa"
+    "cnName": "坦克机枪"
   },
   {
     "retrigger_time": "0.1",
@@ -2274,7 +2451,7 @@
     "kill_decay_start_time": "0.35",
     "kill_decay_end_time": "0.65",
     "key": "M60",
-    "cnName": "M60E4\u901a\u7528\u673a\u67aa"
+    "cnName": "M60E4通用机枪"
   },
   {
     "retrigger_time": "0.066",
@@ -2303,7 +2480,7 @@
     "crouching_stance": "0.95",
     "prone_stance": "0.95",
     "key": "M712 Schnellfeuer",
-    "cnName": "M712\u51b2\u950b\u624b\u67aa"
+    "cnName": "M712冲锋手枪"
   },
   {
     "retrigger_time": "0.065",
@@ -2332,7 +2509,7 @@
     "prone_moving_stance": "0.7",
     "over_wall_stance": "0.87",
     "key": "MAC-10",
-    "cnName": "MAC-10\u51b2\u950b\u67aa"
+    "cnName": "MAC-10冲锋枪"
   },
   {
     "retrigger_time": "0.065",
@@ -2361,7 +2538,7 @@
     "prone_moving_stance": "0.7",
     "over_wall_stance": "0.87",
     "key": "MAC-10 SD",
-    "cnName": "MAC-10\u51b2\u950b\u67aa\uff08\u6d88\u97f3\uff09"
+    "cnName": "MAC-10冲锋枪（消音）"
   },
   {
     "retrigger_time": "0.05",
@@ -2383,7 +2560,7 @@
     "kill_decay_start_time": "0.35",
     "kill_decay_end_time": "0.75",
     "key": "MG-42",
-    "cnName": "MG-42\u901a\u7528\u673a\u67aa"
+    "cnName": "MG-42通用机枪"
   },
   {
     "retrigger_time": "0.050",
@@ -2404,7 +2581,7 @@
     "kill_decay_start_time": "0.17",
     "kill_decay_end_time": "0.35",
     "key": "MGV-176",
-    "cnName": "MGV-176\u51b2\u950b\u67aa"
+    "cnName": "MGV-176冲锋枪"
   },
   {
     "retrigger_time": "0.032",
@@ -2429,7 +2606,7 @@
     "kill_decay_start_time": "0.25",
     "kill_decay_end_time": "0.60",
     "key": "WB-II Microgun",
-    "cnName": "WB-\u2161\u8f7b\u578b\u52a0\u7279\u6797\u673a\u67aa"
+    "cnName": "WB-Ⅱ轻型加特林机枪"
   },
   {
     "retrigger_time": "0.088",
@@ -2458,7 +2635,7 @@
     "crouching_stance": "0.9",
     "prone_stance": "0.95",
     "key": "mini UZI",
-    "cnName": "Mini UZI\u8f7b\u578b\u51b2\u950b\u67aa"
+    "cnName": "Mini UZI轻型冲锋枪"
   },
   {
     "retrigger_time": "0.06",
@@ -2489,7 +2666,7 @@
     "crouching_stance": "0.9",
     "prone_stance": "1.0",
     "key": "MK23 SOCOM",
-    "cnName": "MK23\u7279\u79cd\u4f5c\u6218\u624b\u67aa"
+    "cnName": "MK23特种作战手枪"
   },
   {
     "retrigger_time": "0.098",
@@ -2507,7 +2684,7 @@
     "kill_decay_start_time": "0.36",
     "kill_decay_end_time": "0.58",
     "key": "Mk47 Mutant",
-    "cnName": "Mk47\u201c\u7a81\u53d8\u4f53\u201d\u7a81\u51fb\u6b65\u67aa\uff08\u6d88\u97f3\uff09"
+    "cnName": "Mk47“突变体”突击步枪（消音）"
   },
   {
     "retrigger_time": "0.34",
@@ -2539,7 +2716,7 @@
     "crouching_stance": "0.95",
     "prone_stance": "0.95",
     "key": "44 Magnum",
-    "cnName": ".44\u9a6c\u683c\u5357\u5de6\u8f6e\u624b\u67aa"
+    "cnName": ".44马格南左轮手枪"
   },
   {
     "retrigger_time": "0.1",
@@ -2573,7 +2750,7 @@
     "prone_stance": "0.7",
     "over_wall_stance": "0.7",
     "key": "44 Magnum, rapid fire",
-    "cnName": ".44\u9a6c\u683c\u5357\u5de6\u8f6e\u624b\u67aa\uff08\u5feb\u901f\u5c04\u51fb\uff09"
+    "cnName": ".44马格南左轮手枪（快速射击）"
   },
   {
     "retrigger_time": "-1.0",
@@ -2593,7 +2770,7 @@
     "kill_decay_start_time": "0.25",
     "kill_decay_end_time": "0.30",
     "key": "Mossberg 500",
-    "cnName": "\u83ab\u65af\u4f2f\u683c500\u9730\u5f39\u67aa"
+    "cnName": "莫斯伯格500霰弹枪"
   },
   {
     "retrigger_time": "0.092",
@@ -2610,7 +2787,7 @@
     "kill_decay_start_time": "0.23",
     "kill_decay_end_time": "0.38",
     "key": "MP5SD",
-    "cnName": "MP5\u5fae\u58f0\u51b2\u950b\u67aa"
+    "cnName": "MP5微声冲锋枪"
   },
   {
     "retrigger_time": "0.079",
@@ -2636,9 +2813,9 @@
     "crouching_stance": "0.9",
     "prone_stance": "1.0",
     "prone_moving_stance": "0.3",
-    "over_wall_stance": "0.9",
+    "over_wall_stance": "0.85",
     "key": "MP7",
-    "cnName": "MP7\u51b2\u950b\u67aa"
+    "cnName": "MP7冲锋枪"
   },
   {
     "retrigger_time": "0.079",
@@ -2670,7 +2847,7 @@
     "prone_moving_stance": "0.3",
     "over_wall_stance": "0.92",
     "key": "MP7 AP / ISL200 GL",
-    "cnName": "MP7 AP / ISL200\uff08\u4e0b\u6302\u69b4\u5f39\uff09"
+    "cnName": "MP7 AP / ISL200（下挂榴弹）"
   },
   {
     "retrigger_time": "0.132",
@@ -2701,7 +2878,7 @@
     "prone_moving_stance": "0.1",
     "over_wall_stance": "0.95",
     "key": "MPT76 / AK40 GL",
-    "cnName": "MPT76 / AK40 GL\uff08\u4e0b\u6302\u69b4\u5f39\uff09"
+    "cnName": "MPT76 / AK40 GL（下挂榴弹）"
   },
   {
     "retrigger_time": "0.073",
@@ -2718,7 +2895,7 @@
     "kill_decay_start_time": "0.28",
     "kill_decay_end_time": "0.36",
     "key": "MPX",
-    "cnName": "MPX\u51b2\u950b\u67aa"
+    "cnName": "MPX冲锋枪"
   },
   {
     "retrigger_time": "0.073",
@@ -2736,7 +2913,7 @@
     "kill_decay_start_time": "0.28",
     "kill_decay_end_time": "0.36",
     "key": "MPX - Hollow Point",
-    "cnName": "MPX\u51b2\u950b\u67aa\uff08\u7a7a\u5c16\u5f39\uff09"
+    "cnName": "MPX冲锋枪（空尖弹）"
   },
   {
     "retrigger_time": "-1",
@@ -2756,7 +2933,7 @@
     "kill_decay_start_time": "0.35",
     "kill_decay_end_time": "0.40",
     "key": "Buckshot Bess Musket",
-    "cnName": "\u71e7\u53d1\u67aa"
+    "cnName": "燧发枪"
   },
   {
     "retrigger_time": "0.063",
@@ -2773,7 +2950,7 @@
     "kill_decay_start_time": "0.35",
     "kill_decay_end_time": "0.41",
     "key": "MX4 Storm",
-    "cnName": "MX4\u201c\u98ce\u66b4\u201d\u51b2\u950b\u67aa"
+    "cnName": "MX4“风暴”冲锋枪"
   },
   {
     "retrigger_time": "-1.0",
@@ -2793,7 +2970,47 @@
     "kill_decay_start_time": "0.35",
     "kill_decay_end_time": "0.40",
     "key": "Neostead 2000",
-    "cnName": "\u5c3c\u5965\u65af\u6cf0\u5fb72000\u9730\u5f39\u67aa"
+    "cnName": "尼奥斯泰德2000霰弹枪"
+  },
+  {
+    "retrigger_time": "0.18",
+    "accuracy_factor": "0.8",
+    "sustained_fire_grow_step": "0.8",
+    "sustained_fire_diminish_rate": "1.2",
+    "magazine_size": "30",
+    "can_shoot_standing": "1",
+    "suppressed": "0",
+    "name": "Origin-12",
+    "class": "hit",
+    "burst_shots": "1",
+    "projectile_speed": "102.0",
+    "barrel_offset": "0.2",
+    "projectiles_per_shot": "3",
+    "kill_probability": "0.55",
+    "kill_decay_start_time": "0.32",
+    "kill_decay_end_time": "0.35",
+    "key": "Origin-12",
+    "cnName": "Origin-12半自动霰弹枪"
+  },
+  {
+    "retrigger_time": "0.18",
+    "accuracy_factor": "0.8",
+    "sustained_fire_grow_step": "0.8",
+    "sustained_fire_diminish_rate": "1.0",
+    "magazine_size": "30",
+    "can_shoot_standing": "1",
+    "suppressed": "1",
+    "name": "Origin-12 suppressed",
+    "class": "hit",
+    "burst_shots": "1",
+    "projectile_speed": "96.0",
+    "barrel_offset": "0.6",
+    "projectiles_per_shot": "3",
+    "kill_probability": "0.55",
+    "kill_decay_start_time": "0.28",
+    "kill_decay_end_time": "0.35",
+    "key": "Origin-12 suppressed",
+    "cnName": "Origin-12半自动霰弹枪（消音）"
   },
   {
     "retrigger_time": "0.08",
@@ -2810,7 +3027,7 @@
     "kill_decay_start_time": "0.38",
     "kill_decay_end_time": "0.52",
     "key": "OTS-14/ GP25 GL",
-    "cnName": "OTS-14/ GP25\uff08\u4e0b\u6302\u69b4\u5f39\uff09"
+    "cnName": "OTS-14/ GP25（下挂榴弹）"
   },
   {
     "retrigger_time": "0.113",
@@ -2836,7 +3053,7 @@
     "crouching_stance": "0.9",
     "prone_stance": "0.93",
     "key": "P416",
-    "cnName": "P416\u7a81\u51fb\u6b65\u67aa"
+    "cnName": "P416突击步枪"
   },
   {
     "retrigger_time": "0.070",
@@ -2853,7 +3070,7 @@
     "kill_decay_start_time": "0.32",
     "kill_decay_end_time": "0.44",
     "key": "P90",
-    "cnName": "P90\u51b2\u950b\u67aa"
+    "cnName": "P90冲锋枪"
   },
   {
     "slot": "2",
@@ -2877,7 +3094,7 @@
     "kill_decay_start_time": "0.35",
     "kill_decay_end_time": "0.70",
     "key": "Patrol Ship MG",
-    "cnName": "\u5de1\u903b\u8247\u673a\u67aa"
+    "cnName": "巡逻艇机枪"
   },
   {
     "retrigger_time": "0.3",
@@ -2907,7 +3124,7 @@
     "crouching_stance": "0.95",
     "prone_stance": "0.95",
     "key": "PB",
-    "cnName": "PB 6P9\u5fae\u58f0\u624b\u67aa"
+    "cnName": "PB 6P9微声手枪"
   },
   {
     "retrigger_time": "0.11",
@@ -2927,7 +3144,7 @@
     "kill_decay_start_time": "0.42",
     "kill_decay_end_time": "0.90",
     "key": "Pecheneg Bullpup",
-    "cnName": "\u201c\u4f69\u5207\u6d85\u683c\u201d\u728a\u725b\u673a\u67aa"
+    "cnName": "“佩切涅格”犊牛机枪"
   },
   {
     "retrigger_time": "-1.0",
@@ -2948,7 +3165,7 @@
     "kill_decay_end_time": "0.4",
     "character_state": "stun",
     "key": "pepperdust",
-    "cnName": "Pepperdust\u6655\u7729\u9730\u5f39\u67aa"
+    "cnName": "Pepperdust晕眩霰弹枪"
   },
   {
     "retrigger_time": "0.092",
@@ -2966,7 +3183,7 @@
     "kill_decay_start_time": "0.35",
     "kill_decay_end_time": "0.70",
     "key": "PKM",
-    "cnName": "PKM\u901a\u7528\u673a\u67aa"
+    "cnName": "PKM通用机枪"
   },
   {
     "retrigger_time": "-1.0",
@@ -2987,7 +3204,7 @@
     "kill_decay_start_time": "0.55",
     "kill_decay_end_time": "0.8",
     "key": "PSG-90",
-    "cnName": "PSG-90\u72d9\u51fb\u6b65\u67aa"
+    "cnName": "PSG-90狙击步枪"
   },
   {
     "retrigger_time": "0.40",
@@ -3008,7 +3225,7 @@
     "kill_decay_start_time": "0.23",
     "kill_decay_end_time": "0.32",
     "key": "QBS-09",
-    "cnName": "QBS-09\u5f0f\u534a\u81ea\u52a8\u9730\u5f39\u67aa"
+    "cnName": "QBS-09式半自动霰弹枪"
   },
   {
     "retrigger_time": "0.12",
@@ -3027,7 +3244,7 @@
     "kill_decay_start_time": "0.37",
     "kill_decay_end_time": "0.63",
     "key": "qbz-95",
-    "cnName": "QBZ-95\u5f0f\u7a81\u51fb\u6b65\u67aa"
+    "cnName": "QBZ-95式突击步枪"
   },
   {
     "retrigger_time": "0.18",
@@ -3048,7 +3265,7 @@
     "kill_decay_start_time": "0.23",
     "kill_decay_end_time": "0.35",
     "key": "qbz-95 - underbarrel shotgun",
-    "cnName": "QBZ-95\u5f0f\u7a81\u51fb\u6b65\u67aa\uff08\u4e0b\u6302\u9730\u5f39\uff09"
+    "cnName": "QBZ-95式突击步枪（下挂霰弹）"
   },
   {
     "retrigger_time": "0.085",
@@ -3065,7 +3282,7 @@
     "kill_decay_start_time": "0.23",
     "kill_decay_end_time": "0.37",
     "key": "QCW-05",
-    "cnName": "QCW-05\u5f0f\u5fae\u58f0\u51b2\u950b\u67aa"
+    "cnName": "QCW-05式微声冲锋枪"
   },
   {
     "retrigger_time": "0.10",
@@ -3096,7 +3313,7 @@
     "prone_moving_stance": "0.5",
     "over_wall_stance": "0.85",
     "key": "QJZ89 HMG",
-    "cnName": "QJZ89\u91cd\u673a\u67aa"
+    "cnName": "QJZ89重机枪"
   },
   {
     "retrigger_time": "0.45",
@@ -3125,7 +3342,7 @@
     "prone_moving_stance": "0.5",
     "over_wall_stance": "0.9",
     "key": "QLZ87 GL",
-    "cnName": "QLZ87\u81ea\u52a8\u69b4\u5f39\u53d1\u5c04\u5668"
+    "cnName": "QLZ87自动榴弹发射器"
   },
   {
     "retrigger_time": "0.115",
@@ -3152,7 +3369,7 @@
     "prone_stance": "1.0",
     "over_wall_stance": "0.95",
     "key": "QTS-11",
-    "cnName": "QTS-11\u4f5c\u6218\u7cfb\u7edf"
+    "cnName": "QTS-11作战系统"
   },
   {
     "retrigger_time": "0.092",
@@ -3180,7 +3397,7 @@
     "prone_moving_stance": "0.3",
     "over_wall_stance": "0.92",
     "key": "RPD",
-    "cnName": "RPD\u8f7b\u673a\u67aa"
+    "cnName": "RPD轻机枪"
   },
   {
     "retrigger_time": "0.092",
@@ -3208,7 +3425,7 @@
     "prone_moving_stance": "0.1",
     "over_wall_stance": "1.0",
     "key": "RPD - bipod",
-    "cnName": "RPD\u8f7b\u673a\u67aa\uff08\u67b6\u8bbe\uff09"
+    "cnName": "RPD轻机枪（架设）"
   },
   {
     "retrigger_time": "0.085",
@@ -3236,7 +3453,7 @@
     "prone_moving_stance": "0.7",
     "over_wall_stance": "0.95",
     "key": "RPK16",
-    "cnName": "RPK16\u8f7b\u673a\u67aa"
+    "cnName": "RPK16轻机枪"
   },
   {
     "retrigger_time": "0.085",
@@ -3264,7 +3481,7 @@
     "prone_moving_stance": "0.7",
     "over_wall_stance": "1.0",
     "key": "RPK16 - long barrel",
-    "cnName": "RPK16\u8f7b\u673a\u67aa\uff08\u5ef6\u957f\u67aa\u7ba1\uff09"
+    "cnName": "RPK16轻机枪（延长枪管）"
   },
   {
     "retrigger_time": "0.21",
@@ -3295,7 +3512,7 @@
     "prone_stance": "0.8",
     "over_wall_stance": "0.8",
     "key": "Sawn-Off Shotgun",
-    "cnName": "\u622a\u77ed\u9730\u5f39\u67aa"
+    "cnName": "截短霰弹枪"
   },
   {
     "retrigger_time": "0.5",
@@ -3325,7 +3542,7 @@
     "prone_moving_stance": "0.1",
     "over_wall_stance": "0.9",
     "key": "SCAR SSR",
-    "cnName": "SCAR SSR\u7cbe\u51c6\u5c04\u624b\u6b65\u67aa"
+    "cnName": "SCAR SSR精准射手步枪"
   },
   {
     "retrigger_time": "0.110",
@@ -3358,7 +3575,7 @@
     "prone_moving_stance": "0.15",
     "over_wall_stance": "0.92",
     "key": "SCAR L - thermal",
-    "cnName": "SCAR L\u7a81\u51fb\u6b65\u67aa\uff08\u70ed\u6210\u50cf\uff09"
+    "cnName": "SCAR L突击步枪（热成像）"
   },
   {
     "retrigger_time": "0.075",
@@ -3375,7 +3592,7 @@
     "kill_decay_start_time": "0.24",
     "kill_decay_end_time": "0.36",
     "key": "Scorpion Evo III",
-    "cnName": "\u201c\u874e\u201d\u5f0fEvo \u2162\u5fae\u58f0\u51b2\u950b\u67aa"
+    "cnName": "“蝎”式Evo Ⅲ微声冲锋枪"
   },
   {
     "retrigger_time": "3.5",
@@ -3399,7 +3616,7 @@
     "kill_decay_start_time": "0.35",
     "kill_decay_end_time": "0.70",
     "key": "Scorpio 76mm HESH",
-    "cnName": "\u874e\u5f0f76mm HESH"
+    "cnName": "蝎式76mm HESH"
   },
   {
     "retrigger_time": "0.10",
@@ -3418,7 +3635,7 @@
     "kill_decay_start_time": "0.33",
     "kill_decay_end_time": "0.68",
     "key": "SG 552",
-    "cnName": "SG552\u5361\u5bbe\u67aa"
+    "cnName": "SG552卡宾枪"
   },
   {
     "retrigger_time": "0.083",
@@ -3446,7 +3663,7 @@
     "kill_decay_start_time": "0.35",
     "kill_decay_end_time": "0.70",
     "key": "Shamshir MG",
-    "cnName": "\u5f2f\u5200\u673a\u67aa"
+    "cnName": "弯刀机枪"
   },
   {
     "retrigger_time": "0.21",
@@ -3468,7 +3685,7 @@
     "kill_decay_start_time": "0.48",
     "kill_decay_end_time": "0.75",
     "key": "SKS",
-    "cnName": "SKS\u534a\u81ea\u52a8\u6b65\u67aa"
+    "cnName": "SKS半自动步枪"
   },
   {
     "retrigger_time": "-1.0",
@@ -3488,7 +3705,7 @@
     "kill_decay_start_time": "0.24",
     "kill_decay_end_time": "0.29",
     "key": "SPAS-12",
-    "cnName": "SPAS-12\u591a\u529f\u80fd\u9730\u5f39\u67aa"
+    "cnName": "SPAS-12多功能霰弹枪"
   },
   {
     "retrigger_time": "0.032",
@@ -3512,7 +3729,7 @@
     "kill_decay_start_time": "0.25",
     "kill_decay_end_time": "0.65",
     "key": "Squall",
-    "cnName": "\u201c\u5486\u54ee\u8005\u201d\u91d1\u5c5e\u98ce\u66b4\u7cfb\u7edf"
+    "cnName": "“咆哮者”金属风暴系统"
   },
   {
     "retrigger_time": "0.123",
@@ -3531,7 +3748,7 @@
     "kill_decay_start_time": "0.45",
     "kill_decay_end_time": "0.75",
     "key": "Steyr AUG",
-    "cnName": "\u65af\u592a\u5c14AUG\u7a81\u51fb\u6b65\u67aa"
+    "cnName": "斯太尔AUG突击步枪"
   },
   {
     "retrigger_time": "0.09",
@@ -3560,7 +3777,7 @@
     "crouching_stance": "0.9",
     "prone_stance": "0.95",
     "key": "Steyr TMP",
-    "cnName": "\u65af\u592a\u5c14TMP\u6218\u672f\u51b2\u950b\u67aa"
+    "cnName": "斯太尔TMP战术冲锋枪"
   },
   {
     "retrigger_time": "0.092",
@@ -3588,7 +3805,7 @@
     "prone_moving_stance": "0.3",
     "over_wall_stance": "1.05",
     "key": "Stoner 62",
-    "cnName": "\u65af\u901a\u7eb362\u8f7b\u673a\u67aa\uff08\u7784\u955c\uff09"
+    "cnName": "斯通纳62轻机枪（瞄镜）"
   },
   {
     "retrigger_time": "0.1",
@@ -3614,7 +3831,7 @@
     "prone_moving_stance": "0.1",
     "over_wall_stance": "0.95",
     "key": "Stoner LMG",
-    "cnName": "\u65af\u901a\u7eb3\u8f7b\u673a\u67aa"
+    "cnName": "斯通纳轻机枪"
   },
   {
     "retrigger_time": "0.333",
@@ -3635,7 +3852,7 @@
     "kill_decay_start_time": "0.2",
     "kill_decay_end_time": "0.3",
     "key": "Supershorty",
-    "cnName": "\u201c\u8d85\u7ea7\u77ee\u5b50\u201d\u9730\u5f39\u67aa"
+    "cnName": "“超级矮子”霰弹枪"
   },
   {
     "retrigger_time": "-1.0",
@@ -3656,7 +3873,7 @@
     "kill_decay_start_time": "0.6",
     "kill_decay_end_time": "0.85",
     "key": "SV-98",
-    "cnName": "SV-98\u72d9\u51fb\u6b65\u67aa"
+    "cnName": "SV-98狙击步枪"
   },
   {
     "retrigger_time": "0.1",
@@ -3686,7 +3903,7 @@
     "crouching_stance": "0.95",
     "prone_stance": "0.95",
     "key": "MP443 Grach",
-    "cnName": "MP443\u201c\u4e4c\u9e26\u201d\u534a\u81ea\u52a8\u624b\u67aa"
+    "cnName": "MP443“乌鸦”半自动手枪"
   },
   {
     "retrigger_time": "-1.0",
@@ -3720,7 +3937,7 @@
     "prone_moving_stance": "0.1",
     "over_wall_stance": "0.96",
     "key": "Tac50 AP Warhead",
-    "cnName": "Tac50\uff08\u7a7f\u7532\u5f39\uff09"
+    "cnName": "Tac50（穿甲弹）"
   },
   {
     "retrigger_time": "-1",
@@ -3751,7 +3968,7 @@
     "crouching_stance": "0.95",
     "prone_stance": "0.95",
     "key": "taser",
-    "cnName": "\u6cf0\u745f\u67aa"
+    "cnName": "泰瑟枪"
   },
   {
     "slot": "2",
@@ -3775,7 +3992,7 @@
     "kill_decay_start_time": "0.35",
     "kill_decay_end_time": "0.70",
     "key": "Patriot MG",
-    "cnName": "\u7231\u56fd\u8005\u673a\u67aa"
+    "cnName": "爱国者机枪"
   },
   {
     "retrigger_time": "0.123",
@@ -3793,7 +4010,7 @@
     "kill_decay_start_time": "0.25",
     "kill_decay_end_time": "0.58",
     "key": "TKB-059",
-    "cnName": "TKB-059\u4e09\u7ba1\u7a81\u51fb\u6b65\u67aa"
+    "cnName": "TKB-059三管突击步枪"
   },
   {
     "retrigger_time": "-1.0",
@@ -3822,7 +4039,7 @@
     "prone_moving_stance": "0.3",
     "over_wall_stance": "0.9",
     "key": "TTI-Combat Shield",
-    "cnName": "TTI\u683c\u6597\u76fe\u724c"
+    "cnName": "TTI格斗盾牌"
   },
   {
     "retrigger_time": "0.09",
@@ -3848,7 +4065,7 @@
     "prone_stance": "0.9",
     "over_wall_stance": "0.9",
     "key": "Ultimax 100",
-    "cnName": "Ultimax 100\u8f7b\u673a\u67aa\uff08\u5f39\u9f13\uff09"
+    "cnName": "Ultimax 100轻机枪（弹鼓）"
   },
   {
     "retrigger_time": "0.1",
@@ -3874,7 +4091,7 @@
     "prone_stance": "0.9",
     "over_wall_stance": "0.9",
     "key": "Ultimax 100, magazine",
-    "cnName": "Ultimax 100\u8f7b\u673a\u67aa\uff08\u5f39\u5323\uff09"
+    "cnName": "Ultimax 100轻机枪（弹匣）"
   },
   {
     "retrigger_time": "0.09",
@@ -3891,7 +4108,7 @@
     "kill_decay_start_time": "0.33",
     "kill_decay_end_time": "0.43",
     "key": "UMP40",
-    "cnName": "UMP-40\u51b2\u950b\u67aa"
+    "cnName": "UMP-40冲锋枪"
   },
   {
     "retrigger_time": "-1.0",
@@ -3911,7 +4128,7 @@
     "kill_decay_start_time": "0.23",
     "kill_decay_end_time": "0.275",
     "key": "UTS-15",
-    "cnName": "UTS-15\u6cf5\u52a8\u5f0f\u9730\u5f39\u67aa"
+    "cnName": "UTS-15泵动式霰弹枪"
   },
   {
     "slot": "2",
@@ -3935,7 +4152,7 @@
     "kill_decay_start_time": "0.38",
     "kill_decay_end_time": "0.68",
     "key": "VFS MG",
-    "cnName": "VFS\u8f66\u8f7d\u91cd\u673a\u67aa"
+    "cnName": "VFS车载重机枪"
   },
   {
     "retrigger_time": "1.0",
@@ -3964,7 +4181,7 @@
     "prone_moving_stance": "1",
     "over_wall_stance": "1",
     "key": "VKS",
-    "cnName": "VKS\u201c\u6392\u6c14\u8005\u201d\u72d9\u51fb\u6b65\u67aa"
+    "cnName": "VKS“排气者”狙击步枪"
   },
   {
     "retrigger_time": "0.2",
@@ -3994,7 +4211,7 @@
     "prone_moving_stance": "0.1",
     "over_wall_stance": "0.9",
     "key": "VSS Vintorez",
-    "cnName": "VSS\u5fae\u58f0\u72d9\u51fb\u6b65\u67aa"
+    "cnName": "VSS微声狙击步枪 "
   },
   {
     "slot": "2",
@@ -4019,7 +4236,7 @@
     "kill_decay_start_time": "0.35",
     "kill_decay_end_time": "0.72",
     "key": "MG-3",
-    "cnName": "\u8f66\u8f7dMG3"
+    "cnName": "车载MG3"
   },
   {
     "retrigger_time": "0.110",
@@ -4037,7 +4254,7 @@
     "kill_decay_start_time": "0.42",
     "kill_decay_end_time": "0.75",
     "key": "XM8",
-    "cnName": "XM8\u7a81\u51fb\u6b65\u67aa"
+    "cnName": "XM8突击步枪"
   },
   {
     "slot": "2",
@@ -4062,6 +4279,6 @@
     "kill_decay_start_time": "0.48",
     "kill_decay_end_time": "0.70",
     "key": "ZJX-19/XE MG",
-    "cnName": "\u88c5\u7532\u62a2\u4fee\u8f66-\u673a\u67aa"
+    "cnName": "装甲抢修车-机枪"
   }
 ]
