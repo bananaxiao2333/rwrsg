@@ -278,7 +278,8 @@ const App = () => {
     setSpinning(true);
     message.open({
       type: "info",
-      content: t("app.currentTip", { num: Object.keys(preloadedUrls).length }),
+      // content: t("app.currentTip", { num: Object.keys(preloadedUrls).length }),
+      content: t("app.currentTip", { num: Object.keys(translData).length }),
       duration: 3,
     });
 
@@ -296,8 +297,9 @@ const App = () => {
   }, []);
 
   var opti = [];
-  Object.entries(imageUrls).forEach((key, value) => {
-    var n = key[0].replace("./assets/items/", "").replace(".png", "");
+  Object.entries(translData).forEach((key, value) => {
+    var n = key[0];
+    
     opti = opti.concat([
       {
         value: n,
@@ -312,6 +314,22 @@ const App = () => {
       },
     ]);
   });
+  // Object.entries(imageUrls).forEach((key, value) => {
+  //   var n = key[0].replace("./assets/items/", "").replace(".png", "");
+  //   opti = opti.concat([
+  //     {
+  //       value: n,
+  //       label:
+  //         i18n.language == "zh"
+  //           ? translData[n]?.cn_name
+  //             ? `${translData[n].cn_name + "-" + translData[n].en_name} (${n})`
+  //             : n
+  //           : translData[n]?.en_name
+  //           ? `${translData[n].en_name} (${n})`
+  //           : n,
+  //     },
+  //   ]);
+  // });
 
   const ref1 = React.useRef(null);
   const ref2 = React.useRef(null);

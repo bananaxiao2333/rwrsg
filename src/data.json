@@ -1,21 +1,36 @@
 {
-  "aa-12": { "en_name": "AA-12", "cn_name": "AA-12全自动霰弹枪" },
+  "aa-12": {
+    "en_name": "AA-12",
+    "cn_name": "AA-12全自动霰弹枪"
+  },
   "aa-12_frag": {
     "en_name": "AA-12 Frag",
     "cn_name": "AA-12全自动霰弹枪（破片弹）"
   },
-  "flare_aav7": {
-    "en_name": "AAV-G17/A1 Drop",
-    "cn_name": "G17/A1两栖战车空投信标"
+  "aav7_turret": {
+    "en_name": "AAV7 MG",
+    "cn_name": "两栖战车机枪"
   },
-  "aav7_turret": { "en_name": "AAV7 MG", "cn_name": "两栖战车机枪" },
-  "ac556": { "en_name": "Ruger AC556", "cn_name": "鲁格 AC556" },
+  "ac556": {
+    "en_name": "Ruger AC556",
+    "cn_name": "鲁格 AC556"
+  },
   "ac556_b": {
     "en_name": "Ruger AC556 - bayonet",
     "cn_name": "鲁格 AC556（刺刀）"
   },
-  "aek_919k": { "en_name": "AEK-919k", "cn_name": "AEK-919k冲锋枪" },
-  "ak47": { "en_name": "AK47", "cn_name": "AK47突击步枪" },
+  "acav_minig": {
+    "en_name": "ACAV minigun",
+    "cn_name": "ACAV加特林机枪"
+  },
+  "aek_919k": {
+    "en_name": "AEK-919k",
+    "cn_name": "AEK-919k冲锋枪"
+  },
+  "ak47": {
+    "en_name": "AK47",
+    "cn_name": "AK47突击步枪"
+  },
   "ak47_w_gp25": {
     "en_name": "AK47 w/ GP25 GL",
     "cn_name": "AK47/GP25（下挂榴弹）"
@@ -24,7 +39,10 @@
     "en_name": "AK47 w/ GP25 GL",
     "cn_name": "AK47/GP25（下挂榴弹）"
   },
-  "aks74u": { "en_name": "AKS-74U", "cn_name": "AKS-74U卡宾枪" },
+  "aks74u": {
+    "en_name": "AKS-74U",
+    "cn_name": "AKS-74U卡宾枪"
+  },
   "aks_tishina": {
     "en_name": "AKS / Tishina GL",
     "cn_name": "AKS / Tishina（下挂榴弹）"
@@ -33,210 +51,494 @@
     "en_name": "AKS / Tishina GL",
     "cn_name": "AKS / Tishina（下挂榴弹）"
   },
-  "an94": { "en_name": "AN-94", "cn_name": "AN-94突击步枪" },
+  "amethyst": {
+    "en_name": "amethyst",
+    "cn_name": "紫水晶"
+  },
+  "an94": {
+    "en_name": "AN-94",
+    "cn_name": "AN-94突击步枪"
+  },
   "an94_burst": {
     "en_name": "AN-94 - burst",
     "cn_name": "AN-94突击步枪（双发）"
   },
-  "apc": { "en_name": "Mustela Mk20", "cn_name": "“鼬鼠”Mk.20装甲支援车" },
-  "at_mine": { "en_name": "Naval mine", "cn_name": "水雷" },
-  "apr": { "en_name": "APR", "cn_name": "APR微声狙击步枪" },
-  "ar15": { "en_name": "AR15", "cn_name": "AR15突击步枪" },
+  "apc": {
+    "en_name": "Mustela Mk20",
+    "cn_name": "“鼬鼠”Mk.20装甲支援车"
+  },
+  "apmine": {
+    "en_name": "M528 AP",
+    "cn_name": "M528-人员杀伤导弹"
+  },
+  "apr": {
+    "en_name": "APR",
+    "cn_name": "APR微声狙击步枪"
+  },
+  "apr308s": {
+    "en_name": "APR308S",
+    "cn_name": "APR308S微声狙击步枪"
+  },
+  "apr308s_p": {
+    "en_name": "Glock G18c suppressed",
+    "cn_name": "Glock G18c 消音手枪"
+  },
+  "ar15": {
+    "en_name": "AR15",
+    "cn_name": "AR15突击步枪"
+  },
   "ar15_th": {
     "en_name": "AR15 - thermal",
     "cn_name": "AR15突击步枪（热成像）"
   },
-  "ares_shrike": { "en_name": "ARES Shrike", "cn_name": "ARES“伯劳鸟”轻机枪" },
-  "ash12": { "en_name": "ASh-12.7", "cn_name": "ASh-12.7突击步枪" },
-  "ash12_g": { "en_name": "ASh-12.7", "cn_name": "ASh-12.7突击步枪" },
-  "asm_val": { "en_name": "ASM VAL", "cn_name": "ASM VAL特种突击步枪" },
-  "balloon": { "en_name": "Helium balloon", "cn_name": "氢气球" },
-  "flare_banana": { "en_name": "Banana Car Drop", "cn_name": "香蕉车空投信标" },
-  "banana_peel": { "en_name": "Banana peel", "cn_name": "香蕉皮" },
-  "bandage": { "en_name": "bandage", "cn_name": "绷带" },
-  "banner_aid": { "en_name": "Banner", "cn_name": "牌子" },
-  "banner_chicken": { "en_name": "Banner", "cn_name": "牌子" },
-  "banner_grass": { "en_name": "Banner", "cn_name": "牌子" },
-  "banner_ee": { "en_name": "Banner", "cn_name": "牌子" },
-  "banner_egg": { "en_name": "Banner", "cn_name": "牌子" },
-  "banner_gift": { "en_name": "Banner", "cn_name": "牌子" },
-  "banner_gingerbread": { "en_name": "Banner", "cn_name": "牌子" },
-  "banner_grinch": { "en_name": "Banner", "cn_name": "牌子" },
-  "banner_halloween": { "en_name": "Banner", "cn_name": "牌子" },
-  "banner_ice": { "en_name": "Banner", "cn_name": "牌子" },
-  "banner_pig": { "en_name": "Banner", "cn_name": "牌子" },
-  "banner_president": { "en_name": "Banner", "cn_name": "牌子" },
-  "banner_rabbit": { "en_name": "Banner", "cn_name": "牌子" },
-  "banner_rwr": { "en_name": "Banner", "cn_name": "牌子" },
-  "banner_santa": { "en_name": "Banner", "cn_name": "牌子" },
-  "banner_smile": { "en_name": "Banner", "cn_name": "牌子" },
-  "banner_voting_0": { "en_name": "Banner", "cn_name": "牌子" },
-  "banner_voting_1": { "en_name": "Banner", "cn_name": "牌子" },
+  "ash12": {
+    "en_name": "ASh-12.7",
+    "cn_name": "ASh-12.7突击步枪"
+  },
+  "ash12_g": {
+    "en_name": "ASh-12.7",
+    "cn_name": "ASh-12.7突击步枪"
+  },
+  "asm_val": {
+    "en_name": "ASM VAL",
+    "cn_name": "ASM VAL特种突击步枪"
+  },
+  "at_mine": {
+    "en_name": "Naval mine",
+    "cn_name": "水雷"
+  },
+  "aug": {
+    "en_name": "Steyr AUG",
+    "cn_name": "斯太尔AUG突击步枪"
+  },
+  "axe": {
+    "en_name": "Axe",
+    "cn_name": "Axe"
+  },
+  "balloon": {
+    "en_name": "Helium balloon",
+    "cn_name": "氢气球"
+  },
+  "banana_peel": {
+    "en_name": "Banana peel",
+    "cn_name": "香蕉皮"
+  },
+  "bandage": {
+    "en_name": "bandage",
+    "cn_name": "绷带"
+  },
+  "banner_aid": {
+    "en_name": "Banner",
+    "cn_name": "牌子"
+  },
+  "banner_chicken": {
+    "en_name": "Banner",
+    "cn_name": "牌子"
+  },
+  "banner_ee": {
+    "en_name": "Banner",
+    "cn_name": "牌子"
+  },
+  "banner_egg": {
+    "en_name": "Banner",
+    "cn_name": "牌子"
+  },
+  "banner_gift": {
+    "en_name": "Banner",
+    "cn_name": "牌子"
+  },
+  "banner_gingerbread": {
+    "en_name": "Banner",
+    "cn_name": "牌子"
+  },
+  "banner_grass": {
+    "en_name": "Banner",
+    "cn_name": "牌子"
+  },
+  "banner_grinch": {
+    "en_name": "Banner",
+    "cn_name": "牌子"
+  },
+  "banner_halloween": {
+    "en_name": "Banner",
+    "cn_name": "牌子"
+  },
+  "banner_ice": {
+    "en_name": "Banner",
+    "cn_name": "牌子"
+  },
+  "banner_pig": {
+    "en_name": "Banner",
+    "cn_name": "牌子"
+  },
+  "banner_president": {
+    "en_name": "Banner",
+    "cn_name": "牌子"
+  },
+  "banner_rabbit": {
+    "en_name": "Banner",
+    "cn_name": "牌子"
+  },
+  "banner_rwr": {
+    "en_name": "Banner",
+    "cn_name": "牌子"
+  },
+  "banner_santa": {
+    "en_name": "Banner",
+    "cn_name": "牌子"
+  },
+  "banner_smile": {
+    "en_name": "Banner",
+    "cn_name": "牌子"
+  },
+  "banner_voting_0": {
+    "en_name": "Banner",
+    "cn_name": "牌子"
+  },
+  "banner_voting_1": {
+    "en_name": "Banner",
+    "cn_name": "牌子"
+  },
   "barrett_m107": {
     "en_name": "Barrett M107",
     "cn_name": "巴雷特M107半自动狙击步枪"
+  },
+  "bats": {
+    "en_name": "bats",
+    "cn_name": "吸血出击"
+  },
+  "beach_ball": {
+    "en_name": "Beach Ball",
+    "cn_name": "沙滩球"
+  },
+  "beer_can": {
+    "en_name": "beer can",
+    "cn_name": "啤酒罐"
+  },
+  "bell": {
+    "en_name": "Golden bell",
+    "cn_name": "金色小丁当"
   },
   "benelli_m3": {
     "en_name": "Benelli M3 - speed loader",
     "cn_name": "伯耐利M3霰弹枪（速装器）"
   },
-  "benelli_m4": { "en_name": "Benelli M4", "cn_name": "伯耐利M4霰弹枪" },
+  "benelli_m4": {
+    "en_name": "Benelli M4",
+    "cn_name": "伯耐利M4霰弹枪"
+  },
   "benelli_m4_supp": {
     "en_name": "Benelli M4 suppressed",
     "cn_name": "伯耐利M4霰弹枪（消音）"
+  },
+  "beowulf": {
+    "en_name": ".50 Beowulf",
+    "cn_name": ".50口径贝奥武夫自动步枪"
   },
   "beretta_93r": {
     "en_name": "Beretta 93R",
     "cn_name": "伯莱塔93R消音冲锋手枪"
   },
-  "beretta_m9": { "en_name": "Beretta M9", "cn_name": "伯莱塔M9手枪" },
+  "beretta_m9": {
+    "en_name": "Beretta M9",
+    "cn_name": "伯莱塔M9手枪"
+  },
   "beretta_m9_s": {
     "en_name": "Beretta M9 suppressed",
     "cn_name": "伯莱塔M9消音手枪"
   },
-  "binoculars": { "en_name": "Binoculars", "cn_name": "望远镜" },
-  "bizon": { "en_name": "PP-19 Bizon", "cn_name": "PP-19“野牛”冲锋枪" },
-  "blowgun": { "en_name": "Blowgun", "cn_name": "吹箭" },
-  "tank_mg": { "en_name": "ZJX-19/XE MG", "cn_name": "装甲抢修车-机枪" },
-  "claws": { "en_name": "Elastic Tendons", "cn_name": "弹性肌腱" },
-  "c4": { "en_name": "C4", "cn_name": "C4炸药" },
-  "chainsaw": { "en_name": "Chain Saw", "cn_name": "油锯" },
-  "chain_saw": { "en_name": "Chain SAW", "cn_name": "“链锯”消音轻机枪" },
+  "bible": {
+    "en_name": "Holy Bible",
+    "cn_name": "圣经"
+  },
+  "binoculars": {
+    "en_name": "Binoculars",
+    "cn_name": "望远镜"
+  },
+  "bizarre_carrot": {
+    "en_name": "bizarre carrot",
+    "cn_name": "奇异的胡萝卜...？"
+  },
+  "bizarre_rubber_bullet": {
+    "en_name": "bizarre rubber bullet...?",
+    "cn_name": "奇异的橡胶子弹...？"
+  },
+  "bizon": {
+    "en_name": "PP-19 Bizon",
+    "cn_name": "PP-19“野牛”冲锋枪"
+  },
+  "blackops": {
+    "en_name": "black ops vest",
+    "cn_name": "夜行特战服"
+  },
+  "blackops_1": {
+    "en_name": "black ops vest, damaged",
+    "cn_name": "夜行特战服，已损坏"
+  },
+  "blowgun": {
+    "en_name": "Blowgun",
+    "cn_name": "吹箭"
+  },
+  "bunny_mgl": {
+    "en_name": "Egg Launcher",
+    "cn_name": "榴蛋发射器"
+  },
+  "c4": {
+    "en_name": "C4",
+    "cn_name": "C4炸药"
+  },
+  "camo_vest": {
+    "en_name": "Camouflaged Vest",
+    "cn_name": "迷彩背心"
+  },
+  "camo_vest_1": {
+    "en_name": "Camouflaged Vest, destroyed",
+    "cn_name": "迷彩背心，已损坏"
+  },
+  "camo_vest_20": {
+    "en_name": "Camouflaged Vest, 20%",
+    "cn_name": "迷彩背心，20%"
+  },
+  "camo_vest_50": {
+    "en_name": "Camouflaged Vest, 50%",
+    "cn_name": "迷彩背心，50%"
+  },
+  "camo_vest_80": {
+    "en_name": "Camouflaged Vest, 80%",
+    "cn_name": "迷彩背心，80%"
+  },
+  "camouflage_suit": {
+    "en_name": "Camouflage suit",
+    "cn_name": "伪装服"
+  },
+  "can_cannon": {
+    "en_name": "Can Cannon",
+    "cn_name": "罐子发射器"
+  },
+  "candycane": {
+    "en_name": "Candy cane",
+    "cn_name": "手杖糖"
+  },
+  "cd": {
+    "en_name": "unreleased Justin Beerbar CD",
+    "cn_name": "贾斯汀·比巴卜未发行的CD唱片"
+  },
+  "chain_saw": {
+    "en_name": "Chain SAW",
+    "cn_name": "“链锯”消音轻机枪"
+  },
+  "chainsaw": {
+    "en_name": "Chain Saw",
+    "cn_name": "油锯"
+  },
+  "chewing_gum": {
+    "en_name": "chewing-gum",
+    "cn_name": "口香糖"
+  },
   "chiapparhino": {
     "en_name": "ChiappaRhino",
     "cn_name": "齐亚帕“犀牛”转轮手枪"
   },
-  "chickencarrier": { "en_name": "Chicken carrier", "cn_name": "鸡笼" },
+  "chickencarrier": {
+    "en_name": "Chicken carrier",
+    "cn_name": "鸡笼"
+  },
   "chinalake": {
     "en_name": "Chinalake - HEDP",
     "cn_name": "“中国湖”泵动榴弹发射器"
   },
-  "claymore": { "en_name": "Claymore", "cn_name": "M18阔剑地雷" },
-  "riot_shield": { "en_name": "War Correspondent", "cn_name": "战地记者" },
-  "compound": { "en_name": "Compound X", "cn_name": "X号化合物" },
-  "compound_bow": { "en_name": "Compound Bow", "cn_name": "军用材质复合弓" },
+  "chocolate": {
+    "en_name": "chocolate",
+    "cn_name": "巧克力"
+  },
+  "cigarettes": {
+    "en_name": "cigarettes",
+    "cn_name": "香烟"
+  },
+  "cigars": {
+    "en_name": "cigars",
+    "cn_name": "雪茄"
+  },
+  "cigars_2": {
+    "en_name": "cigars",
+    "cn_name": "雪茄"
+  },
+  "cigars_3": {
+    "en_name": "cigars",
+    "cn_name": "雪茄"
+  },
+  "cigars_4": {
+    "en_name": "cigars",
+    "cn_name": "雪茄"
+  },
+  "cigars_5": {
+    "en_name": "cigars",
+    "cn_name": "雪茄"
+  },
+  "claws": {
+    "en_name": "Elastic Tendons",
+    "cn_name": "弹性肌腱"
+  },
+  "claymore": {
+    "en_name": "Claymore",
+    "cn_name": "M18阔剑地雷"
+  },
+  "coin_4": {
+    "en_name": "Cursed Coin",
+    "cn_name": "诅咒金币"
+  },
+  "comic": {
+    "en_name": "comic book",
+    "cn_name": "漫画书"
+  },
+  "community_box_1": {
+    "en_name": "community box",
+    "cn_name": "社群箱子Ⅰ"
+  },
+  "community_box_2": {
+    "en_name": "community box 2",
+    "cn_name": "社群箱子 Ⅱ"
+  },
+  "community_box_3": {
+    "en_name": "community box 3",
+    "cn_name": "社群箱子 Ⅲ"
+  },
+  "community_box_4": {
+    "en_name": "community box 4",
+    "cn_name": "社群箱子 Ⅳ"
+  },
+  "community_box_5": {
+    "en_name": "community box 5",
+    "cn_name": "社群箱子 V"
+  },
+  "community_box_6": {
+    "en_name": "community box 6",
+    "cn_name": "社群箱子 VI"
+  },
+  "community_box_7": {
+    "en_name": "community box 7",
+    "cn_name": "社群箱子 VII"
+  },
+  "compound": {
+    "en_name": "Compound X",
+    "cn_name": "X号化合物"
+  },
+  "compound_bow": {
+    "en_name": "Compound Bow",
+    "cn_name": "军用材质复合弓"
+  },
   "compound_bow_alt": {
     "en_name": "Compound Bow, explosive",
     "cn_name": "军用材质复合弓（爆炸箭头）"
   },
-  "corn_launcher": { "en_name": "Popcorn Launcher", "cn_name": "爆米花发射器" },
+  "cooler_box_1": {
+    "en_name": "cooler box 1",
+    "cn_name": "夏日冷藏箱1"
+  },
+  "cooler_box_2": {
+    "en_name": "cooler box 2",
+    "cn_name": "夏日冷藏箱2"
+  },
+  "cooler_box_3": {
+    "en_name": "cooler box 3",
+    "cn_name": "夏日冷藏箱3"
+  },
+  "corn_launcher": {
+    "en_name": "Popcorn Launcher",
+    "cn_name": "爆米花发射器"
+  },
   "corn_launcher_g": {
     "en_name": "Popcorn Launcher",
     "cn_name": "爆米花发射器"
   },
-  "hesco_barrier": { "en_name": "Cover deploy", "cn_name": "掩体部署包" },
-  "dartgun_medic": { "en_name": "Medical Dart Gun", "cn_name": "医疗枪" },
-  "gl": { "en_name": "Grenade Launcher", "cn_name": "自动榴弹发射器" },
-  "deployable_mg": { "en_name": "MG deploy", "cn_name": "重机枪部署包" },
-  "minigun": { "en_name": "Minigun", "cn_name": "M134加特林机枪" },
-  "desert_eagle": { "en_name": "Desert Eagle", "cn_name": "沙漠之鹰" },
-  "golden_desert_eagle": {
-    "en_name": "Desert Eagle GOLD",
-    "cn_name": "黄金沙漠之鹰"
+  "costume_banana": {
+    "en_name": "costume, banana",
+    "cn_name": "香蕉服"
   },
-  "grenade": { "en_name": "hand grenade", "cn_name": "手榴弹" },
-  "dogbone": { "en_name": "Dog Bone", "cn_name": "狗骨头" },
-  "medikit": { "en_name": "Medikit", "cn_name": "医疗包" },
-  "dooms_hammer": { "en_name": "Doom's Hammer", "cn_name": "毁灭之锤" },
-  "hunter_shotgun": { "en_name": "KSxS-6 Hunter", "cn_name": "KSxS-6 猎枪" },
-  "hunter_shotgun_alt": {
-    "en_name": "KSxS-6 Hunter, double shot",
-    "cn_name": "KSxS-6 猎枪（双发）"
+  "costume_banana_1": {
+    "en_name": "costume, banana, destroyed",
+    "cn_name": "香蕉服，已损坏"
   },
-  "dp28": { "en_name": "DPM", "cn_name": "DPM轻机枪" },
-  "dp28_s": { "en_name": "DPM - shield", "cn_name": "DPM轻机枪（枪盾）" },
-  "dp64": { "en_name": "DP-64 GL", "cn_name": "DP-64双管榴弹发射器" },
-  "dragons_breath": { "en_name": "Dragons breath", "cn_name": "龙息霰弹枪" },
-  "dragunov_svd": {
-    "en_name": "Dragunov SVD",
-    "cn_name": "Dragunov SVD半自动狙击步枪"
+  "costume_bat": {
+    "en_name": "wings, vampire",
+    "cn_name": "吸血鬼之翼"
   },
-  "bunny_mgl": { "en_name": "Egg Launcher", "cn_name": "榴蛋发射器" },
-  "egg": { "en_name": "egg", "cn_name": "蛋" },
-  "egg_community": { "en_name": "community egg", "cn_name": "社群蛋仔" },
-  "emp_grenade": { "en_name": "EMP grenade", "cn_name": "EMP手雷" },
-  "enforcer": {
-    "en_name": "M711-LA Enforcer",
-    "cn_name": "M711-LA “执行者”步枪"
+  "costume_bat_1": {
+    "en_name": "wings, vampire, blood thirsty",
+    "cn_name": "吸血鬼之翼，嗜血"
   },
-  "evil_pumpkin": { "en_name": "Evil Pumpkin", "cn_name": "老黎的邪恶南瓜" },
-  "flare_f1": { "en_name": "F1 Drop", "cn_name": "一级圆程式赛车空投信标" },
-  "f2000": { "en_name": "F2000", "cn_name": "F2000突击步枪" },
-  "fal": { "en_name": "FN FAL", "cn_name": "FN FAL突击步枪" },
-  "fal_bayonet": {
-    "en_name": "FN FAL - bayonet",
-    "cn_name": "FN FAL突击步枪（刺刀）"
+  "costume_butcher": {
+    "en_name": "Psycho Butcher",
+    "cn_name": "杀人魔"
   },
-  "famasg1": { "en_name": "FAMAS G1", "cn_name": "FAMAS-G1突击步枪" },
-  "fd338": { "en_name": "FD-338", "cn_name": "FD-338射手步枪" },
-  "fd338sd": { "en_name": "FD-338SD", "cn_name": "FD-338射手步枪（消音）" },
-  "fhj01": { "en_name": "FHJ01 - FAE", "cn_name": "FHJ01云爆弹" },
-  "flamethrower": { "en_name": "flamethrower", "cn_name": "火焰喷射器" },
-  "flare_croc": {
-    "en_name": "FT-CROC Drop",
-    "cn_name": "烈焰装甲运输车空投信标"
+  "costume_butcher_1": {
+    "en_name": "Psycho Butcher, wounded",
+    "cn_name": "杀人魔，已损坏"
   },
-  "flare": { "en_name": "flare", "cn_name": "重生信号弹" },
-  "flare_fv101": {
-    "en_name": "Scorpio AXN Drop",
-    "cn_name": "AXN蝎式空投信标"
+  "costume_clown": {
+    "en_name": "costume, clown",
+    "cn_name": "小丑服"
   },
-  "g11": { "en_name": "G11", "cn_name": "H&K G11突击步枪" },
-  "g11_alt": {
-    "en_name": "G11 - burst",
-    "cn_name": "H&K G11突击步枪（三连发）"
+  "costume_clown_1": {
+    "en_name": "costume, clown, destroyed",
+    "cn_name": "小丑服，已损坏"
   },
-  "g36": { "en_name": "G36", "cn_name": "G36突击步枪" },
-  "g36_w_ag36": {
-    "en_name": "G36 w/ AG36 GL",
-    "cn_name": "G36/AG36（下挂榴弹）"
+  "costume_lizard": {
+    "en_name": "Mutagen, Lizard",
+    "cn_name": "蜥蜴诱变剂"
   },
-  "g36_w_ag36_g": {
-    "en_name": "G36 w/ AG36 GL",
-    "cn_name": "G36/AG36（下挂榴弹）"
+  "costume_lizard_1": {
+    "en_name": "Mutagen, Lizard, damaged",
+    "cn_name": "蜥蜴诱变剂，已损坏"
   },
-  "g3_1x": { "en_name": "G3A3", "cn_name": "G3A3突击步枪（红点瞄具）" },
-  "g3_3x": { "en_name": "G3A3 - scoped", "cn_name": "G3A3突击步枪（3倍瞄具）" },
-  "galil": { "en_name": "Galil ARM", "cn_name": "加利尔突击步枪" },
-  "galil_b": {
-    "en_name": "Galil ARM - bipod",
-    "cn_name": "加利尔突击步枪（两脚架）"
+  "costume_panda": {
+    "en_name": "costume, panda",
+    "cn_name": "熊猫服"
   },
-  "gepard_m6_lynx": { "en_name": "M6 Lynx", "cn_name": "GM6“山猫”狙击步枪" },
-  "gilboa_dbr": { "en_name": "Gilboa DBR", "cn_name": "基利波双管突击步枪" },
-  "gl06": { "en_name": "GL06", "cn_name": "GL-06榴弹发射器" },
-  "glock17": { "en_name": "Glock 17", "cn_name": "Glock 17手枪" },
-  "glock17_s": {
-    "en_name": "Glock 17 suppressed",
-    "cn_name": "Glock 17 消音手枪"
+  "costume_panda_1": {
+    "en_name": "costume, panda, destroyed",
+    "cn_name": "熊猫服，已损坏"
   },
-  "deployable_gl": { "en_name": "GL Deploy", "cn_name": "榴弹发射器部署包" },
-  "gm94": { "en_name": "GM94 - Thermobaric", "cn_name": "GM94温压弹发射器" },
-  "golden_ak47": { "en_name": "Golden AK47", "cn_name": "黄金AK-47突击步枪" },
-  "golden_dragunov_svd": {
-    "en_name": "Golden Dragunov SVD",
-    "cn_name": "黄金Dragunov SVD半自动狙击步枪"
+  "costume_santa": {
+    "en_name": "costume, santa",
+    "cn_name": "圣诞服"
   },
-  "golden_knife": { "en_name": "Golden Knife", "cn_name": "氪金匕首" },
-  "golden_mp5sd": { "en_name": "Golden MP5SD", "cn_name": "黄金MP5微声冲锋枪" },
-  "laptop_gps": { "en_name": "GPS laptop", "cn_name": "GPS定位电脑" },
-  "flare_guntruck": {
-    "en_name": "gun truck drop",
-    "cn_name": "武装卡车空投信标"
+  "costume_santa_1": {
+    "en_name": "costume, santa, destroyed",
+    "cn_name": "圣诞服，已损坏"
   },
-  "gun_lewis": { "en_name": "Lewis Gun", "cn_name": "刘易斯轻机枪" },
-  "gun_tommy": { "en_name": "Tommy Gun", "cn_name": "芝加哥打字机" },
-  "hcar": { "en_name": "HCAR", "cn_name": "HCAR重型反突击步枪" },
-  "honeybadger": {
-    "en_name": "AAC Honey Badger",
-    "cn_name": "“蜜獾”消音突击步枪"
+  "costume_scream": {
+    "en_name": "costume, reaper",
+    "cn_name": "死神服"
   },
-  "hornet": { "en_name": "NOXE rocket", "cn_name": "导弹发射车-导弹" },
-  "flare_hovercraft": {
-    "en_name": "Hovercraft Drop",
-    "cn_name": "气垫船空投信标"
+  "costume_scream_1": {
+    "en_name": "costume, reaper (damaged)",
+    "cn_name": "死神服（受损）"
   },
-  "vfs_minig": { "en_name": "ACAV minigun", "cn_name": "ACAV加特林机枪" },
+  "costume_scream_2": {
+    "en_name": "costume, reaper (unchained)",
+    "cn_name": "死神服（解锁）"
+  },
+  "costume_werewolf": {
+    "en_name": "costume, werewolf",
+    "cn_name": "狼人服"
+  },
+  "costume_werewolf_1": {
+    "en_name": "costume, werewolf, destroyed",
+    "cn_name": "狼人服，已损坏"
+  },
+  "costume_werewolf_2": {
+    "en_name": "costume, werewolf, frenzy!",
+    "cn_name": "狼人服，狂暴！"
+  },
+  "cowboy_hat": {
+    "en_name": "costume, cowboy",
+    "cn_name": "牛仔帽"
+  },
+  "cowboy_hat_1": {
+    "en_name": "costume, cowboy, destroyed",
+    "cn_name": "牛仔帽，已损坏"
+  },
   "crossbow_a": {
     "en_name": "Crossbow - Anesthetic arrow",
     "cn_name": "狩猎弩（麻醉箭）"
@@ -245,49 +547,598 @@
     "en_name": "Crossbow - Hunting Arrow",
     "cn_name": "狩猎弩（弩箭）"
   },
-  "icecream": { "en_name": "Ice cream", "cn_name": "冰淇淋" },
-  "imi_negev": { "en_name": "IMI Negev", "cn_name": "IMI Negev轻机枪" },
-  "impact_grenade": { "en_name": "impact grenade", "cn_name": "触发式手榴弹" },
-  "jackhammer": { "en_name": "Jackhammer", "cn_name": "“汽锤”全自动霰弹枪" },
-  "javelin": { "en_name": "Javelin", "cn_name": "“标枪”反坦克导弹" },
-  "javelin_ap": {
-    "en_name": "Javelin, anti-personnel",
-    "cn_name": "“标枪”反步兵导弹"
+  "dartgun_medic": {
+    "en_name": "Medical Dart Gun",
+    "cn_name": "医疗枪"
   },
-  "flare_xmas": {
-    "en_name": "Xmas Jeep Drop",
-    "cn_name": "圣诞快乐车空投信标"
+  "demon_heart": {
+    "en_name": "Demon heart, calm",
+    "cn_name": "恶魔心，平静"
   },
-  "kriss_vector": {
-    "en_name": "KRISS Vector",
-    "cn_name": "KRISS 维克托微声冲锋枪"
+  "demon_heart_1": {
+    "en_name": "Demon heart, anxious",
+    "cn_name": "恶魔心，躁动"
   },
-  "ks23_b": { "en_name": "KS-23", "cn_name": "KS-23大口径霰弹枪" },
-  "ksg_b": { "en_name": "KSG - buckshot", "cn_name": "KSG霰弹枪（鹿弹）" },
-  "ksg_s": { "en_name": "KSG - slug", "cn_name": "KSG霰弹枪（独头弹）" },
-  "kulakov": { "en_name": "Kulakov", "cn_name": "Kulakov 燃烧榴弹发射器" },
-  "kunai": { "en_name": "ballistic knife", "cn_name": "弹道战术刀" },
-  "l30p-dual": { "en_name": "L30P-DUALIST", "cn_name": "双持L30P格斗手枪" },
-  "l85a2": { "en_name": "L85A2", "cn_name": "L85A2突击步枪" },
-  "lahti_l39": { "en_name": "Lahti L-39", "cn_name": "Lahti L-39反坦克步枪" },
+  "demon_heart_2": {
+    "en_name": "Demon heart, beating fast",
+    "cn_name": "恶魔心，要去了"
+  },
+  "deployable_gl": {
+    "en_name": "GL Deploy",
+    "cn_name": "榴弹发射器部署包"
+  },
+  "deployable_mg": {
+    "en_name": "MG deploy",
+    "cn_name": "重机枪部署包"
+  },
+  "desert_eagle": {
+    "en_name": "Desert Eagle",
+    "cn_name": "沙漠之鹰"
+  },
+  "dogbone": {
+    "en_name": "Dog Bone",
+    "cn_name": "狗骨头"
+  },
+  "dollars_100": {
+    "en_name": "100 dollars",
+    "cn_name": "100美元"
+  },
+  "dollars_300": {
+    "en_name": "300 dollars",
+    "cn_name": "300美元"
+  },
+  "dooms_hammer": {
+    "en_name": "Doom's Hammer",
+    "cn_name": "毁灭之锤"
+  },
+  "dp28": {
+    "en_name": "DPM",
+    "cn_name": "DPM轻机枪"
+  },
+  "dp28_s": {
+    "en_name": "DPM - shield",
+    "cn_name": "DPM轻机枪（枪盾）"
+  },
+  "dp64": {
+    "en_name": "DP-64 GL",
+    "cn_name": "DP-64双管榴弹发射器"
+  },
+  "dragons_breath": {
+    "en_name": "Dragons breath",
+    "cn_name": "龙息霰弹枪"
+  },
+  "dragunov_svd": {
+    "en_name": "Dragunov SVD",
+    "cn_name": "Dragunov SVD半自动狙击步枪"
+  },
+  "easter_basket": {
+    "en_name": "easter basket",
+    "cn_name": "复活节篮子"
+  },
+  "easter_egg_1": {
+    "en_name": "easter egg",
+    "cn_name": "复活节蛋"
+  },
+  "easter_egg_2": {
+    "en_name": "easter egg",
+    "cn_name": "复活节蛋"
+  },
+  "easter_egg_3": {
+    "en_name": "easter egg",
+    "cn_name": "复活节蛋"
+  },
+  "easter_egg_4": {
+    "en_name": "easter egg",
+    "cn_name": "复活节蛋"
+  },
+  "egg": {
+    "en_name": "egg",
+    "cn_name": "蛋"
+  },
+  "egg_community": {
+    "en_name": "community egg",
+    "cn_name": "社群蛋仔"
+  },
+  "egg_gold": {
+    "en_name": "Golden egg",
+    "cn_name": "金蛋"
+  },
+  "emp_grenade": {
+    "en_name": "EMP grenade",
+    "cn_name": "EMP手雷"
+  },
+  "energy_drink": {
+    "en_name": "energy drink",
+    "cn_name": "能量饮料"
+  },
+  "enforcer": {
+    "en_name": "M711-LA Enforcer",
+    "cn_name": "M711-LA “执行者”步枪"
+  },
+  "eod": {
+    "en_name": "EOD armor",
+    "cn_name": "防爆服"
+  },
+  "eod1": {
+    "en_name": "EOD armor, 80%",
+    "cn_name": "防爆服，80%"
+  },
+  "eod2": {
+    "en_name": "EOD armor, 50%",
+    "cn_name": "防爆服，50%"
+  },
+  "eod3": {
+    "en_name": "EOD armor, 40%",
+    "cn_name": "防爆服，40%"
+  },
+  "eod4": {
+    "en_name": "EOD armor, 20%",
+    "cn_name": "防爆服，20%"
+  },
+  "eod_critical": {
+    "en_name": "EOD armor, destroyed",
+    "cn_name": "防爆服，已损坏"
+  },
+  "evil_pumpkin": {
+    "en_name": "Evil Pumpkin",
+    "cn_name": "老黎的邪恶南瓜"
+  },
+  "exo_vest": {
+    "en_name": "Exo carrier",
+    "cn_name": "外骨骼装甲"
+  },
+  "exo_vest_1": {
+    "en_name": "Exo carrier, 50%",
+    "cn_name": "外骨骼装甲， 50%"
+  },
+  "exo_vest_d": {
+    "en_name": "Exo carrier, destroyed",
+    "cn_name": "外骨骼装甲，已损坏"
+  },
+  "f2000": {
+    "en_name": "F2000",
+    "cn_name": "F2000突击步枪"
+  },
+  "fal": {
+    "en_name": "FN FAL",
+    "cn_name": "FN FAL突击步枪"
+  },
+  "fal_bayonet": {
+    "en_name": "FN FAL - bayonet",
+    "cn_name": "FN FAL突击步枪（刺刀）"
+  },
+  "famasg1": {
+    "en_name": "FAMAS G1",
+    "cn_name": "FAMAS-G1突击步枪"
+  },
+  "fancy_sunglasses": {
+    "en_name": "fancy Sunglasses",
+    "cn_name": "花哨的太阳镜"
+  },
+  "fd338": {
+    "en_name": "FD-338",
+    "cn_name": "FD-338射手步枪"
+  },
+  "fd338sd": {
+    "en_name": "FD-338SD",
+    "cn_name": "FD-338射手步枪（消音）"
+  },
+  "fhj01": {
+    "en_name": "FHJ01 - FAE",
+    "cn_name": "FHJ01云爆弹"
+  },
+  "flamethrower": {
+    "en_name": "flamethrower",
+    "cn_name": "火焰喷射器"
+  },
+  "flare": {
+    "en_name": "flare",
+    "cn_name": "重生信号弹"
+  },
+  "flare_aav7": {
+    "en_name": "AAV-G17/A1 Drop",
+    "cn_name": "G17/A1两栖战车空投信标"
+  },
+  "flare_acav": {
+    "en_name": "FST ACAV Drop",
+    "cn_name": "ACAV步兵战车空投信标"
+  },
+  "flare_banana": {
+    "en_name": "Banana Car Drop",
+    "cn_name": "香蕉车空投信标"
+  },
+  "flare_croc": {
+    "en_name": "FT-CROC Drop",
+    "cn_name": "烈焰装甲运输车空投信标"
+  },
+  "flare_f1": {
+    "en_name": "F1 Drop",
+    "cn_name": "一级圆程式赛车空投信标"
+  },
+  "flare_fv101": {
+    "en_name": "Scorpio AXN Drop",
+    "cn_name": "AXN蝎式空投信标"
+  },
+  "flare_guntruck": {
+    "en_name": "gun truck drop",
+    "cn_name": "武装卡车空投信标"
+  },
+  "flare_hovercraft": {
+    "en_name": "Hovercraft Drop",
+    "cn_name": "气垫船空投信标"
+  },
   "flare_lai-109": {
     "en_name": "LAI-109 Drop",
     "cn_name": "LAI-109多管火箭炮车空投信标"
-  },
-  "patrol_ship_mortar": {
-    "en_name": "Missile launcher",
-    "cn_name": "导弹发射器"
   },
   "flare_lailv-002": {
     "en_name": "LAILV-002 Drop",
     "cn_name": "LAILV-002装甲运兵车空投信标"
   },
-  "tank_cannon": { "en_name": "Tank cannon", "cn_name": "坦克主炮" },
+  "flare_m528": {
+    "en_name": "M528 Drop",
+    "cn_name": "M528火力支援车空投信标"
+  },
+  "flare_m551": {
+    "en_name": "M551 Sheriff Drop",
+    "cn_name": "M551警长空投信标"
+  },
+  "flare_mmls-528": {
+    "en_name": "MMLS-528 Drop",
+    "cn_name": "MMLS-528自行布雷系统空投信标"
+  },
+  "flare_noxe": {
+    "en_name": "NOXE Ghost Drop",
+    "cn_name": "NOXE Ghost导弹发射车空投信标"
+  },
+  "flare_sev90": {
+    "en_name": "SEV-90 Drop",
+    "cn_name": "SEV-90反战车坦克空投信标"
+  },
+  "flare_wiesel": {
+    "en_name": "Mustela Drop",
+    "cn_name": "“鼬鼠”装甲车空投信标"
+  },
+  "flare_xmas": {
+    "en_name": "Xmas Jeep Drop",
+    "cn_name": "圣诞快乐车空投信标"
+  },
+  "flare_yellow": {
+    "en_name": "",
+    "cn_name": ""
+  },
+  "flare_zjx19": {
+    "en_name": "ZJX-19/XE Drop",
+    "cn_name": "ZJX-19/XE 装甲抢修车空投信标"
+  },
+  "fmg9": {
+    "en_name": "FMG9",
+    "cn_name": "FMG9冲锋枪"
+  },
+  "fmg9_box": {
+    "en_name": "FMG9 BOX",
+    "cn_name": "FMG9冲锋枪（折叠）"
+  },
+  "fn57": {
+    "en_name": "Five-seveN",
+    "cn_name": "FN57穿甲手枪"
+  },
+  "fn57_s": {
+    "en_name": "Five-seveN suppressed",
+    "cn_name": "FN57消音穿甲手枪"
+  },
+  "fruit_bananas": {
+    "en_name": "bananas",
+    "cn_name": "香蕉"
+  },
+  "fruit_coconut": {
+    "en_name": "coconut",
+    "cn_name": "椰子"
+  },
+  "fruit_dragonfruit": {
+    "en_name": "dragon fruit",
+    "cn_name": "火龙果"
+  },
+  "fruit_grape": {
+    "en_name": "grapes",
+    "cn_name": "葡萄"
+  },
+  "fruit_mango": {
+    "en_name": "mango",
+    "cn_name": "芒果"
+  },
+  "fruit_melon": {
+    "en_name": "melon",
+    "cn_name": "西瓜"
+  },
+  "g11": {
+    "en_name": "G11",
+    "cn_name": "H&K G11突击步枪"
+  },
+  "g11_alt": {
+    "en_name": "G11 - burst",
+    "cn_name": "H&K G11突击步枪（三连发）"
+  },
+  "g36": {
+    "en_name": "G36",
+    "cn_name": "G36突击步枪"
+  },
+  "g36_w_ag36": {
+    "en_name": "G36 w/ AG36 GL",
+    "cn_name": "G36/AG36（下挂榴弹）"
+  },
+  "g36_w_ag36_g": {
+    "en_name": "G36 w/ AG36 GL",
+    "cn_name": "G36/AG36（下挂榴弹）"
+  },
+  "g3_1x": {
+    "en_name": "G3A3",
+    "cn_name": "G3A3突击步枪（红点瞄具）"
+  },
+  "g3_3x": {
+    "en_name": "G3A3 - scoped",
+    "cn_name": "G3A3突击步枪（3倍瞄具）"
+  },
+  "galil": {
+    "en_name": "Galil ARM",
+    "cn_name": "加利尔突击步枪"
+  },
+  "galil_b": {
+    "en_name": "Galil ARM - bipod",
+    "cn_name": "加利尔突击步枪（两脚架）"
+  },
+  "gamingdevice": {
+    "en_name": "GameGirl",
+    "cn_name": "GameGirl游戏机"
+  },
+  "gem": {
+    "en_name": "gem",
+    "cn_name": "宝石"
+  },
+  "gen12_r": {
+    "en_name": "GEN-12 RED",
+    "cn_name": "GEN-12 RED"
+  },
+  "gepard_m6_lynx": {
+    "en_name": "M6 Lynx",
+    "cn_name": "GM6“山猫”狙击步枪"
+  },
+  "gift_box_1": {
+    "en_name": "blue box",
+    "cn_name": "蓝箱子"
+  },
+  "gift_box_2": {
+    "en_name": "purple box",
+    "cn_name": "紫箱子"
+  },
+  "gift_box_3": {
+    "en_name": "titan box",
+    "cn_name": "泰坦箱子"
+  },
+  "gilboa_dbr": {
+    "en_name": "Gilboa DBR",
+    "cn_name": "基利波双管突击步枪"
+  },
+  "gl": {
+    "en_name": "Grenade Launcher",
+    "cn_name": "自动榴弹发射器"
+  },
+  "gl06": {
+    "en_name": "GL06",
+    "cn_name": "GL-06榴弹发射器"
+  },
+  "glock17": {
+    "en_name": "Glock 17",
+    "cn_name": "Glock 17手枪"
+  },
+  "glock17_s": {
+    "en_name": "Glock 17 suppressed",
+    "cn_name": "Glock 17 消音手枪"
+  },
+  "gm94": {
+    "en_name": "GM94 - Thermobaric",
+    "cn_name": "GM94温压弹发射器"
+  },
+  "goldbar": {
+    "en_name": "gold bar",
+    "cn_name": "金条"
+  },
+  "golden_ak47": {
+    "en_name": "Golden AK47",
+    "cn_name": "黄金AK-47突击步枪"
+  },
+  "golden_desert_eagle": {
+    "en_name": "Desert Eagle GOLD",
+    "cn_name": "黄金沙漠之鹰"
+  },
+  "golden_dragunov_svd": {
+    "en_name": "Golden Dragunov SVD",
+    "cn_name": "黄金Dragunov SVD半自动狙击步枪"
+  },
+  "golden_knife": {
+    "en_name": "Golden Knife",
+    "cn_name": "氪金匕首"
+  },
+  "golden_mp5sd": {
+    "en_name": "Golden MP5SD",
+    "cn_name": "黄金MP5微声冲锋枪"
+  },
+  "grenade": {
+    "en_name": "hand grenade",
+    "cn_name": "手榴弹"
+  },
+  "gun_lewis": {
+    "en_name": "Lewis Gun",
+    "cn_name": "刘易斯轻机枪"
+  },
+  "gun_tommy": {
+    "en_name": "Tommy Gun",
+    "cn_name": "芝加哥打字机"
+  },
+  "hcar": {
+    "en_name": "HCAR",
+    "cn_name": "HCAR重型反突击步枪"
+  },
+  "headtaker": {
+    "en_name": "Headtaker",
+    "cn_name": "斩颅巨斧"
+  },
+  "hesco_barrier": {
+    "en_name": "Cover deploy",
+    "cn_name": "掩体部署包"
+  },
+  "honeybadger": {
+    "en_name": "AAC Honey Badger",
+    "cn_name": "“蜜獾”消音突击步枪"
+  },
+  "hornet": {
+    "en_name": "NOXE rocket",
+    "cn_name": "导弹发射车-导弹"
+  },
+  "horny_magazine": {
+    "en_name": "Horny magazine",
+    "cn_name": "小黄书"
+  },
+  "hunter_shotgun": {
+    "en_name": "KSxS-6 Hunter",
+    "cn_name": "KSxS-6 猎枪"
+  },
+  "hunter_shotgun_alt": {
+    "en_name": "KSxS-6 Hunter, double shot",
+    "cn_name": "KSxS-6 猎枪（双发）"
+  },
+  "icecream": {
+    "en_name": "Ice cream",
+    "cn_name": "冰淇淋"
+  },
+  "iced_coffee": {
+    "en_name": "iced coffee",
+    "cn_name": "“冰糖皇后”雪顶咖啡"
+  },
+  "imi_negev": {
+    "en_name": "IMI Negev",
+    "cn_name": "IMI Negev轻机枪"
+  },
+  "impact_grenade": {
+    "en_name": "impact grenade",
+    "cn_name": "触发式手榴弹"
+  },
+  "ipoo_blue": {
+    "en_name": "iPoo blue edition",
+    "cn_name": "iPoo宝石蓝版"
+  },
+  "ipoo_green": {
+    "en_name": "iPoo green edition",
+    "cn_name": "iPoo翡翠绿版"
+  },
+  "ipoo_pink": {
+    "en_name": "iPoo pink limited edition",
+    "cn_name": "iPoo脑残粉限量版"
+  },
+  "ipoo_red": {
+    "en_name": "iPoo red edition",
+    "cn_name": "iPoo中国红版"
+  },
+  "ipoo_silver": {
+    "en_name": "iPoo silver edition",
+    "cn_name": "iPoo太空银版"
+  },
+  "ipoo_white": {
+    "en_name": "iPoo white edition",
+    "cn_name": "iPoo珍珠白版"
+  },
+  "ipoo_yellow": {
+    "en_name": "iPoo yellow edition",
+    "cn_name": "iPoo土豪金版"
+  },
+  "jackhammer": {
+    "en_name": "Jackhammer",
+    "cn_name": "“汽锤”全自动霰弹枪"
+  },
+  "javelin": {
+    "en_name": "Javelin",
+    "cn_name": "“标枪”反坦克导弹"
+  },
+  "javelin_ap": {
+    "en_name": "rocket",
+    "cn_name": "火箭弹"
+  },
+  "kamasutra": {
+    "en_name": "Kamasutra",
+    "cn_name": "爱经"
+  },
+  "kar98k": {
+    "en_name": "Karabiner 98k",
+    "cn_name": "Karabiner 98k"
+  },
+  "kar98k_b": {
+    "en_name": "Karabiner 98k Bayonet",
+    "cn_name": "Karabiner 98k Bayonet"
+  },
+  "koran": {
+    "en_name": "Holy Koran",
+    "cn_name": "古兰经"
+  },
+  "kriss_vector": {
+    "en_name": "KRISS Vector",
+    "cn_name": "KRISS 维克托微声冲锋枪"
+  },
+  "ks23_b": {
+    "en_name": "KS-23",
+    "cn_name": "KS-23大口径霰弹枪"
+  },
+  "ksg_b": {
+    "en_name": "KSG - buckshot",
+    "cn_name": "KSG霰弹枪（鹿弹）"
+  },
+  "ksg_s": {
+    "en_name": "KSG - slug",
+    "cn_name": "KSG霰弹枪（独头弹）"
+  },
+  "kulakov": {
+    "en_name": "Kulakov",
+    "cn_name": "Kulakov 燃烧榴弹发射器"
+  },
+  "kunai": {
+    "en_name": "ballistic knife",
+    "cn_name": "弹道战术刀"
+  },
+  "l30p-dual": {
+    "en_name": "L30P-DUALIST",
+    "cn_name": "双持L30P格斗手枪"
+  },
+  "l85a2": {
+    "en_name": "L85A2",
+    "cn_name": "L85A2突击步枪"
+  },
+  "lahti_l39": {
+    "en_name": "Lahti L-39",
+    "cn_name": "Lahti L-39反坦克步枪"
+  },
+  "laptop": {
+    "en_name": "Laptop",
+    "cn_name": "笔记本电脑"
+  },
+  "laptop_gps": {
+    "en_name": "GPS laptop",
+    "cn_name": "GPS定位电脑"
+  },
+  "lighter": {
+    "en_name": "lighter",
+    "cn_name": "打火机"
+  },
   "lijia_pumpkin": {
     "en_name": "Lijia's Pumpkin Spawn",
     "cn_name": "老黎的南瓜车"
   },
-  "lounger": { "en_name": "Lounger", "cn_name": "躺椅" },
+  "lottery": {
+    "en_name": "Lottery ticket",
+    "cn_name": "彩票"
+  },
+  "lounger": {
+    "en_name": "Lounger",
+    "cn_name": "躺椅"
+  },
   "m14ebr": {
     "en_name": "M14ebr - assault",
     "cn_name": "M14ebr战斗步枪（突击模式）"
@@ -300,13 +1151,18 @@
     "en_name": "M14ebr - marksman",
     "cn_name": "M14ebr战斗步枪（射手模式）"
   },
-  "m14k": { "en_name": "m14k", "cn_name": "M14k半自动步枪" },
+  "m14k": {
+    "en_name": "m14k",
+    "cn_name": "M14k半自动步枪"
+  },
   "m14k_carry": {
     "en_name": "m14k (stim)",
     "cn_name": "M14k半自动步枪（肾上腺素）"
   },
-  "stim": { "en_name": "Stim pack, active", "cn_name": "兴奋剂（已激活）" },
-  "m16a4": { "en_name": "M16A4", "cn_name": "M16A4突击步枪" },
+  "m16a4": {
+    "en_name": "M16A4",
+    "cn_name": "M16A4突击步枪"
+  },
   "m16a4_support": {
     "en_name": "M16A4 - shield and scope",
     "cn_name": "M16A4突击步枪（枪盾|瞄镜）"
@@ -319,15 +1175,46 @@
     "en_name": "M16A4 w/ M203 GL",
     "cn_name": "M16A4/M203（下挂榴弹）"
   },
-  "m1_garand_m": { "en_name": "M1 Garand Modern", "cn_name": "现代化M1加兰德" },
-  "m200": { "en_name": "CheyTac M200", "cn_name": "M200高精狙击步枪" },
-  "m202": { "en_name": "M202 flash", "cn_name": "M202“闪光”火箭发射器" },
-  "m240": { "en_name": "Shamshir MG", "cn_name": "弯刀机枪" },
-  "m249": { "en_name": "M249", "cn_name": "M249轻机枪" },
-  "m249_s": { "en_name": "M249 suppressed", "cn_name": "M249轻机枪（消音）" },
-  "m24a2": { "en_name": "M24-A2", "cn_name": "M24-A2狙击步枪" },
-  "m2_carlgustav": { "en_name": "M2 Carl Gustav", "cn_name": "M2无后坐力炮" },
-  "m320": { "en_name": "M320", "cn_name": "M320榴弹发射器" },
+  "m1_garand_m": {
+    "en_name": "M1 Garand Modern",
+    "cn_name": "现代化M1加兰德"
+  },
+  "m200": {
+    "en_name": "CheyTac M200",
+    "cn_name": "M200高精狙击步枪"
+  },
+  "m202": {
+    "en_name": "M202 flash",
+    "cn_name": "M202“闪光”火箭发射器"
+  },
+  "m202_ultra": {
+    "en_name": "M202 flash",
+    "cn_name": "M202“闪光”火箭发射器"
+  },
+  "m240": {
+    "en_name": "Shamshir MG",
+    "cn_name": "弯刀机枪"
+  },
+  "m249": {
+    "en_name": "M249",
+    "cn_name": "M249轻机枪"
+  },
+  "m249_s": {
+    "en_name": "M249 suppressed",
+    "cn_name": "M249轻机枪（消音）"
+  },
+  "m24a2": {
+    "en_name": "M24-A2",
+    "cn_name": "M24-A2狙击步枪"
+  },
+  "m2_carlgustav": {
+    "en_name": "M2 Carl Gustav",
+    "cn_name": "M2无后坐力炮"
+  },
+  "m320": {
+    "en_name": "M320",
+    "cn_name": "M320榴弹发射器"
+  },
   "m4a1_m26": {
     "en_name": "M4 / M26 Frag",
     "cn_name": "M4 / M26（下挂破片弹）"
@@ -336,46 +1223,106 @@
     "en_name": "M4 / M26 Frag",
     "cn_name": "M4 / M26（下挂破片弹）"
   },
-  "flare_m528": { "en_name": "M528 Drop", "cn_name": "M528火力支援车空投信标" },
-  "flare_m551": {
-    "en_name": "M551 Sheriff Drop",
-    "cn_name": "M551警长空投信标"
+  "m60e4": {
+    "en_name": "M60",
+    "cn_name": "M60E4通用机枪"
   },
-  "m60e4": { "en_name": "M60", "cn_name": "M60E4通用机枪" },
-  "m712": { "en_name": "M712 Schnellfeuer", "cn_name": "M712冲锋手枪" },
-  "m72law": { "en_name": "M72 LAW", "cn_name": "M72轻型反装甲火箭筒" },
-  "m79": { "en_name": "m79 grenade launcher", "cn_name": "M79榴弹发射器" },
-  "mac10": { "en_name": "MAC-10", "cn_name": "MAC-10冲锋枪" },
-  "mac10sd": { "en_name": "MAC-10 SD", "cn_name": "MAC-10冲锋枪（消音）" },
+  "m712": {
+    "en_name": "M712 Schnellfeuer",
+    "cn_name": "M712冲锋手枪"
+  },
+  "m72law": {
+    "en_name": "M72 LAW",
+    "cn_name": "M72轻型反装甲火箭筒"
+  },
+  "m79": {
+    "en_name": "m79 grenade launcher",
+    "cn_name": "M79榴弹发射器"
+  },
+  "mac10": {
+    "en_name": "MAC-10",
+    "cn_name": "MAC-10冲锋枪"
+  },
+  "mac10sd": {
+    "en_name": "MAC-10 SD",
+    "cn_name": "MAC-10冲锋枪（消音）"
+  },
   "mag7": {
     "en_name": "MAG-7 Dragon breath",
     "cn_name": "MAG-7霰弹枪（龙息弹）"
   },
-  "unknown": { "en_name": "trauma kit", "cn_name": "创伤医护包" },
-  "mg42": { "en_name": "MG-42", "cn_name": "MG-42通用机枪" },
-  "mgl": { "en_name": "MGL Flasher", "cn_name": "MGL闪光弹发射器" },
-  "mgv176": { "en_name": "MGV-176", "cn_name": "MGV-176冲锋枪" },
-  "microgun": { "en_name": "WB-II Microgun", "cn_name": "WB-Ⅱ轻型加特林机枪" },
-  "milkor_mgl": { "en_name": "Milkor MGL", "cn_name": "Milkor榴弹发射器" },
-  "uzi_mini": { "en_name": "mini UZI", "cn_name": "Mini UZI轻型冲锋枪" },
-  "mk23": { "en_name": "MK23 SOCOM", "cn_name": "MK23特种作战手枪" },
+  "medal_brown": {
+    "en_name": "Medal of Brownpants",
+    "cn_name": "Medal of Brownpants"
+  },
+  "medal_green": {
+    "en_name": "Medal of Greenbelts",
+    "cn_name": "Medal of Greenbelts"
+  },
+  "medal_grey": {
+    "en_name": "Medal of Graycollars",
+    "cn_name": "Medal of Graycollars"
+  },
+  "medikit": {
+    "en_name": "Medikit",
+    "cn_name": "医疗包"
+  },
+  "mg42": {
+    "en_name": "MG-3",
+    "cn_name": "车载MG3"
+  },
+  "mgl": {
+    "en_name": "MGL Flasher",
+    "cn_name": "MGL闪光弹发射器"
+  },
+  "mgv176": {
+    "en_name": "MGV-176",
+    "cn_name": "MGV-176冲锋枪"
+  },
+  "microgun": {
+    "en_name": "WB-II Microgun",
+    "cn_name": "WB-Ⅱ轻型加特林机枪"
+  },
+  "milkor_mgl": {
+    "en_name": "Milkor MGL",
+    "cn_name": "Milkor榴弹发射器"
+  },
+  "minigun": {
+    "en_name": "Minigun",
+    "cn_name": "M134加特林机枪"
+  },
+  "mk23": {
+    "en_name": "MK23 SOCOM",
+    "cn_name": "MK23特种作战手枪"
+  },
   "mk47": {
     "en_name": "Mk47 Mutant",
     "cn_name": "Mk47“突变体”突击步枪（消音）"
   },
-  "flare_mmls-528": {
-    "en_name": "MMLS-528 Drop",
-    "cn_name": "MMLS-528自行布雷系统空投信标"
-  },
-  "apmine": { "en_name": "M528 AP", "cn_name": "M528-人员杀伤导弹" },
   "model29": {
     "en_name": "44 Magnum, rapid fire",
     "cn_name": ".44马格南左轮手枪（快速射击）"
   },
-  "mortar": { "en_name": "Mortar", "cn_name": "迫击炮" },
-  "mossberg": { "en_name": "Mossberg 500", "cn_name": "莫斯伯格500霰弹枪" },
-  "mp5sd": { "en_name": "MP5SD", "cn_name": "MP5微声冲锋枪" },
-  "mp7": { "en_name": "MP7", "cn_name": "MP7冲锋枪" },
+  "mortar": {
+    "en_name": "Mortar",
+    "cn_name": "迫击炮"
+  },
+  "mossberg": {
+    "en_name": "Mossberg 500",
+    "cn_name": "莫斯伯格500霰弹枪"
+  },
+  "mp40": {
+    "en_name": "MP 40",
+    "cn_name": "MP 40"
+  },
+  "mp5sd": {
+    "en_name": "MP5SD",
+    "cn_name": "MP5微声冲锋枪"
+  },
+  "mp7": {
+    "en_name": "MP7",
+    "cn_name": "MP7冲锋枪"
+  },
   "mp7_isl200": {
     "en_name": "MP7 AP / ISL200 GL",
     "cn_name": "MP7 AP / ISL200（下挂榴弹）"
@@ -388,502 +1335,61 @@
     "en_name": "MPT76 / AK40 GL",
     "cn_name": "MPT76 / AK40 GL（下挂榴弹）"
   },
-  "mpx": { "en_name": "MPX", "cn_name": "MPX冲锋枪" },
+  "mpt76_ak40_g": {
+    "en_name": "MPT76/ AK40 GL",
+    "cn_name": "MPT76/ AK40 GL"
+  },
+  "mpx": {
+    "en_name": "MPX",
+    "cn_name": "MPX冲锋枪"
+  },
   "mpx_hp": {
     "en_name": "MPX - Hollow Point",
     "cn_name": "MPX冲锋枪（空尖弹）"
   },
-  "mrl": { "en_name": "MRL deploy", "cn_name": "MRL火箭发射架部署包" },
+  "mrl": {
+    "en_name": "MRL deploy",
+    "cn_name": "MRL火箭发射架部署包"
+  },
   "mrl_terminal": {
     "en_name": "MRL laser-guidance kit",
     "cn_name": "MRL火箭发射架 激光制导套件"
   },
-  "musket": { "en_name": "Buckshot Bess Musket", "cn_name": "燧发枪" },
-  "musket_bayonet": { "en_name": "Buckshot Bess Musket", "cn_name": "燧发枪" },
-  "mx4_storm": { "en_name": "MX4 Storm", "cn_name": "MX4“风暴”冲锋枪" },
-  "ninjato": { "en_name": "Ninjato", "cn_name": "忍者刀" },
-  "ninjato_alt": {
-    "en_name": "Ninjato, firecrackers",
-    "cn_name": "忍者刀（摔炮）"
+  "musket": {
+    "en_name": "Buckshot Bess Musket",
+    "cn_name": "燧发枪"
   },
-  "flare_noxe": {
-    "en_name": "NOXE Ghost Drop",
-    "cn_name": "NOXE Ghost导弹发射车空投信标"
+  "musket_bayonet": {
+    "en_name": "Buckshot Bess Musket",
+    "cn_name": "燧发枪"
   },
-  "ns2000": { "en_name": "Neostead 2000", "cn_name": "尼奥斯泰德2000霰弹枪" },
-  "ots14": {
-    "en_name": "OTS-14/ GP25 GL",
-    "cn_name": "OTS-14/ GP25（下挂榴弹）"
+  "mx4_storm": {
+    "en_name": "MX4 Storm",
+    "cn_name": "MX4“风暴”冲锋枪"
   },
-  "ots14_g": {
-    "en_name": "OTS-14/ GP25 GL",
-    "cn_name": "OTS-14/ GP25（下挂榴弹）"
+  "needle_chicken": {
+    "en_name": "costume, chicken",
+    "cn_name": "小鸡服"
   },
-  "p416": { "en_name": "P416", "cn_name": "P416突击步枪" },
-  "p90": { "en_name": "P90", "cn_name": "P90冲锋枪" },
-  "parasol_blue": { "en_name": "Blue parasol", "cn_name": "蓝色太阳伞" },
-  "parasol_green": { "en_name": "Green parasol", "cn_name": "绿色太阳伞" },
-  "parasol_red": { "en_name": "Red parasol", "cn_name": "红色太阳伞" },
-  "parasol_yellow": { "en_name": "Yellow parasol", "cn_name": "黄色太阳伞" },
-  "patrol_ship_cannon": {
-    "en_name": "D40mm-Flak-proto",
-    "cn_name": "Flak 40mm防空炮"
-  },
-  "patrol_ship_mg": { "en_name": "Patrol Ship MG", "cn_name": "巡逻艇机枪" },
-  "paw20": { "en_name": "PAW-20", "cn_name": "PAW-20半自动榴弹发射器" },
-  "pb": { "en_name": "PB", "cn_name": "PB 6P9微声手枪" },
-  "pecheneg_bullpup": {
-    "en_name": "Pecheneg Bullpup",
-    "cn_name": "“佩切涅格”犊牛机枪"
-  },
-  "pepperdust": { "en_name": "pepperdust", "cn_name": "Pepperdust晕眩霰弹枪" },
-  "pf98": { "en_name": "PF-98", "cn_name": "PF-98 XN1 120mm火箭筒" },
-  "pkm": { "en_name": "PKM", "cn_name": "PKM通用机枪" },
-  "portable_mortar": {
-    "en_name": "RWM Mortar",
-    "cn_name": "RWM轻型便捷迫击炮"
-  },
-  "psg90": { "en_name": "PSG-90", "cn_name": "PSG-90狙击步枪" },
-  "qbs-09": { "en_name": "QBS-09", "cn_name": "QBS-09式半自动霰弹枪" },
-  "qbz95": { "en_name": "qbz-95", "cn_name": "QBZ-95式突击步枪" },
-  "qbz95_us": {
-    "en_name": "qbz-95 - underbarrel shotgun",
-    "cn_name": "QBZ-95式突击步枪（下挂霰弹）"
-  },
-  "qcw-05": { "en_name": "QCW-05", "cn_name": "QCW-05式微声冲锋枪" },
-  "qjz89": { "en_name": "QJZ89 HMG", "cn_name": "QJZ89重机枪" },
-  "qlz87_b": { "en_name": "QLZ87 GL", "cn_name": "QLZ87自动榴弹发射器" },
-  "qts11": { "en_name": "QTS-11", "cn_name": "QTS-11作战系统" },
-  "qts11_g": {
-    "en_name": "QTS-11 air burst GL",
-    "cn_name": "QTS-11作战系统（空爆弹）"
-  },
-  "wrench": { "en_name": "large wrench", "cn_name": "大扳手" },
-  "repair_crane": {
-    "en_name": "Repair crane deploy",
-    "cn_name": "机械修理臂部署包"
-  },
-  "rg6_a": { "en_name": "RG6 - Airburst", "cn_name": "RG6发射器（空爆弹）" },
-  "rg6_s": { "en_name": "RG6 - Shrapnel", "cn_name": "RG6发射器（箭形弹）" },
-  "rgm40": { "en_name": "RGM-40", "cn_name": "RGM-40榴弹发射器" },
-  "rpd": { "en_name": "RPD", "cn_name": "RPD轻机枪" },
-  "rpd_b": { "en_name": "RPD - bipod", "cn_name": "RPD轻机枪（架设）" },
-  "rpg-7": { "en_name": "RPG-7", "cn_name": "RPG-7火箭筒" },
-  "rpk16": { "en_name": "RPK16", "cn_name": "RPK16轻机枪" },
-  "rpk16_long": {
-    "en_name": "RPK16 - long barrel",
-    "cn_name": "RPK16轻机枪（延长枪管）"
-  },
-  "sabre": { "en_name": "Cavalry saber", "cn_name": "骑兵军刀" },
-  "sawn-off_shotgun": {
-    "en_name": "Sawn-Off Shotgun",
-    "cn_name": "截短霰弹枪"
-  },
-  "sbl": { "en_name": "SBL", "cn_name": "圆锯发射器" },
-  "scarssr": { "en_name": "SCAR SSR", "cn_name": "SCAR SSR精准射手步枪" },
-  "scar_mk13": {
-    "en_name": "SCAR L - thermal",
-    "cn_name": "SCAR L突击步枪（热成像）"
-  },
-  "scar_mk13_g": {
-    "en_name": "SCAR L / MK13 GL",
-    "cn_name": "SCAR L / MK13（下挂温压榴弹）"
-  },
-  "scorpion-evo": {
-    "en_name": "Scorpion Evo III",
-    "cn_name": "“蝎”式Evo Ⅲ微声冲锋枪"
-  },
-  "scythe": { "en_name": "Demon Scythe", "cn_name": "恶魔镰刀" },
-  "flare_sev90": {
-    "en_name": "SEV-90 Drop",
-    "cn_name": "SEV-90反战车坦克空投信标"
-  },
-  "sg552": { "en_name": "SG 552", "cn_name": "SG552卡宾枪" },
-  "shock_paddle": { "en_name": "Defibrillator", "cn_name": "电复律机" },
-  "shovel": { "en_name": "Ordnance Shovel", "cn_name": "工兵铲" },
-  "stars": { "en_name": "shuriken", "cn_name": "手里剑" },
-  "sks": { "en_name": "SKS", "cn_name": "SKS半自动步枪" },
-  "sks_fire": {
-    "en_name": "SKS - Incendiary",
-    "cn_name": "SKS半自动步枪（燃烧弹）"
-  },
-  "smaw": { "en_name": "SMAW", "cn_name": "SMAW火箭筒" },
-  "spas-12": { "en_name": "SPAS-12", "cn_name": "SPAS-12多功能霰弹枪" },
-  "squad_equipment_kit": {
-    "en_name": "Squad Equipment Kit",
-    "cn_name": "小队装甲包"
-  },
-  "squad_equipment_kit_navy": {
-    "en_name": "Squad Equipment Kit - Navy",
-    "cn_name": "小队装甲包 - 海军"
-  },
-  "squall": { "en_name": "Squall", "cn_name": "“咆哮者”金属风暴系统" },
-  "aug": { "en_name": "Steyr AUG", "cn_name": "斯太尔AUG突击步枪" },
-  "steyr_tmp": { "en_name": "Steyr TMP", "cn_name": "斯太尔TMP战术冲锋枪" },
-  "stoner62": { "en_name": "Stoner 62", "cn_name": "斯通纳62轻机枪（瞄镜）" },
-  "stoner_lmg": { "en_name": "Stoner LMG", "cn_name": "斯通纳轻机枪" },
-  "stun_grenade": { "en_name": "stun grenade", "cn_name": "震撼弹" },
-  "suomi": { "en_name": "KP-31 Suomi", "cn_name": "KP-31 索米冲锋枪" },
-  "supershorty": { "en_name": "Supershorty", "cn_name": "“超级矮子”霰弹枪" },
-  "sv98": { "en_name": "SV-98", "cn_name": "SV-98狙击步枪" },
-  "sv98_p": { "en_name": "MP443 Grach", "cn_name": "MP443“乌鸦”半自动手枪" },
-  "tac50": { "en_name": "Tac50 AP Warhead", "cn_name": "Tac50（穿甲弹）" },
-  "tac50_e": {
-    "en_name": "Tac50 Explosive Warhead",
-    "cn_name": "Tac50（高爆弹）"
-  },
-  "tank_trap": { "en_name": "tank trap deploy", "cn_name": "坦克陷阱部署包" },
-  "taser": { "en_name": "taser", "cn_name": "泰瑟枪" },
-  "tkb059": { "en_name": "TKB-059", "cn_name": "TKB-059三管突击步枪" },
-  "torch": { "en_name": "Welding torch", "cn_name": "维修喷枪" },
-  "tow": { "en_name": "TOW", "cn_name": "“陶”式反坦克导弹" },
-  "tow2": { "en_name": "TOW deploy", "cn_name": "“陶”式反坦克导弹部署包" },
-  "tracer": { "en_name": "tracer", "cn_name": "信标枪" },
-  "trauma_kit": { "en_name": "trauma kit", "cn_name": "创伤医护包" },
-  "truvelo_amris": {
-    "en_name": "Truvelo Amris suppressed",
-    "cn_name": "Truvelo Amris反器材步枪（消音|高爆弹）"
-  },
-  "tti": { "en_name": "TTI-Combat Shield", "cn_name": "TTI格斗盾牌" },
-  "ultimax": {
-    "en_name": "Ultimax 100",
-    "cn_name": "Ultimax 100轻机枪（弹鼓）"
-  },
-  "ultimax_m": {
-    "en_name": "Ultimax 100, magazine",
-    "cn_name": "Ultimax 100轻机枪（弹匣）"
-  },
-  "ump40": { "en_name": "UMP40", "cn_name": "UMP-40冲锋枪" },
-  "uts15": { "en_name": "UTS-15", "cn_name": "UTS-15泵动式霰弹枪" },
-  "bats": { "en_name": "bats", "cn_name": "吸血出击" },
-  "vestkit": { "en_name": "Vest Repair Kit", "cn_name": "背心修复包" },
-  "vks": { "en_name": "VKS", "cn_name": "VKS“排气者”狙击步枪" },
-  "vss_vintorez": { "en_name": "VSS Vintorez", "cn_name": "VSS微声狙击步枪 " },
-  "flare_acav": {
-    "en_name": "FST ACAV Drop",
-    "cn_name": "ACAV步兵战车空投信标"
-  },
-  "acav_minig": { "en_name": "ACAV minigun", "cn_name": "ACAV加特林机枪" },
-  "water_gun": { "en_name": "water gun", "cn_name": "水枪" },
-  "wolf_howling": { "en_name": "howling", "cn_name": "狼吼" },
-  "flare_wiesel": {
-    "en_name": "Mustela Drop",
-    "cn_name": "“鼬鼠”装甲车空投信标"
-  },
-  "wrench_small": { "en_name": "small wrench", "cn_name": "小扳手" },
-  "xm25": { "en_name": "XM-25", "cn_name": "XM-25空爆弹发射器" },
-  "xm25_r": { "en_name": "XM-25", "cn_name": "XM-25空爆弹发射器" },
-  "xm8": { "en_name": "XM8", "cn_name": "XM8突击步枪" },
-  "xmas_tree": { "en_name": "Xmas tree", "cn_name": "圣诞树" },
-  "flare_zjx19": {
-    "en_name": "ZJX-19/XE Drop",
-    "cn_name": "ZJX-19/XE 装甲抢修车空投信标"
-  },
-  "zweihander": { "en_name": "Zweihander", "cn_name": "双手巨剑" },
-  "amethyst": { "en_name": "amethyst", "cn_name": "紫水晶" },
-  "beach_ball": { "en_name": "Beach Ball", "cn_name": "沙滩球" },
-  "beer_can": { "en_name": "beer can", "cn_name": "啤酒罐" },
-  "bible": { "en_name": "Holy Bible", "cn_name": "圣经" },
-  "bizarre_carrot": {
-    "en_name": "bizarre carrot",
-    "cn_name": "奇异的胡萝卜...？"
-  },
-  "bizarre_rubber_bullet": {
-    "en_name": "bizarre rubber bullet...?",
-    "cn_name": "奇异的橡胶子弹...？"
-  },
-  "camouflage_suit": { "en_name": "Camouflage suit", "cn_name": "伪装服" },
-  "camo_vest": { "en_name": "Camouflaged Vest", "cn_name": "迷彩背心" },
-  "camo_vest_80": {
-    "en_name": "Camouflaged Vest, 80%",
-    "cn_name": "迷彩背心，80%"
-  },
-  "camo_vest_50": {
-    "en_name": "Camouflaged Vest, 50%",
-    "cn_name": "迷彩背心，50%"
-  },
-  "camo_vest_20": {
-    "en_name": "Camouflaged Vest, 20%",
-    "cn_name": "迷彩背心，20%"
-  },
-  "camo_vest_1": {
-    "en_name": "Camouflaged Vest, destroyed",
-    "cn_name": "迷彩背心，已损坏"
-  },
-  "cd": {
-    "en_name": "unreleased Justin Beerbar CD",
-    "cn_name": "贾斯汀·比巴卜未发行的CD唱片"
-  },
-  "chewing_gum": { "en_name": "chewing-gum", "cn_name": "口香糖" },
-  "chocolate": { "en_name": "chocolate", "cn_name": "巧克力" },
-  "cigarettes": { "en_name": "cigarettes", "cn_name": "香烟" },
-  "cigars": { "en_name": "cigars", "cn_name": "雪茄" },
-  "comic": { "en_name": "comic book", "cn_name": "漫画书" },
-  "cooler_box_1": { "en_name": "cooler box 1", "cn_name": "夏日冷藏箱1" },
-  "cooler_box_2": { "en_name": "cooler box 2", "cn_name": "夏日冷藏箱2" },
-  "cooler_box_3": { "en_name": "cooler box 3", "cn_name": "夏日冷藏箱3" },
-  "costume_banana": { "en_name": "costume, banana", "cn_name": "香蕉服" },
-  "costume_banana_1": {
-    "en_name": "costume, banana, destroyed",
-    "cn_name": "香蕉服，已损坏"
-  },
-  "costume_bat": { "en_name": "wings, vampire", "cn_name": "吸血鬼之翼" },
-  "costume_bat_1": {
-    "en_name": "wings, vampire, blood thirsty",
-    "cn_name": "吸血鬼之翼，嗜血"
-  },
-  "costume_butcher": { "en_name": "Psycho Butcher", "cn_name": "杀人魔" },
-  "costume_butcher_1": {
-    "en_name": "Psycho Butcher, wounded",
-    "cn_name": "杀人魔，已损坏"
-  },
-  "needle_chicken": { "en_name": "costume, chicken", "cn_name": "小鸡服" },
   "needle_chicken_1": {
     "en_name": "costume, chicken, destroyed",
     "cn_name": "小鸡服，已损坏"
   },
-  "costume_clown": { "en_name": "costume, clown", "cn_name": "小丑服" },
-  "costume_clown_1": {
-    "en_name": "costume, clown, destroyed",
-    "cn_name": "小丑服，已损坏"
+  "ninjato": {
+    "en_name": "Ninjato",
+    "cn_name": "忍者刀"
   },
-  "coin_4": { "en_name": "Cursed Coin", "cn_name": "诅咒金币" },
-  "cowboy_hat": { "en_name": "costume, cowboy", "cn_name": "牛仔帽" },
-  "cowboy_hat_1": {
-    "en_name": "costume, cowboy, destroyed",
-    "cn_name": "牛仔帽，已损坏"
+  "ninjato_alt": {
+    "en_name": "Ninjato, firecrackers",
+    "cn_name": "忍者刀（摔炮）"
   },
-  "fancy_sunglasses": {
-    "en_name": "fancy Sunglasses",
-    "cn_name": "花哨的太阳镜"
+  "ns2000": {
+    "en_name": "Neostead 2000",
+    "cn_name": "尼奥斯泰德2000霰弹枪"
   },
-  "costume_lizard": { "en_name": "Mutagen, Lizard", "cn_name": "蜥蜴诱变剂" },
-  "costume_lizard_1": {
-    "en_name": "Mutagen, Lizard, damaged",
-    "cn_name": "蜥蜴诱变剂，已损坏"
-  },
-  "costume_panda": { "en_name": "costume, panda", "cn_name": "熊猫服" },
-  "costume_panda_1": {
-    "en_name": "costume, panda, destroyed",
-    "cn_name": "熊猫服，已损坏"
-  },
-  "rabbit_suit": { "en_name": "rabbit suit", "cn_name": "兔兔服" },
-  "rabbit_suit_1": {
-    "en_name": "rabbit suit, damaged",
-    "cn_name": "兔兔服，已损坏"
-  },
-  "costume_santa": { "en_name": "costume, santa", "cn_name": "圣诞服" },
-  "costume_santa_1": {
-    "en_name": "costume, santa, destroyed",
-    "cn_name": "圣诞服，已损坏"
-  },
-  "costume_scream": { "en_name": "costume, reaper", "cn_name": "死神服" },
-  "costume_scream_1": {
-    "en_name": "costume, reaper (damaged)",
-    "cn_name": "死神服（受损）"
-  },
-  "costume_scream_2": {
-    "en_name": "costume, reaper (unchained)",
-    "cn_name": "死神服（解锁）"
-  },
-  "sunglasses": { "en_name": "sunglasses", "cn_name": "太阳镜" },
-  "sunglasses_1": {
-    "en_name": "sunglasses, broken",
-    "cn_name": "太阳镜，已损坏"
-  },
-  "talisman": { "en_name": "Ocean talisman", "cn_name": "海洋护符" },
-  "talisman_1": {
-    "en_name": "Ocean talisman, broken",
-    "cn_name": "海洋护符，已碎裂"
-  },
-  "tcap": { "en_name": "Terran's Cap", "cn_name": "泰伦的帽子" },
-  "worn_underpants": { "en_name": "worn underpants", "cn_name": "破烂的内裤" },
-  "costume_werewolf": { "en_name": "costume, werewolf", "cn_name": "狼人服" },
-  "costume_werewolf_1": {
-    "en_name": "costume, werewolf, destroyed",
-    "cn_name": "狼人服，已损坏"
-  },
-  "costume_werewolf_2": {
-    "en_name": "costume, werewolf, frenzy!",
-    "cn_name": "狼人服，狂暴！"
-  },
-  "dollars_100": { "en_name": "100 dollars", "cn_name": "100美元" },
-  "dollars_300": { "en_name": "300 dollars", "cn_name": "300美元" },
-  "easter_basket": { "en_name": "easter basket", "cn_name": "复活节篮子" },
-  "easter_egg_1": { "en_name": "easter egg", "cn_name": "复活节蛋" },
-  "easter_egg_2": { "en_name": "easter egg", "cn_name": "复活节蛋" },
-  "easter_egg_3": { "en_name": "easter egg", "cn_name": "复活节蛋" },
-  "easter_egg_4": { "en_name": "easter egg", "cn_name": "复活节蛋" },
-  "egg_gold": { "en_name": "Golden egg", "cn_name": "金蛋" },
-  "energy_drink": { "en_name": "energy drink", "cn_name": "能量饮料" },
-  "eod": { "en_name": "EOD armor", "cn_name": "防爆服" },
-  "eod1": { "en_name": "EOD armor, 80%", "cn_name": "防爆服，80%" },
-  "eod2": { "en_name": "EOD armor, 50%", "cn_name": "防爆服，50%" },
-  "eod3": { "en_name": "EOD armor, 40%", "cn_name": "防爆服，40%" },
-  "eod4": { "en_name": "EOD armor, 20%", "cn_name": "防爆服，20%" },
-  "eod_critical": {
-    "en_name": "EOD armor, destroyed",
-    "cn_name": "防爆服，已损坏"
-  },
-  "fruit_bananas": { "en_name": "bananas", "cn_name": "香蕉" },
-  "fruit_coconut": { "en_name": "coconut", "cn_name": "椰子" },
-  "fruit_dragonfruit": { "en_name": "dragon fruit", "cn_name": "火龙果" },
-  "fruit_grape": { "en_name": "grapes", "cn_name": "葡萄" },
-  "fruit_mango": { "en_name": "mango", "cn_name": "芒果" },
-  "fruit_melon": { "en_name": "melon", "cn_name": "西瓜" },
-  "gamingdevice": { "en_name": "GameGirl", "cn_name": "GameGirl游戏机" },
-  "gem": { "en_name": "gem", "cn_name": "宝石" },
-  "gift_box_1": { "en_name": "blue box", "cn_name": "蓝箱子" },
-  "gift_box_2": { "en_name": "purple box", "cn_name": "紫箱子" },
-  "gift_box_3": { "en_name": "titan box", "cn_name": "泰坦箱子" },
-  "community_box_1": { "en_name": "community box", "cn_name": "社群箱子Ⅰ" },
-  "community_box_2": { "en_name": "community box 2", "cn_name": "社群箱子 Ⅱ" },
-  "community_box_3": { "en_name": "community box 3", "cn_name": "社群箱子 Ⅲ" },
-  "community_box_4": { "en_name": "community box 4", "cn_name": "社群箱子 Ⅳ" },
-  "community_box_5": { "en_name": "community box 5", "cn_name": "社群箱子 V" },
-  "community_box_6": { "en_name": "community box 6", "cn_name": "社群箱子 VI" },
-  "community_box_7": {
-    "en_name": "community box 7",
-    "cn_name": "社群箱子 VII"
-  },
-  "goldbar": { "en_name": "gold bar", "cn_name": "金条" },
-  "pumpkin": { "en_name": "pumpkin box", "cn_name": "南瓜箱子" },
-  "pumpkin_2": { "en_name": "pumpkin box 2", "cn_name": "南瓜箱子2" },
-  "horny_magazine": { "en_name": "Horny magazine", "cn_name": "小黄书" },
-  "iced_coffee": { "en_name": "iced coffee", "cn_name": "“冰糖皇后”雪顶咖啡" },
-  "ipoo_blue": { "en_name": "iPoo blue edition", "cn_name": "iPoo宝石蓝版" },
-  "ipoo_green": { "en_name": "iPoo green edition", "cn_name": "iPoo翡翠绿版" },
-  "ipoo_pink": {
-    "en_name": "iPoo pink limited edition",
-    "cn_name": "iPoo脑残粉限量版"
-  },
-  "ipoo_red": { "en_name": "iPoo red edition", "cn_name": "iPoo中国红版" },
-  "ipoo_silver": {
-    "en_name": "iPoo silver edition",
-    "cn_name": "iPoo太空银版"
-  },
-  "ipoo_white": { "en_name": "iPoo white edition", "cn_name": "iPoo珍珠白版" },
-  "ipoo_yellow": {
-    "en_name": "iPoo yellow edition",
-    "cn_name": "iPoo土豪金版"
-  },
-  "kamasutra": { "en_name": "Kamasutra", "cn_name": "爱经" },
-  "koran": { "en_name": "Holy Koran", "cn_name": "古兰经" },
-  "laptop": { "en_name": "Laptop", "cn_name": "笔记本电脑" },
-  "lighter": { "en_name": "lighter", "cn_name": "打火机" },
-  "lottery": { "en_name": "Lottery ticket", "cn_name": "彩票" },
-  "orange_juice": { "en_name": "orange juice", "cn_name": "橙汁" },
-  "oscar_statue": { "en_name": "Oscar statue", "cn_name": "奥斯卡小金人" },
-  "pacific_travel_guide": {
-    "en_name": "Pacific travel guide",
-    "cn_name": "太平洋旅游指南"
-  },
-  "painting": { "en_name": "Lona Misa", "cn_name": "蒙娜丽莎" },
-  "pickashoe": { "en_name": "Pickashoe", "cn_name": "皮卡丘" },
-  "playing_cards": { "en_name": "poker cards", "cn_name": "扑克牌" },
-  "popsicle": { "en_name": "popsicle", "cn_name": "赤狐棒冰" },
-  "pyrite": { "en_name": "pyrite", "cn_name": "黄铁矿" },
-  "radio": { "en_name": "ghetto blaster", "cn_name": "手提式录音机" },
-  "razor": { "en_name": "razor", "cn_name": "剃须刀" },
-  "rotten_banana": { "en_name": "rotten banana", "cn_name": "烂香蕉" },
-  "rwr_handbook": { "en_name": "RWR handbook", "cn_name": "RWR游戏手册" },
-  "sheaths": { "en_name": "willy boy", "cn_name": "套套" },
-  "sheaths_xxl": { "en_name": "King-size willy boy", "cn_name": "超大号套套" },
-  "steroids": { "en_name": "steroids", "cn_name": "肾上腺素" },
-  "suitcase": { "en_name": "briefcase", "cn_name": "公文包" },
-  "teddy": { "en_name": "Teddy Bear", "cn_name": "泰迪熊" },
-  "ticket_boxes": { "en_name": "Community ticket", "cn_name": "社群奖券" },
-  "ticket_easter": { "en_name": "Easter ticket", "cn_name": "复活节奖券" },
-  "ticket_halloween": {
-    "en_name": "Halloween ticket",
-    "cn_name": "万圣节奖券"
-  },
-  "ticket_summer": { "en_name": "Summer ticket", "cn_name": "夏日奖券" },
-  "vest1": { "en_name": "Vest, type I", "cn_name": "Ⅰ型防弹背心" },
-  "vest1_hole1": {
-    "en_name": "Vest, type I, 50%",
-    "cn_name": "Ⅰ型防弹背心, 50%"
-  },
-  "vest": { "en_name": "Vest, type II", "cn_name": "Ⅱ型防弹背心" },
-  "vest_hole1": {
-    "en_name": "Vest, type II, 50%",
-    "cn_name": "Ⅱ型防弹背心，50%"
-  },
-  "vest_hole2": {
-    "en_name": "Vest, type II, 25%",
-    "cn_name": "Ⅱ型防弹背心，25%"
-  },
-  "vest3": { "en_name": "Vest, type III", "cn_name": "Ⅲ型防弹背心" },
-  "vest3_80": {
-    "en_name": "Vest, type III, 80%",
-    "cn_name": "Ⅲ型防弹背心，80%"
-  },
-  "vest3_60": {
-    "en_name": "Vest, type III, 60%",
-    "cn_name": "Ⅲ型防弹背心，60%"
-  },
-  "vest3_40": {
-    "en_name": "Vest, type III, 40%",
-    "cn_name": "Ⅲ型防弹背心，40%"
-  },
-  "vest3_20": {
-    "en_name": "Vest, type III, 20%",
-    "cn_name": "Ⅲ型防弹背心，20%"
-  },
-  "blackops": { "en_name": "black ops vest", "cn_name": "夜行特战服" },
-  "blackops_1": {
-    "en_name": "black ops vest, damaged",
-    "cn_name": "夜行特战服，已损坏"
-  },
-  "demon_heart": { "en_name": "Demon heart, calm", "cn_name": "恶魔心，平静" },
-  "demon_heart_1": {
-    "en_name": "Demon heart, anxious",
-    "cn_name": "恶魔心，躁动"
-  },
-  "demon_heart_2": {
-    "en_name": "Demon heart, beating fast",
-    "cn_name": "恶魔心，要去了"
-  },
-  "exo_vest": { "en_name": "Exo carrier", "cn_name": "外骨骼装甲" },
-  "exo_vest_1": {
-    "en_name": "Exo carrier, 50%",
-    "cn_name": "外骨骼装甲， 50%"
-  },
-  "exo_vest_d": {
-    "en_name": "Exo carrier, destroyed",
-    "cn_name": "外骨骼装甲，已损坏"
-  },
-  "vest_navy": { "en_name": "Vest, Navy", "cn_name": "海军服" },
-  "vest_navy_2": { "en_name": "Vest, Navy, 60%", "cn_name": "海军服，60%" },
-  "vest_navy_3": { "en_name": "Vest, Navy, 30%", "cn_name": "海军服，30%" },
-  "vest_navy_4": { "en_name": "Vest, Navy, 10%", "cn_name": "海军服，10%" },
-  "water_balloon": { "en_name": "water balloon", "cn_name": "水气球" },
-  "whiskey_bottle": { "en_name": "whiskey bottle", "cn_name": "威士忌" },
-  "bell": { "en_name": "Golden bell", "cn_name": "金色小丁当" },
-  "xmastree": { "en_name": "Christmas biscuit", "cn_name": "圣诞小饼干" },
-  "xmas_box": { "en_name": "Xmas box", "cn_name": "圣诞箱子" },
-  "candycane": { "en_name": "Candy cane", "cn_name": "手杖糖" },
-  "stocking": { "en_name": "Santa's stocking", "cn_name": "圣诞长筒袜" },
-  "apr308s": { "en_name": "APR308S", "cn_name": "APR308S微声狙击步枪" },
-  "g18c": {
-    "en_name": "Glock G18c suppressed",
-    "cn_name": "Glock G18c 消音手枪"
-  },
-  "beowulf": {
-    "en_name": ".50 Beowulf",
-    "cn_name": ".50口径贝奥武夫自动步枪"
-  },
-  "fmg9": {
-    "en_name": "FMG9",
-    "cn_name": "FMG9冲锋枪"
-  },
-  "fn57": {
-    "en_name": "Five-seveN",
-    "cn_name": "FN57穿甲手枪"
-  },
-  "fn57_s": {
-    "en_name": "Five-seveN suppressed",
-    "cn_name": "FN57消音穿甲手枪"
+  "orange_juice": {
+    "en_name": "orange juice",
+    "cn_name": "橙汁"
   },
   "origin_12": {
     "en_name": "Origin-12",
@@ -893,17 +1399,229 @@
     "en_name": "Origin-12 suppressed",
     "cn_name": "Origin-12半自动霰弹枪（消音）"
   },
-  "axe": {
-    "en_name": "hand axe",
-    "cn_name": "手斧"
+  "oscar_statue": {
+    "en_name": "Oscar statue",
+    "cn_name": "奥斯卡小金人"
   },
-  "can_cannon": {
-    "en_name": "Can Cannon",
-    "cn_name": "罐子发射器"
+  "ots14": {
+    "en_name": "OTS-14/ GP25 GL",
+    "cn_name": "OTS-14/ GP25（下挂榴弹）"
   },
-  "fmg9_box": {
-    "en_name": "FMG9 BOX",
-    "cn_name": "FMG9冲锋枪（折叠）"
+  "ots14_g": {
+    "en_name": "OTS-14/ GP25 GL",
+    "cn_name": "OTS-14/ GP25（下挂榴弹）"
+  },
+  "p416": {
+    "en_name": "P416",
+    "cn_name": "P416突击步枪"
+  },
+  "p90": {
+    "en_name": "P90",
+    "cn_name": "P90冲锋枪"
+  },
+  "pacific_travel_guide": {
+    "en_name": "Pacific travel guide",
+    "cn_name": "太平洋旅游指南"
+  },
+  "painting": {
+    "en_name": "Lona Misa",
+    "cn_name": "蒙娜丽莎"
+  },
+  "parasol_blue": {
+    "en_name": "Blue parasol",
+    "cn_name": "蓝色太阳伞"
+  },
+  "parasol_green": {
+    "en_name": "Green parasol",
+    "cn_name": "绿色太阳伞"
+  },
+  "parasol_red": {
+    "en_name": "Red parasol",
+    "cn_name": "红色太阳伞"
+  },
+  "parasol_yellow": {
+    "en_name": "Yellow parasol",
+    "cn_name": "黄色太阳伞"
+  },
+  "patrol_ship_cannon": {
+    "en_name": "D40mm-Flak-proto",
+    "cn_name": "Flak 40mm防空炮"
+  },
+  "patrol_ship_mg": {
+    "en_name": "Patrol Ship MG",
+    "cn_name": "巡逻艇机枪"
+  },
+  "patrol_ship_mortar": {
+    "en_name": "Missile launcher",
+    "cn_name": "导弹发射器"
+  },
+  "paw20": {
+    "en_name": "PAW-20",
+    "cn_name": "PAW-20半自动榴弹发射器"
+  },
+  "pb": {
+    "en_name": "PB",
+    "cn_name": "PB 6P9微声手枪"
+  },
+  "pdx_r": {
+    "en_name": "PDX-SD",
+    "cn_name": "PDX-SD"
+  },
+  "pecheneg_bullpup": {
+    "en_name": "Pecheneg Bullpup",
+    "cn_name": "“佩切涅格”犊牛机枪"
+  },
+  "pepperdust": {
+    "en_name": "pepperdust",
+    "cn_name": "Pepperdust晕眩霰弹枪"
+  },
+  "pf98": {
+    "en_name": "PF-98",
+    "cn_name": "PF-98 XN1 120mm火箭筒"
+  },
+  "pickashoe": {
+    "en_name": "Pickashoe",
+    "cn_name": "皮卡丘"
+  },
+  "pkm": {
+    "en_name": "PKM",
+    "cn_name": "PKM通用机枪"
+  },
+  "playing_cards": {
+    "en_name": "poker cards",
+    "cn_name": "扑克牌"
+  },
+  "popsicle": {
+    "en_name": "popsicle",
+    "cn_name": "赤狐棒冰"
+  },
+  "portable_mortar": {
+    "en_name": "RWM Mortar",
+    "cn_name": "RWM轻型便捷迫击炮"
+  },
+  "presentschreck": {
+    "en_name": "Presentschreck",
+    "cn_name": "礼物杀手"
+  },
+  "psg90": {
+    "en_name": "PSG-90",
+    "cn_name": "PSG-90狙击步枪"
+  },
+  "pumpkin": {
+    "en_name": "pumpkin box",
+    "cn_name": "南瓜箱子1"
+  },
+  "pumpkin_2": {
+    "en_name": "pumpkin box 2",
+    "cn_name": "南瓜箱子2"
+  },
+  "pumpkin_3": {
+    "en_name": "pumpkin box 3",
+    "cn_name": "南瓜箱子3"
+  },
+  "pyrite": {
+    "en_name": "pyrite",
+    "cn_name": "黄铁矿"
+  },
+  "qbs-09": {
+    "en_name": "QBS-09",
+    "cn_name": "QBS-09式半自动霰弹枪"
+  },
+  "qbz95": {
+    "en_name": "qbz-95",
+    "cn_name": "QBZ-95式突击步枪"
+  },
+  "qbz95_us": {
+    "en_name": "qbz-95 - underbarrel shotgun",
+    "cn_name": "QBZ-95式突击步枪（下挂霰弹）"
+  },
+  "qcw-05": {
+    "en_name": "QCW-05",
+    "cn_name": "QCW-05式微声冲锋枪"
+  },
+  "qjz89": {
+    "en_name": "QJZ89 HMG",
+    "cn_name": "QJZ89重机枪"
+  },
+  "qlz87_b": {
+    "en_name": "QLZ87 GL",
+    "cn_name": "QLZ87自动榴弹发射器"
+  },
+  "qts11": {
+    "en_name": "QTS-11",
+    "cn_name": "QTS-11作战系统"
+  },
+  "qts11_g": {
+    "en_name": "QTS-11 air burst GL",
+    "cn_name": "QTS-11作战系统（空爆弹）"
+  },
+  "rabbit_suit": {
+    "en_name": "rabbit suit",
+    "cn_name": "兔兔服"
+  },
+  "rabbit_suit_1": {
+    "en_name": "rabbit suit, damaged",
+    "cn_name": "兔兔服，已损坏"
+  },
+  "radio": {
+    "en_name": "ghetto blaster",
+    "cn_name": "手提式录音机"
+  },
+  "razor": {
+    "en_name": "razor",
+    "cn_name": "剃须刀"
+  },
+  "repair_crane": {
+    "en_name": "Repair crane deploy",
+    "cn_name": "机械修理臂部署包"
+  },
+  "rg6_a": {
+    "en_name": "RG6 - Airburst",
+    "cn_name": "RG6发射器（空爆弹）"
+  },
+  "rg6_s": {
+    "en_name": "RG6 - Shrapnel",
+    "cn_name": "RG6发射器（箭形弹）"
+  },
+  "rgm40": {
+    "en_name": "RGM-40",
+    "cn_name": "RGM-40榴弹发射器"
+  },
+  "riot_shield": {
+    "en_name": "War Correspondent",
+    "cn_name": "战地记者"
+  },
+  "rotten_banana": {
+    "en_name": "rotten banana",
+    "cn_name": "烂香蕉"
+  },
+  "rpd": {
+    "en_name": "RPD",
+    "cn_name": "RPD轻机枪"
+  },
+  "rpd_b": {
+    "en_name": "RPD - bipod",
+    "cn_name": "RPD轻机枪（架设）"
+  },
+  "rpg-7": {
+    "en_name": "RPG-7",
+    "cn_name": "RPG-7火箭筒"
+  },
+  "rpk16": {
+    "en_name": "RPK16",
+    "cn_name": "RPK16轻机枪"
+  },
+  "rpk16_long": {
+    "en_name": "RPK16 - long barrel",
+    "cn_name": "RPK16轻机枪（延长枪管）"
+  },
+  "rsh_12": {
+    "en_name": "RSH-12",
+    "cn_name": "RSH-12"
+  },
+  "rwr_handbook": {
+    "en_name": "RWR handbook",
+    "cn_name": "RWR游戏手册"
   },
   "sa81": {
     "en_name": "SA81-Krasa-HE",
@@ -913,16 +1631,400 @@
     "en_name": "SA81-Krasa-Overload!",
     "cn_name": "SA81爆弹改型冲锋枪（过载模式）"
   },
-  "headtaker": {
-    "en_name": "Headtaker",
-    "cn_name": "斩颅巨斧"
+  "sabre": {
+    "en_name": "Cavalry saber",
+    "cn_name": "骑兵军刀"
   },
-  "pumpkin_3": {
-    "en_name": "pumpkin box 3",
-    "cn_name": "南瓜箱子3"
+  "sawn-off_shotgun": {
+    "en_name": "Sawn-Off Shotgun",
+    "cn_name": "截短霰弹枪"
   },
-  "rsh_12": {
-    "en_name": "Rsh 12",
-    "cn_name": "Rsh 12手枪"
+  "sbl": {
+    "en_name": "SBL",
+    "cn_name": "圆锯发射器"
+  },
+  "scar_mk13": {
+    "en_name": "SCAR L - thermal",
+    "cn_name": "SCAR L突击步枪（热成像）"
+  },
+  "scar_mk13_g": {
+    "en_name": "SCAR L / MK13 GL",
+    "cn_name": "SCAR L / MK13（下挂温压榴弹）"
+  },
+  "scarssr": {
+    "en_name": "SCAR SSR",
+    "cn_name": "SCAR SSR精准射手步枪"
+  },
+  "scorpion-evo": {
+    "en_name": "Scorpion Evo III",
+    "cn_name": "“蝎”式Evo Ⅲ微声冲锋枪"
+  },
+  "scythe": {
+    "en_name": "Demon Scythe",
+    "cn_name": "恶魔镰刀"
+  },
+  "sg552": {
+    "en_name": "SG 552",
+    "cn_name": "SG552卡宾枪"
+  },
+  "sheaths": {
+    "en_name": "willy boy",
+    "cn_name": "套套"
+  },
+  "sheaths_xxl": {
+    "en_name": "King-size willy boy",
+    "cn_name": "超大号套套"
+  },
+  "shock_paddle": {
+    "en_name": "Defibrillator",
+    "cn_name": "电复律机"
+  },
+  "shovel": {
+    "en_name": "Ordnance Shovel",
+    "cn_name": "工兵铲"
+  },
+  "sks": {
+    "en_name": "SKS",
+    "cn_name": "SKS半自动步枪"
+  },
+  "sks_fire": {
+    "en_name": "SKS - Incendiary",
+    "cn_name": "SKS半自动步枪（燃烧弹）"
+  },
+  "smaw": {
+    "en_name": "SMAW",
+    "cn_name": "SMAW火箭筒"
+  },
+  "snowball": {
+    "en_name": "snowball",
+    "cn_name": "雪球"
+  },
+  "spas-12": {
+    "en_name": "SPAS-12",
+    "cn_name": "SPAS-12多功能霰弹枪"
+  },
+  "squad_equipment_kit": {
+    "en_name": "Squad Equipment Kit",
+    "cn_name": "小队装甲包"
+  },
+  "squad_equipment_kit_navy": {
+    "en_name": "Squad Equipment Kit - Navy",
+    "cn_name": "小队装甲包 - 海军"
+  },
+  "squall": {
+    "en_name": "Squall",
+    "cn_name": "“咆哮者”金属风暴系统"
+  },
+  "stars": {
+    "en_name": "shuriken",
+    "cn_name": "手里剑"
+  },
+  "steroids": {
+    "en_name": "steroids",
+    "cn_name": "肾上腺素"
+  },
+  "steyr_tmp": {
+    "en_name": "Steyr TMP",
+    "cn_name": "斯太尔TMP战术冲锋枪"
+  },
+  "stg44": {
+    "en_name": "StG 44",
+    "cn_name": "StG 44"
+  },
+  "stim": {
+    "en_name": "Stim pack, active",
+    "cn_name": "兴奋剂（已激活）"
+  },
+  "stocking": {
+    "en_name": "Santa's stocking",
+    "cn_name": "圣诞长筒袜"
+  },
+  "stoner62": {
+    "en_name": "Stoner 62",
+    "cn_name": "斯通纳62轻机枪（瞄镜）"
+  },
+  "stoner_lmg": {
+    "en_name": "Stoner LMG",
+    "cn_name": "斯通纳轻机枪"
+  },
+  "stun_grenade": {
+    "en_name": "stun grenade",
+    "cn_name": "震撼弹"
+  },
+  "suitcase": {
+    "en_name": "briefcase",
+    "cn_name": "公文包"
+  },
+  "sunglasses": {
+    "en_name": "sunglasses",
+    "cn_name": "太阳镜"
+  },
+  "sunglasses_1": {
+    "en_name": "sunglasses, broken",
+    "cn_name": "太阳镜，已损坏"
+  },
+  "supershorty": {
+    "en_name": "Supershorty",
+    "cn_name": "“超级矮子”霰弹枪"
+  },
+  "sv98": {
+    "en_name": "SV-98",
+    "cn_name": "SV-98狙击步枪"
+  },
+  "sv98_p": {
+    "en_name": "MP443 Grach",
+    "cn_name": "MP443“乌鸦”半自动手枪"
+  },
+  "tac50": {
+    "en_name": "Tac50 AP Warhead",
+    "cn_name": "Tac50（穿甲弹）"
+  },
+  "tac50_e": {
+    "en_name": "Tac50 Explosive Warhead",
+    "cn_name": "Tac50（高爆弹）"
+  },
+  "talisman": {
+    "en_name": "Ocean talisman",
+    "cn_name": "海洋护符"
+  },
+  "talisman_1": {
+    "en_name": "Ocean talisman, broken",
+    "cn_name": "海洋护符，已碎裂"
+  },
+  "tank_cannon": {
+    "en_name": "GIFT?",
+    "cn_name": "礼物？"
+  },
+  "tank_mg": {
+    "en_name": "ZJX-19/XE MG",
+    "cn_name": "装甲抢修车-机枪"
+  },
+  "tank_trap": {
+    "en_name": "tank trap deploy",
+    "cn_name": "坦克陷阱部署包"
+  },
+  "taser": {
+    "en_name": "taser",
+    "cn_name": "泰瑟枪"
+  },
+  "tcap": {
+    "en_name": "Terran's Cap",
+    "cn_name": "泰伦的帽子"
+  },
+  "teddy": {
+    "en_name": "Teddy Bear",
+    "cn_name": "泰迪熊"
+  },
+  "ticket_boxes": {
+    "en_name": "Community ticket",
+    "cn_name": "社群奖券"
+  },
+  "ticket_easter": {
+    "en_name": "Easter ticket",
+    "cn_name": "复活节奖券"
+  },
+  "ticket_halloween": {
+    "en_name": "Halloween ticket",
+    "cn_name": "万圣节奖券"
+  },
+  "ticket_summer": {
+    "en_name": "Summer ticket",
+    "cn_name": "夏日奖券"
+  },
+  "tkb059": {
+    "en_name": "TKB-059",
+    "cn_name": "TKB-059三管突击步枪"
+  },
+  "torch": {
+    "en_name": "Welding torch",
+    "cn_name": "维修喷枪"
+  },
+  "tow": {
+    "en_name": "TOW",
+    "cn_name": "“陶”式反坦克导弹"
+  },
+  "tow2": {
+    "en_name": "TOW deploy",
+    "cn_name": "“陶”式反坦克导弹部署包"
+  },
+  "tracer": {
+    "en_name": "tracer",
+    "cn_name": "信标枪"
+  },
+  "trauma_kit": {
+    "en_name": "trauma kit",
+    "cn_name": "创伤医护包"
+  },
+  "truvelo_amris": {
+    "en_name": "Truvelo Amris suppressed",
+    "cn_name": "Truvelo Amris反器材步枪（消音|高爆弹）"
+  },
+  "tti": {
+    "en_name": "TTI-Combat Shield",
+    "cn_name": "TTI格斗盾牌"
+  },
+  "ultimax": {
+    "en_name": "Ultimax 100",
+    "cn_name": "Ultimax 100轻机枪（弹鼓）"
+  },
+  "ultimax_m": {
+    "en_name": "Ultimax 100, magazine",
+    "cn_name": "Ultimax 100轻机枪（弹匣）"
+  },
+  "ump40": {
+    "en_name": "UMP40",
+    "cn_name": "UMP-40冲锋枪"
+  },
+  "unknown": {
+    "en_name": "trauma kit",
+    "cn_name": "创伤医护包"
+  },
+  "uts15": {
+    "en_name": "UTS-15",
+    "cn_name": "UTS-15泵动式霰弹枪"
+  },
+  "uzi_mini": {
+    "en_name": "mini UZI",
+    "cn_name": "Mini UZI轻型冲锋枪"
+  },
+  "vest": {
+    "en_name": "Vest, type II",
+    "cn_name": "Ⅱ型防弹背心"
+  },
+  "vest1": {
+    "en_name": "Vest, type I",
+    "cn_name": "Ⅰ型防弹背心"
+  },
+  "vest1_hole1": {
+    "en_name": "Vest, type I, 50%",
+    "cn_name": "Ⅰ型防弹背心, 50%"
+  },
+  "vest3": {
+    "en_name": "Vest, type III",
+    "cn_name": "Ⅲ型防弹背心"
+  },
+  "vest3_1": {
+    "en_name": "bunny cub, lightly wounded",
+    "cn_name": "bunny cub, lightly wounded"
+  },
+  "vest3_20": {
+    "en_name": "Vest, type III, 20%",
+    "cn_name": "Ⅲ型防弹背心，20%"
+  },
+  "vest3_40": {
+    "en_name": "Vest, type III, 40%",
+    "cn_name": "Ⅲ型防弹背心，40%"
+  },
+  "vest3_60": {
+    "en_name": "Vest, type III, 60%",
+    "cn_name": "Ⅲ型防弹背心，60%"
+  },
+  "vest3_80": {
+    "en_name": "Vest, type III, 80%",
+    "cn_name": "Ⅲ型防弹背心，80%"
+  },
+  "vest_hole1": {
+    "en_name": "Vest, type II, 50%",
+    "cn_name": "Ⅱ型防弹背心，50%"
+  },
+  "vest_hole2": {
+    "en_name": "Vest, type II, 25%",
+    "cn_name": "Ⅱ型防弹背心，25%"
+  },
+  "vest_navy": {
+    "en_name": "Vest, Navy",
+    "cn_name": "海军服"
+  },
+  "vest_navy_2": {
+    "en_name": "Vest, Navy, 60%",
+    "cn_name": "海军服，60%"
+  },
+  "vest_navy_3": {
+    "en_name": "Vest, Navy, 30%",
+    "cn_name": "海军服，30%"
+  },
+  "vest_navy_4": {
+    "en_name": "Vest, Navy, 10%",
+    "cn_name": "海军服，10%"
+  },
+  "vestkit": {
+    "en_name": "Vest Repair Kit",
+    "cn_name": "背心修复包"
+  },
+  "vfs_at": {
+    "en_name": "VFS AT",
+    "cn_name": "VFS车载反坦克系统"
+  },
+  "vfs_minig": {
+    "en_name": "ACAV minigun",
+    "cn_name": "ACAV加特林机枪"
+  },
+  "vks": {
+    "en_name": "VKS",
+    "cn_name": "VKS“排气者”狙击步枪"
+  },
+  "vss_vintorez": {
+    "en_name": "VSS Vintorez",
+    "cn_name": "VSS微声狙击步枪 "
+  },
+  "water_balloon": {
+    "en_name": "water balloon",
+    "cn_name": "水气球"
+  },
+  "water_gun": {
+    "en_name": "water gun",
+    "cn_name": "水枪"
+  },
+  "whiskey_bottle": {
+    "en_name": "whiskey bottle",
+    "cn_name": "威士忌"
+  },
+  "whoopee_cushion": {
+    "en_name": "whoopee cushion",
+    "cn_name": "屁垫"
+  },
+  "wolf_howling": {
+    "en_name": "howling",
+    "cn_name": "狼吼"
+  },
+  "worn_underpants": {
+    "en_name": "worn underpants",
+    "cn_name": "破烂的内裤"
+  },
+  "wrench": {
+    "en_name": "large wrench",
+    "cn_name": "大扳手"
+  },
+  "wrench_small": {
+    "en_name": "small wrench",
+    "cn_name": "小扳手"
+  },
+  "xm25": {
+    "en_name": "XM-25",
+    "cn_name": "XM-25空爆弹发射器"
+  },
+  "xm25_r": {
+    "en_name": "XM-25",
+    "cn_name": "XM-25空爆弹发射器"
+  },
+  "xm8": {
+    "en_name": "XM8",
+    "cn_name": "XM8突击步枪"
+  },
+  "xmas_box": {
+    "en_name": "Xmas box",
+    "cn_name": "圣诞箱子"
+  },
+  "xmas_tree": {
+    "en_name": "Xmas tree",
+    "cn_name": "圣诞树"
+  },
+  "xmastree": {
+    "en_name": "Christmas biscuit",
+    "cn_name": "圣诞小饼干"
+  },
+  "zweihander": {
+    "en_name": "Zweihander",
+    "cn_name": "双手巨剑"
   }
 }
