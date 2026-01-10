@@ -23,7 +23,6 @@ import {
   BarChartOutlined,
   RadarChartOutlined,
 } from "@ant-design/icons";
-import { Pie, Column, Radar } from "@ant-design/plots";
 import DataSource from "./data.json";
 import KeyListTrans from "../pre-pull/keyListTrans.json";
 import priceData from "./price.json";
