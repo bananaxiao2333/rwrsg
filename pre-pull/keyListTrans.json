@@ -1,4 +1,5 @@
 {
+  "enName": "英文名称",
   "retrigger_time": "重新触发时间",
   "accuracy_factor": "精度因子",
   "sustained_fire_grow_step": "持续射击增长步长",
@@ -15,6 +16,11 @@
   "kill_probability": "击杀概率",
   "kill_decay_start_time": "击杀衰减开始时间",
   "kill_decay_end_time": "击杀衰减结束时间",
+  "kill_decay": "击杀衰减时间",
+  "kill_probability_text": "击杀概率文本",
+  "rpm": "射速",
+  "encumbrance": "负重",
+  "stance": "姿态",
   "running_stance": "奔跑姿态",
   "walking_stance": "行走姿态",
   "crouch_moving_stance": "蹲伏移动姿态",
@@ -49,5 +55,9 @@
   "radius": "半径",
   "damage": "伤害",
   "push": "推力",
-  "faction_compare": "阵营比较"
+  "faction_compare": "阵营比较",
+  "type": "类型",
+  "speed": "速度",
+  "price": "价格",
+  "projectiles_spec": "子弹伤害/范围"
 }
