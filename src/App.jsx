@@ -296,13 +296,20 @@ const App = () => {
     };
   }, []);
 
-  var opti = [];
+  var temp_opti = [];
   Object.entries(translData).forEach((key, value) => {
     var n = key[0];
-    
-    opti = opti.concat([
+
+    temp_opti = temp_opti.concat([
       {
-        value: n,
+        value:
+          n +
+          "|" +
+          key[1]["hud_icon"] +
+          "|" +
+          translData[n]?.en_name +
+          "|" +
+          translData[n]?.cn_name,
         label:
           i18n.language == "zh"
             ? translData[n]?.cn_name
@@ -314,6 +321,8 @@ const App = () => {
       },
     ]);
   });
+  const opti = temp_opti;
+
   // Object.entries(imageUrls).forEach((key, value) => {
   //   var n = key[0].replace("./assets/items/", "").replace(".png", "");
   //   opti = opti.concat([
@@ -667,18 +676,14 @@ const App = () => {
                       if (addChoise.join().length <= 0) return true;
                       var newData = [];
                       addChoise.forEach(function (item) {
+                        var hud_icon = item.split("|")[1];
+                        var en_name = item.split("|")[2];
+                        var cn_name = item.split("|")[3];
                         newData = newData.concat([
                           {
-                            key: item,
-                            name:
-                              i18n.language == "zh"
-                                ? translData[item]?.cn_name
-                                  ? `${translData[item].cn_name}`
-                                  : item
-                                : translData[item]?.en_name
-                                ? `${translData[item].en_name}`
-                                : item,
-                            price: priceData[item] ?? 0,
+                            key: hud_icon,
+                            name: cn_name,
+                            price: priceData[hud_icon] ?? 0,
                           },
                         ]);
                       });
