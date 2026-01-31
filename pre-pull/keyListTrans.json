@@ -63,5 +63,7 @@
   "speed_text": "速度文本(%)",
   "hud_icon": "HUD图标",
   "id": "道具唯一编号",
-  "sight_range_modifier_text": "视野"
+  "sight_range_modifier_text": "视野",
+  "curve_height": "投掷高度",
+  "max_speed": "投掷速度"
 }
