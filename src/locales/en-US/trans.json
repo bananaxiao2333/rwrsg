@@ -24,7 +24,7 @@
   "property": "Property",
   "set": "Set",
   "'s": "'s",
-  "experi": "(Experimental!)",
+  "experi": "Languages",
   "app": {
     "items": "Items for Sale",
     "tip1": "After adding items in Properties: If an item has a translation, its Chinese translation will be displayed automatically; if the item has a set price in the group, the price will be automatically added (prices for collectibles/damaged items/weapons in other modes are currently unavailable).",

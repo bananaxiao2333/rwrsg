@@ -14,6 +14,8 @@ import {
   HomeOutlined,
   LeftCircleOutlined,
   LoadingOutlined,
+  MenuFoldOutlined,
+  MenuUnfoldOutlined,
   MoonOutlined,
   PlusOutlined,
   RightCircleFilled,
@@ -96,10 +98,31 @@ function removeDuplicates(arr) {
   });
 }
 
+const ToggleSidebarButton = ({ collapsed, onToggle }) => {
+  return (
+    <div
+      style={{
+        position: "fixed",
+        bottom: 20,
+        left: 20,
+        zIndex: 1000,
+        cursor: "pointer",
+      }}
+      onClick={onToggle}
+    >
+      {collapsed ? (
+        <Button type="primary" icon={<MenuUnfoldOutlined />} />
+      ) : (
+        <Button type="primary" icon={<MenuFoldOutlined />} />
+      )}
+    </div>
+  );
+};
+
 const imageModules = import.meta.glob("./assets/items/*.png", { eager: true });
 
 const preloadedUrls = Object.fromEntries(
-  Object.entries(imageModules).map(([path, module]) => [path, module.default])
+  Object.entries(imageModules).map(([path, module]) => [path, module.default]),
 );
 
 const lines = [
@@ -188,7 +211,7 @@ const DRow = (props) => {
   };
   const contextValue = useMemo(
     () => ({ setActivatorNodeRef, listeners }),
-    [setActivatorNodeRef, listeners]
+    [setActivatorNodeRef, listeners],
   );
   return (
     <RowContext.Provider value={contextValue}>
@@ -200,18 +223,24 @@ const DRow = (props) => {
 const App = () => {
   const { t, i18n } = useTranslation();
   const navigate = useNavigate();
+  const [collapsed, setCollapsed] = React.useState(false);
+
   const onDragEnd = ({ active, over }) => {
     if (active.id !== over?.id) {
       setData((prevState) => {
         const activeIndex = prevState.findIndex(
-          (record) => record.key === active?.id
+          (record) => record.key === active?.id,
         );
         const overIndex = prevState.findIndex(
-          (record) => record.key === over?.id
+          (record) => record.key === over?.id,
         );
         return arrayMove(prevState, activeIndex, overIndex);
       });
     }
+  };
+
+  const toggleSidebar = () => {
+    setCollapsed(!collapsed);
   };
 
   const navItem = [
@@ -255,7 +284,7 @@ const App = () => {
   React.useEffect(() => {
     const fetchCommits = async () => {
       const response = await fetch(
-        "https://api.github.com/repos/bananaxiao2333/rwrsg/commits"
+        "https://api.github.com/repos/bananaxiao2333/rwrsg/commits",
       );
       const jsonData = await response.json();
       setCommitHistory(extractCommitInfo(jsonData));
@@ -316,8 +345,8 @@ const App = () => {
               ? `${translData[n].cn_name + "-" + translData[n].en_name} (${n})`
               : n
             : translData[n]?.en_name
-            ? `${translData[n].en_name} (${n})`
-            : n,
+              ? `${translData[n].en_name} (${n})`
+              : n,
       },
     ]);
   });
@@ -423,8 +452,8 @@ const App = () => {
               removeDuplicates(
                 data.filter(function (item) {
                   return item.key !== record.key;
-                })
-              )
+                }),
+              ),
             );
 
             if (record.key.length > 0)
@@ -461,10 +490,10 @@ const App = () => {
             size="small"
             autoInsertSpace={false}
             onClick={() => {
-              setEditKey(record),
+              (setEditKey(record),
                 setEditMode("name"),
                 setEditModal(record.name),
-                setIsModalOpen(true);
+                setIsModalOpen(true));
             }}
           >
             {record.name ? <>{record.name}</> : <>{t("unset")}</>}
@@ -492,10 +521,10 @@ const App = () => {
             type="link"
             autoInsertSpace={false}
             onClick={() => {
-              setEditKey(record),
+              (setEditKey(record),
                 setEditMode("price"),
                 setEditModal(record.price),
-                setIsModalOpen(true);
+                setIsModalOpen(true));
             }}
           >
             {text ? <>{text}rp</> : <>{t("unset")}</>}
@@ -516,10 +545,10 @@ const App = () => {
             type="link"
             autoInsertSpace={false}
             onClick={() => {
-              setEditKey(record),
+              (setEditKey(record),
                 setEditMode("num"),
                 setEditModal(record.num),
-                setIsModalOpen(true);
+                setIsModalOpen(true));
             }}
           >
             {text ? <>{text}</> : <>{t("unset")}</>}
@@ -746,7 +775,7 @@ const App = () => {
                     item[editMode] = editModal;
                   }
                   return item;
-                })
+                }),
               );
               setIsModalOpen(false);
             }}
@@ -793,7 +822,7 @@ const App = () => {
                 ref={canvasRef}
                 style={Object.assign(
                   { backgroundColor: color },
-                  picWidth ? { width: picWidth + "px" } : {}
+                  picWidth ? { width: picWidth + "px" } : {},
                 )}
               >
                 <Watermark
@@ -897,11 +926,11 @@ const App = () => {
                                   ? (transUnit
                                       ? unitTrans(
                                           (item.price * (1 - discount)).toFixed(
-                                            0
-                                          )
+                                            0,
+                                          ),
                                         )
                                       : (item.price * (1 - discount)).toFixed(
-                                          0
+                                          0,
                                         )) + " rp"
                                   : "N/A"
                               }
@@ -1138,24 +1167,32 @@ const App = () => {
           />
         </Header>
         <Layout>
-          <Sider
-            width={210}
-            style={{ background: colorBgContainer }}
-            breakpoint="lg"
-          >
-            <Menu
-              mode="inline"
-              defaultOpenKeys={["1"]}
-              style={{ height: "100%", borderInlineEnd: 0 }}
-              items={navItem}
-              onClick={(key) =>
-                ["zh", "en"].indexOf(key["key"]) !== -1
-                  ? i18n.changeLanguage(key["key"])
-                  : ""
-              }
-            />
-          </Sider>
+          {collapsed ? (
+            <Sider
+              style={{ background: colorBgContainer, overflow: "hidden" }}
+              breakpoint="lg"
+            >
+              <Menu
+                mode="inline"
+                defaultOpenKeys={["1"]}
+                style={{ height: "100%", borderInlineEnd: 0 }}
+                items={navItem}
+                onClick={(key) =>
+                  ["zh", "en"].indexOf(key["key"]) !== -1
+                    ? i18n.changeLanguage(key["key"])
+                    : ""
+                }
+              />
+            </Sider>
+          ) : (
+            <></>
+          )}
+
           <div style={{ overflow: "auto", flex: "1" }} ref={ref5}>
+            <ToggleSidebarButton
+              collapsed={collapsed}
+              onToggle={toggleSidebar}
+            />
             <Content style={{ padding: "16px 16px" }}>
               <div
                 style={{
@@ -1206,7 +1243,7 @@ const App = () => {
                                       new Blob([JSON.stringify(data)], {
                                         type: "text/plain;charset=utf-8",
                                       }),
-                                      "RWRSG-" + new Date().getTime() + ".json"
+                                      "RWRSG-" + new Date().getTime() + ".json",
                                     )
                                   }
                                 >
@@ -1229,11 +1266,11 @@ const App = () => {
                                               blob,
                                               "RWRSG-" +
                                                 new Date().getTime() +
-                                                ".png"
+                                                ".png",
                                             );
                                           }
                                         });
-                                      }
+                                      },
                                     );
                                   }}
                                 >
@@ -1254,16 +1291,16 @@ const App = () => {
                                               });
                                               navigator.clipboard.write([item]);
                                               message.info(
-                                                "已将图片复制至剪贴板"
+                                                "已将图片复制至剪贴板",
                                               );
                                             } catch (error) {
                                               message.error(
-                                                "复制至剪贴板失败：" + error
+                                                "复制至剪贴板失败：" + error,
                                               );
                                             }
                                           }
                                         });
-                                      }
+                                      },
                                     );
                                   }}
                                 >

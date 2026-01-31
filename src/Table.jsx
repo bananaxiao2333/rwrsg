@@ -9,39 +9,38 @@ import {
   Button,
   Modal,
   InputNumber,
-  Image,
-  Statistic,
-  Divider,
-  Tabs,
+  message,
 } from "antd";
 import {
   SearchOutlined,
   SwapOutlined,
   PlusOutlined,
-  DollarCircleOutlined,
-  PieChartOutlined,
-  BarChartOutlined,
-  RadarChartOutlined,
+  CopyOutlined,
+  DownloadOutlined,
 } from "@ant-design/icons";
 import DataSource from "./data.json";
 import KeyListTrans from "../pre-pull/keyListTrans.json";
 import priceData from "./price.json";
 import useLocalStorageState from "use-local-storage-state";
+import html2canvas from "html2canvas";
+import fs from "file-saver";
 
 // 图片预加载
 const imageModules = import.meta.glob("./assets/items/*.png", { eager: true });
 const preloadedUrls = Object.fromEntries(
-  Object.entries(imageModules).map(([path, module]) => [path, module.default])
+  Object.entries(imageModules).map(([path, module]) => [path, module.default]),
 );
 
 // 获取 App.jsx 中的 data 状态
 const getInventoryData = () => {
   const stored = localStorage.getItem("data");
-  return stored ? JSON.parse(stored) : [
-    { key: "lottery", name: "彩票", price: 1700, num: 1 },
-    { key: "vest3", name: "Ⅲ型防弹背心", price: 200, num: 2 },
-    { key: "aug", name: "斯太尔AUG突击步枪", price: 250, num: 5 },
-  ];
+  return stored
+    ? JSON.parse(stored)
+    : [
+        { key: "lottery", name: "彩票", price: 1700, num: 1 },
+        { key: "vest3", name: "Ⅲ型防弹背心", price: 200, num: 2 },
+        { key: "aug", name: "斯太尔AUG突击步枪", price: 250, num: 5 },
+      ];
 };
 
 const setInventoryData = (newData) => {
@@ -59,18 +58,18 @@ const stanceTranslations = {
   crouching: "蹲伏",
   prone: "匍匐",
   prone_moving: "匍匐移动",
-  over_wall: "越墙"
+  over_wall: "越墙",
 };
 
 // 转换数据格式：将data.json的字典结构转换为数组
 const convertDataToArray = (data) => {
   return Object.entries(data).map(([id, weapon]) => {
     const converted = {
-      id: id,  // 保存外层键（如 "ar15"）
+      id: id, // 保存外层键（如 "ar15"）
       enName: weapon.en_name,
       cnName: weapon.cn_name,
-      key: weapon.key,  // 内部的key字段（如 "ar15.weapon"）
-      type: weapon.type,
+      key: weapon.key, // 内部的key字段（如 "ar15.weapon"）
+      hud_icon: weapon.hud_icon,
       ...weapon.spec,
     };
     return converted;
@@ -90,7 +89,7 @@ const RwrTable = () => {
         sortColumn: "cnName",
         sortDirection: "ascend",
       },
-    }
+    },
   );
 
   // 状态管理
@@ -117,12 +116,14 @@ const RwrTable = () => {
 
   // 保存编辑
   const handleSaveEdit = () => {
-    const newData = [{
-      key: editRecord.id,  // 使用外层键（如 "ar15"）
-      name: editRecord.cnName,
-      price: editPrice,
-      num: editNum,
-    }];
+    const newData = [
+      {
+        key: editRecord.hud_icon, // 使用外层键（如 "ar15"）
+        name: editRecord.cnName,
+        price: editPrice,
+        num: editNum,
+      },
+    ];
     setInventoryData(newData);
     setEditModalVisible(false);
     setEditRecord(null);
@@ -138,7 +139,7 @@ const RwrTable = () => {
     setTableSettings(newSettings);
   };
 
-  // 过滤武器数据
+  // 过滤道具数据
   const filteredWeapons = useMemo(() => {
     let result = [...WeaponList];
 
@@ -198,7 +199,7 @@ const RwrTable = () => {
             : null,
         render: (id, record) => (
           <img
-            src={preloadedUrls["./assets/items/" + id + ".png"]}
+            src={preloadedUrls["./assets/items/" + record.hud_icon + ".png"]}
             fallback="data:image/png;base64,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"
             style={{
               maxHeight: "50px",
@@ -212,8 +213,8 @@ const RwrTable = () => {
         title: "中文名称",
         dataIndex: "cnName",
         key: "cnName",
-        fixed: "left",
-        width: 200,
+        // fixed: "left",
+        width: 20,
         sorter: true,
         sortOrder:
           tableSettings.sortColumn === "cnName"
@@ -256,64 +257,173 @@ const RwrTable = () => {
         ),
       },
     ];
-  }, [
-    tableSettings.sortColumn,
-    tableSettings.sortDirection,
-  ]);
+  }, [tableSettings.sortColumn, tableSettings.sortDirection]);
 
-  // 武器详情面板
+  // 道具详情面板
   const weaponDetailPanel = selectedWeapon && (
-    <Card
-      title={selectedWeapon.cnName || "未知武器"}
-      extra={
-        <Button
-          type="text"
-          icon={<SwapOutlined />}
-          onClick={() => setSelectedWeapon(null)}
-        />
-      }
-      style={{ marginTop: 20 }}
-    >
-      <Descriptions column={2} bordered size="small">
-        {Object.entries(selectedWeapon).map(([key, value]) => {
-          // 特殊处理姿态属性
-          if (key === 'stance' && typeof value === 'object' && value !== null) {
+    <div id="target_section">
+      <Card
+        title={selectedWeapon.cnName || "未知道具"}
+        extra={
+          <Button
+            type="text"
+            icon={<SwapOutlined />}
+            onClick={() => setSelectedWeapon(null)}
+          />
+        }
+        style={{ marginTop: 20 }}
+      >
+        {/* 道具图标和名称 */}
+        <div
+          style={{
+            display: "flex",
+            alignItems: "center",
+            marginBottom: 16,
+            justifyContent: "flex-end",
+          }}
+        >
+          <div style={{ display: "flex", flexDirection: "column" }}>
+            <div style={{ fontWeight: "bold", fontSize: "18px" }}>
+              {selectedWeapon.cnName}
+            </div>
+            <div style={{ color: "#666", fontSize: "14px" }}>
+              {selectedWeapon.enName}
+            </div>
+          </div>
+          <div
+            style={{
+              width: 150,
+              height: 150,
+              overflow: "hidden",
+              marginLeft: 20,
+              display: "flex",
+              justifyContent: "center",
+              alignItems: "center",
+            }}
+          >
+            <img
+              src={
+                preloadedUrls[
+                  "./assets/items/" + selectedWeapon.hud_icon + ".png"
+                ]
+              }
+              alt={selectedWeapon.cnName}
+              style={{
+                height: "100%",
+                objectFit: "contain",
+              }}
+            />
+          </div>
+        </div>
+
+        {/* 属性列表 */}
+        <Descriptions
+          column={{ xs: 1, sm: 2, md: 3, lg: 3, xl: 4, xxl: 4 }}
+          size="small"
+        >
+          {Object.entries(selectedWeapon).map(([key, value]) => {
+            // 特殊处理姿态属性
+            if (
+              key === "stance" &&
+              typeof value === "object" &&
+              value !== null
+            ) {
+              return (
+                <Descriptions.Item
+                  key={key}
+                  label={KeyListTrans[key] || key}
+                  labelStyle={{ fontWeight: "bold", width: "30%" }}
+                >
+                  <div
+                    style={{
+                      display: "flex",
+                      flexDirection: "column",
+                      gap: "8px",
+                    }}
+                  >
+                    {Object.entries(value).map(([stanceKey, stanceValue]) => (
+                      <div key={stanceKey}>
+                        {stanceTranslations[stanceKey] || stanceKey}:{" "}
+                        {stanceValue}
+                      </div>
+                    ))}
+                  </div>
+                </Descriptions.Item>
+              );
+            }
+
+            // 普通属性直接显示
             return (
               <Descriptions.Item
                 key={key}
                 label={KeyListTrans[key] || key}
                 labelStyle={{ fontWeight: "bold", width: "30%" }}
               >
-                <div style={{ display: 'flex', flexDirection: 'column', gap: '8px' }}>
-                  {Object.entries(value).map(([stanceKey, stanceValue]) => (
-                    <div key={stanceKey}>
-                      {stanceTranslations[stanceKey] || stanceKey}: {stanceValue}
-                    </div>
-                  ))}
-                </div>
+                {typeof value === "object" ? JSON.stringify(value) : value}
               </Descriptions.Item>
             );
-          }
-
-          // 普通属性直接显示
-          return (
-            <Descriptions.Item
-              key={key}
-              label={KeyListTrans[key] || key}
-              labelStyle={{ fontWeight: "bold", width: "30%" }}
-            >
-              {typeof value === "object" ? JSON.stringify(value) : value}
-            </Descriptions.Item>
-          );
-        })}
-      </Descriptions>
-    </Card>
+          })}
+        </Descriptions>
+      </Card>
+    </div>
   );
 
+  const detailCardId = "target_section";
 
+  // 保存图片
+  const handleSaveImage = async () => {
+    if (!selectedWeapon) return;
+    const detailCard = document.getElementById(detailCardId);
+    if (!detailCard) return;
+
+    try {
+      const canvas = await html2canvas(detailCard, {
+        useCORS: true,
+        backgroundColor: null,
+        scale: 5,
+      });
+      canvas.toBlob((blob) => {
+        if (blob) {
+          fs.saveAs(blob, `${selectedWeapon.cnName}-${selectedWeapon.id}.png`);
+        }
+      });
+    } catch (error) {
+      message.error("保存图片失败：" + error.message);
+    }
+  };
+
+  // 复制图片
+  const handleCopyImage = async () => {
+    if (!selectedWeapon) return;
+    const detailCard = document.getElementById(detailCardId);
+    if (!detailCard) return;
+
+    try {
+      const canvas = await html2canvas(detailCard, {
+        useCORS: true,
+        backgroundColor: null,
+        scale: 2,
+      });
+      canvas.toBlob(async (blob) => {
+        if (blob) {
+          try {
+            const item = new ClipboardItem({
+              "image/png": blob,
+            });
+            await navigator.clipboard.write([item]);
+            message.info("已将图片复制至剪贴板");
+          } catch (error) {
+            message.error("复制至剪贴板失败：" + error.message);
+          }
+        }
+      });
+    } catch (error) {
+      message.error("复制图片失败：" + error.message);
+    }
+  };
 
   return (
-    <div style={{ padding: 20 }}>
+    <div style={{ padding: 20, position: "relative" }}>
       {/* 编辑对话框 */}
       <Modal
         title="添加/编辑物品"
@@ -326,9 +436,7 @@ const RwrTable = () => {
           <Descriptions.Item label="物品名称">
             {editRecord?.cnName}
           </Descriptions.Item>
-          <Descriptions.Item label="物品键">
-            {editRecord?.id}
-          </Descriptions.Item>
+          <Descriptions.Item label="物品键">{editRecord?.id}</Descriptions.Item>
           <Descriptions.Item label="价格 (rp)">
             <InputNumber
               style={{ width: "100%" }}
@@ -353,7 +461,7 @@ const RwrTable = () => {
       <Row gutter={16} style={{ marginBottom: 16 }}>
         <Col flex="auto">
           <Input
-            placeholder="搜索武器名称..."
+            placeholder="搜索道具名称..."
             prefix={<SearchOutlined />}
             value={searchText}
             onChange={(e) => handleSearch(e.target.value)}
@@ -363,7 +471,7 @@ const RwrTable = () => {
         </Col>
       </Row>
 
-      {/* 武器表格 */}
+      {/* 道具表格 */}
       <Table
         dataSource={filteredWeapons}
         columns={columns}
@@ -374,13 +482,32 @@ const RwrTable = () => {
         pagination={{
           pageSize: tableSettings.pageSize,
           showSizeChanger: false,
-          showTotal: (total) => `共 ${total} 件武器`,
+          showTotal: (total) => `共 ${total} 件道具`,
         }}
         onChange={handleSortChange}
       />
 
-      {/* 武器详情面板 */}
+      {/* 道具详情面板 */}
       {weaponDetailPanel}
+      {/* 保存图片和复制图片按钮 */}
+      {selectedWeapon && (
+        <div style={{ marginTop: 16, display: "flex", gap: 8 }}>
+          <Button
+            type="primary"
+            icon={<DownloadOutlined />}
+            onClick={handleSaveImage}
+          >
+            保存图片
+          </Button>
+          <Button
+            type="primary"
+            icon={<CopyOutlined />}
+            onClick={handleCopyImage}
+          >
+            复制图片
+          </Button>
+        </div>
+      )}
     </div>
   );
 };
